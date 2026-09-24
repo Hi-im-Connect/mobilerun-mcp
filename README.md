@@ -32,97 +32,72 @@ It also works over any network `adb` works over (LAN, VPN, `adb connect`), not o
 
 ## Quick start
 
-About ten minutes. You need three things: an Android device, this server, and an MCP client. Nothing
-here assumes prior Android or MCP experience.
+### Requirements
 
-### What you need
-
-| You need | What it is for | Get it |
+| Package | Needed for | Install |
 |---|---|---|
-| An Android device that `adb` can reach | The thing the agent controls | [Step 1](#1-get-an-android-device-ready) |
-| `adb` (Android platform-tools) | Talks to the device | [Download](https://developer.android.com/tools/releases/platform-tools), or `sudo apt install adb`, or `brew install android-platform-tools` |
-| `uv` | Installs Python and this project's dependencies (you do not need to install Python yourself) | [Install uv](https://docs.astral.sh/uv/getting-started/installation/) |
-| `git` | Downloads this repo (or use the green **Code** button, then **Download ZIP**) | [git-scm.com](https://git-scm.com/downloads) |
-| An MCP client | The AI app that will call the tools | [Claude Code](https://docs.claude.com/en/docs/claude-code/mcp), [Claude Desktop](https://modelcontextprotocol.io/quickstart/user), [Cursor](https://docs.cursor.com/context/model-context-protocol) |
-| `tesseract` (optional) | Reads text on screens that expose little to accessibility | [Install guide](https://tesseract-ocr.github.io/tessdoc/Installation.html), or `sudo apt install tesseract-ocr`, or `brew install tesseract` |
+| `adb` (platform-tools) | device access | [download](https://developer.android.com/tools/releases/platform-tools), `apt install adb`, `brew install android-platform-tools` |
+| `uv` (or Python 3.11+) | environment and dependencies | [install](https://docs.astral.sh/uv/getting-started/installation/) |
+| `mobilerun` CLI | installing the Portal; `run_task` | `uv tool install mobilerun` |
+| `tesseract` (optional) | OCR on screens with a sparse accessibility tree | [install](https://tesseract-ocr.github.io/tessdoc/Installation.html), `apt install tesseract-ocr`, `brew install tesseract` |
 
-### 1. Get an Android device ready
+Python dependencies (`fastmcp`, `httpx`, `websockets`, `pillow`) are installed with the project.
 
-Pick whichever you have:
-
-| Option | What to do |
-|---|---|
-| **A real phone over USB** | Turn on Developer options and USB debugging ([how](https://developer.android.com/studio/debug/dev-options)), plug it in, and tap **Allow** on the phone. |
-| **The Android Studio emulator** | Create a virtual device with an x86_64 system image ([how](https://developer.android.com/studio/run/managing-avds)) and start it. |
-| **redroid (Android in Docker)** | Install [Docker](https://docs.docker.com/get-docker/), load the kernel modules described in the [redroid docs](https://github.com/remote-android/redroid-doc), then run `docker run -itd --privileged -p 5555:5555 redroid/redroid:12.0.0-latest` and `adb connect localhost:5555`. |
-
-Check it worked:
+You also need an Android device that `adb` can reach: a USB phone
+([enable USB debugging](https://developer.android.com/studio/debug/dev-options)), an x86_64
+[emulator](https://developer.android.com/studio/run/managing-avds), or
+[redroid](https://github.com/remote-android/redroid-doc):
 
 ```bash
-adb devices
+docker run -itd --privileged -p 5555:5555 redroid/redroid:12.0.0-latest
+adb connect localhost:5555
 ```
 
-Your device must be listed with the state `device` (not `unauthorized` or `offline`). Note the name in
-the first column, its **serial**: for example `emulator-5554`, `R58M123ABC` or `localhost:5555`. You
-will use it below as `<serial>`.
-
-### 2. Install the Mobilerun Portal on the device
-
-The Portal is a small Android app (an accessibility service) that lets the server read the screen.
-It comes from [droidrun/mobilerun-portal](https://github.com/droidrun/mobilerun-portal). The
-`mobilerun` command line tool installs and enables it for you:
+### Install
 
 ```bash
-uv tool install mobilerun
+adb devices                                   # note the serial
+
+# Mobilerun Portal: the accessibility service the server reads the screen through
 mobilerun setup -d <serial>
-mobilerun ping -d <serial>
+mobilerun ping -d <serial>                    # Portal is installed and accessible
+
+# Server
+git clone https://github.com/Hi-im-Connect/mobilerun-mcp.git && cd mobilerun-mcp
+uv venv --python 3.13 .venv && uv pip install --python .venv/bin/python -e .
 ```
 
-The last command should print `Portal is installed and accessible. You're good to go!` The setup
-step downloads the APK (about 50 MB) from GitHub, so it can take a few minutes on a slow link.
+On Windows use `.venv\Scripts\python.exe` in place of `.venv/bin/python`.
 
 <details>
-<summary>Installing the Portal by hand instead</summary>
+<summary>Manual Portal install</summary>
 
-1. Download the newest `.apk` from the [Portal releases page](https://github.com/droidrun/mobilerun-portal/releases).
-2. `adb -s <serial> install -r path/to/the.apk`
-3. On the device: **Settings, Accessibility, Mobilerun Portal**, then turn it on.
-   On a device with no screen to tap, this enables it from the command line, but it replaces any other
-   accessibility services you had switched on:
-   `adb -s <serial> shell settings put secure enabled_accessibility_services com.mobilerun.portal/com.mobilerun.portal.service.MobilerunAccessibilityService`
-   and then `adb -s <serial> shell settings put secure accessibility_enabled 1`.
+Download the APK from [Portal releases](https://github.com/droidrun/mobilerun-portal/releases), then:
+
+```bash
+adb -s <serial> install -r <portal.apk>
+# enable it: Settings > Accessibility > Mobilerun Portal, or headless (replaces other enabled services):
+adb -s <serial> shell settings put secure enabled_accessibility_services com.mobilerun.portal/com.mobilerun.portal.service.MobilerunAccessibilityService
+adb -s <serial> shell settings put secure accessibility_enabled 1
+```
 
 </details>
 
-### 3. Install this server
+### Register with your MCP client
 
-```bash
-git clone https://github.com/Hi-im-Connect/mobilerun-mcp.git
-cd mobilerun-mcp
-uv venv --python 3.13 .venv
-uv pip install --python .venv/bin/python -e .
-```
-
-On Windows, use `.venv\Scripts\python.exe` wherever `.venv/bin/python` appears in this README.
-
-### 4. Connect it to your MCP client
-
-Use the full path to this project's Python. `$PWD` below is the folder you just cloned into.
-
-**Claude Code:**
+**Claude Code**
 
 ```bash
 claude mcp add --scope user mobilerun -e MOBILERUN_DEVICE=<serial> -- "$PWD/.venv/bin/python" -m mobilerun_mcp
-claude mcp list        # mobilerun should show as Connected
 ```
 
-**Claude Desktop, Cursor and most other clients** read a JSON file. Add this entry, then restart the app:
+**Claude Desktop, Cursor, others:** add to the client's MCP config and restart it.
 
 ```json
 {
   "mcpServers": {
     "mobilerun": {
-      "command": "/full/path/to/mobilerun-mcp/.venv/bin/python",
+      "command": "/path/to/mobilerun-mcp/.venv/bin/python",
       "args": ["-m", "mobilerun_mcp"],
       "env": { "MOBILERUN_DEVICE": "<serial>" }
     }
@@ -132,44 +107,39 @@ claude mcp list        # mobilerun should show as Connected
 
 | Client | Config file |
 |---|---|
-| Claude Desktop, macOS | `~/Library/Application Support/Claude/claude_desktop_config.json` |
-| Claude Desktop, Windows | `%APPDATA%\Claude\claude_desktop_config.json` |
+| Claude Desktop (macOS) | `~/Library/Application Support/Claude/claude_desktop_config.json` |
+| Claude Desktop (Windows) | `%APPDATA%\Claude\claude_desktop_config.json` |
 | Cursor | `~/.cursor/mcp.json` |
 
-`MOBILERUN_DEVICE` is optional: if it is left out and exactly one device is attached to `adb`, that
-device is used. Every device tool also takes a `device` argument, so one server can drive several.
+Client docs: [Claude Code](https://docs.claude.com/en/docs/claude-code/mcp),
+[Claude Desktop](https://modelcontextprotocol.io/quickstart/user),
+[Cursor](https://docs.cursor.com/context/model-context-protocol).
 
-### 5. Try it
+`MOBILERUN_DEVICE` is optional when exactly one device is attached to `adb`. Every device tool also
+takes a `device` argument, so one server can drive several devices.
 
-Ask your agent in plain words:
+### Usage
 
-- "Take a screenshot of my phone and tell me what is on it."
-- "Open Settings and tell me the Android version."
-- "Open the Clock app and set an alarm for 7:30."
-
-Behind the scenes the agent calls tools such as `perceive_screen`, `launch_app` and `system_intent`,
-and reads what the screen looks like after each step. The first launch of an app can take up to 20
-seconds on a slow device. To call tools yourself and see what each one returns, go to
-[Calling the tools](#calling-the-tools).
+Ask the agent in natural language ("open Settings and read the Android version"), or call tools
+directly. See [Calling the tools](#calling-the-tools) and the [Tool reference](#tool-reference).
 
 ## Troubleshooting
 
-| What you see | Why | What to do |
-|---|---|---|
-| `[device_unreachable] no device selected` | `MOBILERUN_DEVICE` is not set and `adb` sees no device, or more than one | Run `adb devices`, then set `MOBILERUN_DEVICE=<serial>` in the client config |
-| `adb devices` shows `unauthorized` | The phone has not approved this computer | Unlock the phone and tap **Allow** on the USB debugging prompt (tick "Always allow"); if it never appears, run `adb kill-server` and reconnect |
-| `adb devices` shows nothing, or `offline` | Cable, container or network problem | Replug the cable; for a container or remote device run `adb connect <host>:<port>` first and check the device is running |
-| `adb: command not found` | platform-tools is not installed or not on `PATH` | Install it (link above), or point `MOBILERUN_ADB_BIN` at the `adb` binary |
-| `Mobilerun Portal is not enabled as an accessibility service` | The Portal is installed but switched off | Turn it on under **Settings, Accessibility, Mobilerun Portal**, or run step 2 again |
-| `mobilerun setup` stalls after "Found Portal APK" | Google Play Protect is scanning the install and never answers (seen on redroid and emulators with Google Play) | `adb -s <serial> shell settings put global verifier_verify_adb_installs 0` and `adb -s <serial> shell settings put global package_verifier_enable 0`, then run setup again |
-| The client shows no `mobilerun` tools | The client has not reloaded, or the config path or JSON is wrong | Restart the client. To see the real error, run `.venv/bin/python -m mobilerun_mcp` by hand: a healthy server prints a FastMCP banner and then waits for input (press Ctrl+C); a traceback or error message instead is the problem |
-| `[stale_som_id]` | An action changed the screen, so the old numbers are out of date | Normal. Call `perceive_screen` again and use the new numbers |
-| A launch takes a long time | Cold app starts can take 20 to 30 seconds on a slow device | Wait; `launch_app` waits for the app for you |
-| `web_search` returns an error | DuckDuckGo throttled the request | Retry shortly, or set `BRAVE_API_KEY` |
-| Nothing is read from a screen that is mostly images | The screen exposes little to accessibility | Install `tesseract` so `perceive_screen` can add OCR text, or tap by coordinates from the screenshot |
+| Symptom | Fix |
+|---|---|
+| `[device_unreachable] no device selected` | `adb devices`, then set `MOBILERUN_DEVICE=<serial>` |
+| `adb devices` shows `unauthorized` | Accept the USB debugging prompt on the device; if it does not appear, `adb kill-server` and reconnect |
+| `adb devices` empty or `offline` | Replug USB; for a container or remote device run `adb connect <host>:<port>` |
+| `adb: command not found` | Install platform-tools, or set `MOBILERUN_ADB_BIN` |
+| `Mobilerun Portal is not enabled as an accessibility service` | Enable it under Settings > Accessibility, or rerun `mobilerun setup` |
+| `mobilerun setup` stalls after "Found Portal APK" | Play Protect is scanning the install (redroid, emulators with Google Play): `adb -s <serial> shell settings put global verifier_verify_adb_installs 0` and `... package_verifier_enable 0`, then rerun |
+| Client lists no `mobilerun` tools | Restart the client and check the config path. Run `.venv/bin/python -m mobilerun_mcp` by hand: a FastMCP banner followed by waiting is healthy, a traceback is the cause |
+| `[stale_som_id]` | An action changed the screen; call `perceive_screen` again |
+| Slow first launch | Cold starts take 20 to 30 s on slow devices; `launch_app` waits for the app |
+| `web_search` error | DuckDuckGo throttled the request; retry or set `BRAVE_API_KEY` |
+| Sparse text on image-heavy screens | Install `tesseract` for OCR, or tap by coordinates from the screenshot |
 
-Still stuck? [Open an issue](https://github.com/Hi-im-Connect/mobilerun-mcp/issues) with the exact
-message and the output of `adb devices`.
+Issues: [github.com/Hi-im-Connect/mobilerun-mcp/issues](https://github.com/Hi-im-Connect/mobilerun-mcp/issues) (include the error and `adb devices` output).
 
 ## How it works
 
@@ -197,15 +167,14 @@ Details that matter in practice:
 
 ## Calling the tools
 
-Every capability is an ordinary MCP tool: a name plus a JSON `arguments` object. Your MCP client
-makes the call when you describe what you want in words, and you can also invoke a tool by name.
-On the wire a call looks like this:
+Every capability is an MCP tool: a name and a JSON `arguments` object. The client makes the call
+when you describe what you want, or you can invoke a tool by name. On the wire:
 
 ```json
 {"method": "tools/call", "params": {"name": "tap", "arguments": {"som_id": 2}}}
 ```
 
-What holds for every tool:
+For every tool:
 
 - **Optional arguments** can be left out; `null` also means "not given".
 - **`device`** is an optional argument on every tool that touches a device (an adb serial). Leave it
@@ -229,7 +198,7 @@ The `post_action_observation` block tells the agent what the screen looks like a
 
 ### A typical session
 
-Search the Contacts app for "ali". Calls are shown as `tool arguments`; outputs are real.
+Search Contacts for "ali". Calls are written `tool arguments`; outputs are real.
 
 **1. Look at the screen.**
 
@@ -248,8 +217,8 @@ The reply is a JSON object with `foreground_app`, `package`, `activity`, `keyboa
   5 [button] "Create new contact" @(632,1096)
 ```
 
-The number in front of each line is its `som_id`, and `@(x,y)` is where a tap would land. An image
-of the screen with the same numbers drawn on it is returned alongside the JSON.
+The leading number is the `som_id`; `@(x,y)` is the tap point. An annotated screenshot with the same
+numbers is returned alongside the JSON.
 
 **2. Tap the search icon by its number.**
 
@@ -257,9 +226,9 @@ of the screen with the same numbers drawn on it is returned alongside the JSON.
 tap {"som_id": 2}
 ```
 
-The reply has `"ok": true`, and its `post_action_observation` shows `keyboard_visible: true`. The
-numbers are now stale: any action invalidates them, so a later `tap` with `som_id` 2 would fail with
-`stale_som_id` until you call `perceive_screen` again.
+The reply has `"ok": true` and `keyboard_visible: true` in `post_action_observation`. Any action
+invalidates the numbers: reusing `som_id` 2 now fails with `stale_som_id` until `perceive_screen` is
+called again.
 
 **3. Type.**
 
@@ -291,7 +260,7 @@ type_text {"text": "ali"}
 }
 ```
 
-**4. Verify.** Ask the screen instead of assuming.
+**4. Verify.**
 
 ```
 verify_action {"expected": "Ali Omar"}
