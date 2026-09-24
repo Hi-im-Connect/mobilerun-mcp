@@ -1,0 +1,1150 @@
+{
+ "a11y_tree": {
+  "resourceId": "",
+  "className": "android.widget.FrameLayout",
+  "packageName": "com.android.launcher3",
+  "text": "",
+  "contentDescription": "",
+  "hint": "",
+  "stateDescription": "",
+  "tooltipText": "",
+  "paneTitle": "",
+  "error": "",
+  "boundsInScreen": {
+   "left": 0,
+   "top": 0,
+   "right": 720,
+   "bottom": 1280
+  },
+  "boundsInParent": {
+   "left": 0,
+   "top": 0,
+   "right": 720,
+   "bottom": 1280
+  },
+  "isClickable": false,
+  "isLongClickable": false,
+  "isContextClickable": false,
+  "isFocusable": false,
+  "isFocused": false,
+  "isAccessibilityFocused": false,
+  "isSelected": false,
+  "isCheckable": false,
+  "isChecked": false,
+  "isEnabled": true,
+  "isVisibleToUser": true,
+  "isEditable": false,
+  "isPassword": false,
+  "isShowingHintText": false,
+  "isScrollable": false,
+  "isDismissable": false,
+  "isMultiLine": false,
+  "isImportantForAccessibility": true,
+  "isScreenReaderFocusable": false,
+  "isHeading": false,
+  "inputType": 0,
+  "liveRegion": 0,
+  "windowId": 2,
+  "drawingOrder": 0,
+  "maxTextLength": -1,
+  "movementGranularities": 0,
+  "childCount": 6,
+  "actionCount": 4,
+  "actionList": [
+   {
+    "id": 4,
+    "label": "",
+    "name": "SELECT"
+   },
+   {
+    "id": 8,
+    "label": "",
+    "name": "CLEAR_SELECTION"
+   },
+   {
+    "id": 64,
+    "label": "",
+    "name": "UNKNOWN_64"
+   },
+   {
+    "id": 16908342,
+    "label": "",
+    "name": "UNKNOWN_16908342"
+   }
+  ],
+  "children": [
+   {
+    "resourceId": "com.android.launcher3:id/workspace",
+    "className": "android.widget.ScrollView",
+    "packageName": "com.android.launcher3",
+    "text": "",
+    "contentDescription": "",
+    "hint": "",
+    "stateDescription": "",
+    "tooltipText": "",
+    "paneTitle": "",
+    "error": "",
+    "boundsInScreen": {
+     "left": 0,
+     "top": 0,
+     "right": 720,
+     "bottom": 1280
+    },
+    "boundsInParent": {
+     "left": 0,
+     "top": 0,
+     "right": 720,
+     "bottom": 1280
+    },
+    "isClickable": false,
+    "isLongClickable": false,
+    "isContextClickable": false,
+    "isFocusable": false,
+    "isFocused": false,
+    "isAccessibilityFocused": false,
+    "isSelected": false,
+    "isCheckable": false,
+    "isChecked": false,
+    "isEnabled": true,
+    "isVisibleToUser": true,
+    "isEditable": false,
+    "isPassword": false,
+    "isShowingHintText": false,
+    "isScrollable": true,
+    "isDismissable": false,
+    "isMultiLine": false,
+    "isImportantForAccessibility": true,
+    "isScreenReaderFocusable": false,
+    "isHeading": false,
+    "inputType": 0,
+    "liveRegion": 0,
+    "windowId": 2,
+    "drawingOrder": 2,
+    "maxTextLength": -1,
+    "movementGranularities": 0,
+    "childCount": 1,
+    "actionCount": 8,
+    "actionList": [
+     {
+      "id": 4,
+      "label": "",
+      "name": "SELECT"
+     },
+     {
+      "id": 8,
+      "label": "",
+      "name": "CLEAR_SELECTION"
+     },
+     {
+      "id": 64,
+      "label": "",
+      "name": "UNKNOWN_64"
+     },
+     {
+      "id": 4096,
+      "label": "",
+      "name": "SCROLL_FORWARD"
+     },
+     {
+      "id": 8192,
+      "label": "",
+      "name": "SCROLL_BACKWARD"
+     },
+     {
+      "id": 16908342,
+      "label": "",
+      "name": "UNKNOWN_16908342"
+     },
+     {
+      "id": 16908360,
+      "label": "",
+      "name": "UNKNOWN_16908360"
+     },
+     {
+      "id": 16908361,
+      "label": "",
+      "name": "UNKNOWN_16908361"
+     }
+    ],
+    "children": [
+     {
+      "resourceId": "com.android.launcher3:id/qsb_widget",
+      "className": "android.appwidget.AppWidgetHostView",
+      "packageName": "com.android.launcher3",
+      "text": "",
+      "contentDescription": "Search",
+      "hint": "",
+      "stateDescription": "",
+      "tooltipText": "",
+      "paneTitle": "",
+      "error": "",
+      "boundsInScreen": {
+       "left": 28,
+       "top": 64,
+       "right": 692,
+       "bottom": 283
+      },
+      "boundsInParent": {
+       "left": 0,
+       "top": 0,
+       "right": 664,
+       "bottom": 219
+      },
+      "isClickable": false,
+      "isLongClickable": false,
+      "isContextClickable": false,
+      "isFocusable": true,
+      "isFocused": false,
+      "isAccessibilityFocused": false,
+      "isSelected": false,
+      "isCheckable": false,
+      "isChecked": false,
+      "isEnabled": true,
+      "isVisibleToUser": true,
+      "isEditable": false,
+      "isPassword": false,
+      "isShowingHintText": false,
+      "isScrollable": false,
+      "isDismissable": false,
+      "isMultiLine": false,
+      "isImportantForAccessibility": true,
+      "isScreenReaderFocusable": false,
+      "isHeading": false,
+      "inputType": 0,
+      "liveRegion": 0,
+      "windowId": 2,
+      "drawingOrder": 1,
+      "maxTextLength": -1,
+      "movementGranularities": 11,
+      "childCount": 3,
+      "actionCount": 8,
+      "actionList": [
+       {
+        "id": 1,
+        "label": "",
+        "name": "FOCUS"
+       },
+       {
+        "id": 4,
+        "label": "",
+        "name": "SELECT"
+       },
+       {
+        "id": 8,
+        "label": "",
+        "name": "CLEAR_SELECTION"
+       },
+       {
+        "id": 64,
+        "label": "",
+        "name": "UNKNOWN_64"
+       },
+       {
+        "id": 256,
+        "label": "",
+        "name": "UNKNOWN_256"
+       },
+       {
+        "id": 512,
+        "label": "",
+        "name": "UNKNOWN_512"
+       },
+       {
+        "id": 131072,
+        "label": "",
+        "name": "UNKNOWN_131072"
+       },
+       {
+        "id": 16908342,
+        "label": "",
+        "name": "UNKNOWN_16908342"
+       }
+      ],
+      "children": [
+       {
+        "resourceId": "com.android.quicksearchbox:id/search_icon",
+        "className": "android.widget.ImageView",
+        "packageName": "com.android.quicksearchbox",
+        "text": "",
+        "contentDescription": "",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 47,
+         "top": 125,
+         "right": 143,
+         "bottom": 221
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 96,
+         "bottom": 96
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": false,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 2,
+        "drawingOrder": 1,
+        "maxTextLength": -1,
+        "movementGranularities": 0,
+        "childCount": 0,
+        "actionCount": 5,
+        "actionList": [
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.quicksearchbox:id/search_widget_text",
+        "className": "android.widget.TextView",
+        "packageName": "com.android.quicksearchbox",
+        "text": "",
+        "contentDescription": "",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 143,
+         "top": 130,
+         "right": 572,
+         "bottom": 217
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 429,
+         "bottom": 87
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 2,
+        "drawingOrder": 2,
+        "maxTextLength": -1,
+        "movementGranularities": 0,
+        "childCount": 0,
+        "actionCount": 6,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.quicksearchbox:id/search_widget_voice_btn",
+        "className": "android.widget.ImageButton",
+        "packageName": "com.android.quicksearchbox",
+        "text": "",
+        "contentDescription": "",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 572,
+         "top": 118,
+         "right": 672,
+         "bottom": 229
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 100,
+         "bottom": 111
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 2,
+        "drawingOrder": 5,
+        "maxTextLength": -1,
+        "movementGranularities": 0,
+        "childCount": 0,
+        "actionCount": 6,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "resourceId": "",
+    "className": "android.view.View",
+    "packageName": "com.android.launcher3",
+    "text": "",
+    "contentDescription": "Home",
+    "hint": "",
+    "stateDescription": "",
+    "tooltipText": "",
+    "paneTitle": "",
+    "error": "",
+    "boundsInScreen": {
+     "left": 0,
+     "top": 48,
+     "right": 720,
+     "bottom": 1184
+    },
+    "boundsInParent": {
+     "left": 0,
+     "top": 0,
+     "right": 720,
+     "bottom": 1136
+    },
+    "isClickable": false,
+    "isLongClickable": false,
+    "isContextClickable": false,
+    "isFocusable": false,
+    "isFocused": false,
+    "isAccessibilityFocused": false,
+    "isSelected": false,
+    "isCheckable": false,
+    "isChecked": false,
+    "isEnabled": true,
+    "isVisibleToUser": true,
+    "isEditable": false,
+    "isPassword": false,
+    "isShowingHintText": false,
+    "isScrollable": false,
+    "isDismissable": false,
+    "isMultiLine": false,
+    "isImportantForAccessibility": true,
+    "isScreenReaderFocusable": false,
+    "isHeading": false,
+    "inputType": 0,
+    "liveRegion": 0,
+    "windowId": 2,
+    "drawingOrder": 1,
+    "maxTextLength": -1,
+    "movementGranularities": 11,
+    "childCount": 0,
+    "actionCount": 11,
+    "actionList": [
+     {
+      "id": 4,
+      "label": "",
+      "name": "SELECT"
+     },
+     {
+      "id": 8,
+      "label": "",
+      "name": "CLEAR_SELECTION"
+     },
+     {
+      "id": 64,
+      "label": "",
+      "name": "UNKNOWN_64"
+     },
+     {
+      "id": 256,
+      "label": "",
+      "name": "UNKNOWN_256"
+     },
+     {
+      "id": 512,
+      "label": "",
+      "name": "UNKNOWN_512"
+     },
+     {
+      "id": 131072,
+      "label": "",
+      "name": "UNKNOWN_131072"
+     },
+     {
+      "id": 16908342,
+      "label": "",
+      "name": "UNKNOWN_16908342"
+     },
+     {
+      "id": 2131755075,
+      "label": "Apps list",
+      "name": "UNKNOWN_2131755075"
+     },
+     {
+      "id": 2131755238,
+      "label": "Home settings",
+      "name": "UNKNOWN_2131755238"
+     },
+     {
+      "id": 2131755264,
+      "label": "Wallpapers",
+      "name": "UNKNOWN_2131755264"
+     },
+     {
+      "id": 2131755268,
+      "label": "Widgets",
+      "name": "UNKNOWN_2131755268"
+     }
+    ],
+    "children": []
+   },
+   {
+    "resourceId": "",
+    "className": "android.widget.TextView",
+    "packageName": "com.android.launcher3",
+    "text": "Eyecon",
+    "contentDescription": "Eyecon",
+    "hint": "",
+    "stateDescription": "",
+    "tooltipText": "",
+    "paneTitle": "",
+    "error": "",
+    "boundsInScreen": {
+     "left": 28,
+     "top": 1004,
+     "right": 194,
+     "bottom": 1126
+    },
+    "boundsInParent": {
+     "left": 0,
+     "top": 0,
+     "right": 166,
+     "bottom": 122
+    },
+    "isClickable": true,
+    "isLongClickable": true,
+    "isContextClickable": false,
+    "isFocusable": true,
+    "isFocused": false,
+    "isAccessibilityFocused": false,
+    "isSelected": false,
+    "isCheckable": false,
+    "isChecked": false,
+    "isEnabled": true,
+    "isVisibleToUser": true,
+    "isEditable": false,
+    "isPassword": false,
+    "isShowingHintText": false,
+    "isScrollable": false,
+    "isDismissable": false,
+    "isMultiLine": true,
+    "isImportantForAccessibility": true,
+    "isScreenReaderFocusable": false,
+    "isHeading": false,
+    "textSelectionStart": -1,
+    "textSelectionEnd": -1,
+    "inputType": 0,
+    "liveRegion": 0,
+    "windowId": 2,
+    "drawingOrder": 3,
+    "maxTextLength": -1,
+    "movementGranularities": 31,
+    "childCount": 0,
+    "actionCount": 14,
+    "actionList": [
+     {
+      "id": 1,
+      "label": "",
+      "name": "FOCUS"
+     },
+     {
+      "id": 4,
+      "label": "",
+      "name": "SELECT"
+     },
+     {
+      "id": 8,
+      "label": "",
+      "name": "CLEAR_SELECTION"
+     },
+     {
+      "id": 16,
+      "label": "",
+      "name": "CLICK"
+     },
+     {
+      "id": 32,
+      "label": "",
+      "name": "LONG_CLICK"
+     },
+     {
+      "id": 64,
+      "label": "",
+      "name": "UNKNOWN_64"
+     },
+     {
+      "id": 256,
+      "label": "",
+      "name": "UNKNOWN_256"
+     },
+     {
+      "id": 512,
+      "label": "",
+      "name": "UNKNOWN_512"
+     },
+     {
+      "id": 131072,
+      "label": "",
+      "name": "UNKNOWN_131072"
+     },
+     {
+      "id": 16908342,
+      "label": "",
+      "name": "UNKNOWN_16908342"
+     },
+     {
+      "id": 2131296314,
+      "label": "Shortcuts",
+      "name": "UNKNOWN_2131296314"
+     },
+     {
+      "id": 2131296324,
+      "label": "Move item",
+      "name": "UNKNOWN_2131296324"
+     },
+     {
+      "id": 2131296331,
+      "label": "Remove",
+      "name": "UNKNOWN_2131296331"
+     },
+     {
+      "id": 2131296338,
+      "label": "Uninstall",
+      "name": "UNKNOWN_2131296338"
+     }
+    ],
+    "children": []
+   },
+   {
+    "resourceId": "",
+    "className": "android.widget.TextView",
+    "packageName": "com.android.launcher3",
+    "text": "Contacts",
+    "contentDescription": "Contacts",
+    "hint": "",
+    "stateDescription": "",
+    "tooltipText": "",
+    "paneTitle": "",
+    "error": "",
+    "boundsInScreen": {
+     "left": 194,
+     "top": 1004,
+     "right": 360,
+     "bottom": 1126
+    },
+    "boundsInParent": {
+     "left": 0,
+     "top": 0,
+     "right": 166,
+     "bottom": 122
+    },
+    "isClickable": true,
+    "isLongClickable": true,
+    "isContextClickable": false,
+    "isFocusable": true,
+    "isFocused": false,
+    "isAccessibilityFocused": false,
+    "isSelected": false,
+    "isCheckable": false,
+    "isChecked": false,
+    "isEnabled": true,
+    "isVisibleToUser": true,
+    "isEditable": false,
+    "isPassword": false,
+    "isShowingHintText": false,
+    "isScrollable": false,
+    "isDismissable": false,
+    "isMultiLine": true,
+    "isImportantForAccessibility": true,
+    "isScreenReaderFocusable": false,
+    "isHeading": false,
+    "textSelectionStart": -1,
+    "textSelectionEnd": -1,
+    "inputType": 0,
+    "liveRegion": 0,
+    "windowId": 2,
+    "drawingOrder": 4,
+    "maxTextLength": -1,
+    "movementGranularities": 31,
+    "childCount": 0,
+    "actionCount": 13,
+    "actionList": [
+     {
+      "id": 1,
+      "label": "",
+      "name": "FOCUS"
+     },
+     {
+      "id": 4,
+      "label": "",
+      "name": "SELECT"
+     },
+     {
+      "id": 8,
+      "label": "",
+      "name": "CLEAR_SELECTION"
+     },
+     {
+      "id": 16,
+      "label": "",
+      "name": "CLICK"
+     },
+     {
+      "id": 32,
+      "label": "",
+      "name": "LONG_CLICK"
+     },
+     {
+      "id": 64,
+      "label": "",
+      "name": "UNKNOWN_64"
+     },
+     {
+      "id": 256,
+      "label": "",
+      "name": "UNKNOWN_256"
+     },
+     {
+      "id": 512,
+      "label": "",
+      "name": "UNKNOWN_512"
+     },
+     {
+      "id": 131072,
+      "label": "",
+      "name": "UNKNOWN_131072"
+     },
+     {
+      "id": 16908342,
+      "label": "",
+      "name": "UNKNOWN_16908342"
+     },
+     {
+      "id": 2131296314,
+      "label": "Shortcuts",
+      "name": "UNKNOWN_2131296314"
+     },
+     {
+      "id": 2131296324,
+      "label": "Move item",
+      "name": "UNKNOWN_2131296324"
+     },
+     {
+      "id": 2131296331,
+      "label": "Remove",
+      "name": "UNKNOWN_2131296331"
+     }
+    ],
+    "children": []
+   },
+   {
+    "resourceId": "",
+    "className": "android.widget.TextView",
+    "packageName": "com.android.launcher3",
+    "text": "WebView Browser Tester",
+    "contentDescription": "WebView Browser Tester",
+    "hint": "",
+    "stateDescription": "",
+    "tooltipText": "",
+    "paneTitle": "",
+    "error": "",
+    "boundsInScreen": {
+     "left": 360,
+     "top": 1004,
+     "right": 526,
+     "bottom": 1126
+    },
+    "boundsInParent": {
+     "left": 0,
+     "top": 0,
+     "right": 166,
+     "bottom": 122
+    },
+    "isClickable": true,
+    "isLongClickable": true,
+    "isContextClickable": false,
+    "isFocusable": true,
+    "isFocused": false,
+    "isAccessibilityFocused": false,
+    "isSelected": false,
+    "isCheckable": false,
+    "isChecked": false,
+    "isEnabled": true,
+    "isVisibleToUser": true,
+    "isEditable": false,
+    "isPassword": false,
+    "isShowingHintText": false,
+    "isScrollable": false,
+    "isDismissable": false,
+    "isMultiLine": true,
+    "isImportantForAccessibility": true,
+    "isScreenReaderFocusable": false,
+    "isHeading": false,
+    "textSelectionStart": -1,
+    "textSelectionEnd": -1,
+    "inputType": 0,
+    "liveRegion": 0,
+    "windowId": 2,
+    "drawingOrder": 5,
+    "maxTextLength": -1,
+    "movementGranularities": 31,
+    "childCount": 0,
+    "actionCount": 13,
+    "actionList": [
+     {
+      "id": 1,
+      "label": "",
+      "name": "FOCUS"
+     },
+     {
+      "id": 4,
+      "label": "",
+      "name": "SELECT"
+     },
+     {
+      "id": 8,
+      "label": "",
+      "name": "CLEAR_SELECTION"
+     },
+     {
+      "id": 16,
+      "label": "",
+      "name": "CLICK"
+     },
+     {
+      "id": 32,
+      "label": "",
+      "name": "LONG_CLICK"
+     },
+     {
+      "id": 64,
+      "label": "",
+      "name": "UNKNOWN_64"
+     },
+     {
+      "id": 256,
+      "label": "",
+      "name": "UNKNOWN_256"
+     },
+     {
+      "id": 512,
+      "label": "",
+      "name": "UNKNOWN_512"
+     },
+     {
+      "id": 131072,
+      "label": "",
+      "name": "UNKNOWN_131072"
+     },
+     {
+      "id": 16908342,
+      "label": "",
+      "name": "UNKNOWN_16908342"
+     },
+     {
+      "id": 2131296314,
+      "label": "Shortcuts",
+      "name": "UNKNOWN_2131296314"
+     },
+     {
+      "id": 2131296324,
+      "label": "Move item",
+      "name": "UNKNOWN_2131296324"
+     },
+     {
+      "id": 2131296331,
+      "label": "Remove",
+      "name": "UNKNOWN_2131296331"
+     }
+    ],
+    "children": []
+   },
+   {
+    "resourceId": "",
+    "className": "android.widget.TextView",
+    "packageName": "com.android.launcher3",
+    "text": "Play Store",
+    "contentDescription": "Play Store",
+    "hint": "",
+    "stateDescription": "",
+    "tooltipText": "",
+    "paneTitle": "",
+    "error": "",
+    "boundsInScreen": {
+     "left": 526,
+     "top": 1004,
+     "right": 692,
+     "bottom": 1126
+    },
+    "boundsInParent": {
+     "left": 0,
+     "top": 0,
+     "right": 166,
+     "bottom": 122
+    },
+    "isClickable": true,
+    "isLongClickable": true,
+    "isContextClickable": false,
+    "isFocusable": true,
+    "isFocused": false,
+    "isAccessibilityFocused": false,
+    "isSelected": false,
+    "isCheckable": false,
+    "isChecked": false,
+    "isEnabled": true,
+    "isVisibleToUser": true,
+    "isEditable": false,
+    "isPassword": false,
+    "isShowingHintText": false,
+    "isScrollable": false,
+    "isDismissable": false,
+    "isMultiLine": true,
+    "isImportantForAccessibility": true,
+    "isScreenReaderFocusable": false,
+    "isHeading": false,
+    "textSelectionStart": -1,
+    "textSelectionEnd": -1,
+    "inputType": 0,
+    "liveRegion": 0,
+    "windowId": 2,
+    "drawingOrder": 6,
+    "maxTextLength": -1,
+    "movementGranularities": 31,
+    "childCount": 0,
+    "actionCount": 13,
+    "actionList": [
+     {
+      "id": 1,
+      "label": "",
+      "name": "FOCUS"
+     },
+     {
+      "id": 4,
+      "label": "",
+      "name": "SELECT"
+     },
+     {
+      "id": 8,
+      "label": "",
+      "name": "CLEAR_SELECTION"
+     },
+     {
+      "id": 16,
+      "label": "",
+      "name": "CLICK"
+     },
+     {
+      "id": 32,
+      "label": "",
+      "name": "LONG_CLICK"
+     },
+     {
+      "id": 64,
+      "label": "",
+      "name": "UNKNOWN_64"
+     },
+     {
+      "id": 256,
+      "label": "",
+      "name": "UNKNOWN_256"
+     },
+     {
+      "id": 512,
+      "label": "",
+      "name": "UNKNOWN_512"
+     },
+     {
+      "id": 131072,
+      "label": "",
+      "name": "UNKNOWN_131072"
+     },
+     {
+      "id": 16908342,
+      "label": "",
+      "name": "UNKNOWN_16908342"
+     },
+     {
+      "id": 2131296314,
+      "label": "Shortcuts",
+      "name": "UNKNOWN_2131296314"
+     },
+     {
+      "id": 2131296324,
+      "label": "Move item",
+      "name": "UNKNOWN_2131296324"
+     },
+     {
+      "id": 2131296331,
+      "label": "Remove",
+      "name": "UNKNOWN_2131296331"
+     }
+    ],
+    "children": []
+   }
+  ]
+ },
+ "phone_state": {
+  "currentApp": "Quickstep",
+  "packageName": "com.android.launcher3",
+  "activityName": "com.android.launcher3.uioverrides.QuickstepLauncher",
+  "keyboardVisible": false,
+  "isEditable": false,
+  "focusedElement": {
+   "resourceId": ""
+  }
+ },
+ "device_context": {
+  "screen_bounds": {
+   "width": 720,
+   "height": 1280
+  },
+  "filtering_params": {
+   "min_element_size": 5,
+   "overlay_offset": 0
+  },
+  "display_metrics": {
+   "density": 2,
+   "densityDpi": 320,
+   "scaledDensity": 2,
+   "widthPixels": 720,
+   "heightPixels": 1184
+  }
+ }
+}

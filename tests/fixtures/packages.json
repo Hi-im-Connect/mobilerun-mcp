@@ -1,0 +1,121 @@
+[
+ {
+  "packageName": "com.android.calendar",
+  "label": "Calendar",
+  "versionName": "12",
+  "versionCode": 31,
+  "isSystemApp": true
+ },
+ {
+  "packageName": "com.android.contacts",
+  "label": "Contacts",
+  "versionName": "1.7.33",
+  "versionCode": 10733,
+  "isSystemApp": true
+ },
+ {
+  "packageName": "com.android.deskclock",
+  "label": "Clock",
+  "versionName": "12",
+  "versionCode": 31,
+  "isSystemApp": true
+ },
+ {
+  "packageName": "com.android.gallery3d",
+  "label": "Gallery",
+  "versionName": "1.1.40030",
+  "versionCode": 40030,
+  "isSystemApp": true
+ },
+ {
+  "packageName": "com.android.settings",
+  "label": "Settings",
+  "versionName": "12",
+  "versionCode": 31,
+  "isSystemApp": true
+ },
+ {
+  "packageName": "com.android.vending",
+  "label": "Play Store",
+  "versionName": "53.2.23-31 [0] [PR] 980945147",
+  "versionCode": 85322330,
+  "isSystemApp": true
+ },
+ {
+  "packageName": "com.eyecon.global",
+  "label": "Eyecon",
+  "versionName": "4.2026.09.16.1233",
+  "versionCode": 790,
+  "isSystemApp": false
+ },
+ {
+  "packageName": "com.google.android.gm",
+  "label": "Gmail",
+  "versionName": "2026.08.31.977101690.Release",
+  "versionCode": 66003358,
+  "isSystemApp": false
+ },
+ {
+  "packageName": "com.android.documentsui",
+  "label": "Files",
+  "versionName": "12",
+  "versionCode": 31,
+  "isSystemApp": true
+ },
+ {
+  "packageName": "com.android.quicksearchbox",
+  "label": "Search",
+  "versionName": "12",
+  "versionCode": 31,
+  "isSystemApp": true
+ },
+ {
+  "packageName": "com.google.android.googlequicksearchbox",
+  "label": "Google",
+  "versionName": "17.58.16.ve.x86_64",
+  "versionCode": 301806948,
+  "isSystemApp": true
+ },
+ {
+  "packageName": "org.chromium.webview_shell",
+  "label": "WebView Browser Tester",
+  "versionName": "1.0",
+  "versionCode": 1,
+  "isSystemApp": true
+ },
+ {
+  "packageName": "com.facebook.katana",
+  "label": "Facebook",
+  "versionName": "579.0.0.52.74",
+  "versionCode": 474818424,
+  "isSystemApp": false
+ },
+ {
+  "packageName": "com.instagram.android",
+  "label": "Instagram",
+  "versionName": "447.0.0.55.81",
+  "versionCode": 385311929,
+  "isSystemApp": false
+ },
+ {
+  "packageName": "com.mobilerun.portal",
+  "label": "Mobilerun Portal",
+  "versionName": "0.7.25",
+  "versionCode": 539,
+  "isSystemApp": false
+ },
+ {
+  "packageName": "com.twitter.android",
+  "label": "X",
+  "versionName": "12.28.0-prod.01",
+  "versionCode": 312280001,
+  "isSystemApp": false
+ },
+ {
+  "packageName": "com.zhiliaoapp.musically.go",
+  "label": "TikTok Lite",
+  "versionName": "46.9.1",
+  "versionCode": 460901,
+  "isSystemApp": false
+ }
+]

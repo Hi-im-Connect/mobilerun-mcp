@@ -1,0 +1,2553 @@
+{
+ "a11y_tree": {
+  "resourceId": "",
+  "className": "android.widget.FrameLayout",
+  "packageName": "com.android.deskclock",
+  "text": "",
+  "contentDescription": "",
+  "hint": "",
+  "stateDescription": "",
+  "tooltipText": "",
+  "paneTitle": "",
+  "error": "",
+  "boundsInScreen": {
+   "left": 0,
+   "top": 0,
+   "right": 720,
+   "bottom": 1280
+  },
+  "boundsInParent": {
+   "left": 0,
+   "top": 0,
+   "right": 720,
+   "bottom": 1280
+  },
+  "isClickable": false,
+  "isLongClickable": false,
+  "isContextClickable": false,
+  "isFocusable": false,
+  "isFocused": false,
+  "isAccessibilityFocused": false,
+  "isSelected": false,
+  "isCheckable": false,
+  "isChecked": false,
+  "isEnabled": true,
+  "isVisibleToUser": true,
+  "isEditable": false,
+  "isPassword": false,
+  "isShowingHintText": false,
+  "isScrollable": false,
+  "isDismissable": false,
+  "isMultiLine": false,
+  "isImportantForAccessibility": true,
+  "isScreenReaderFocusable": false,
+  "isHeading": false,
+  "inputType": 0,
+  "liveRegion": 0,
+  "windowId": 97,
+  "drawingOrder": 0,
+  "maxTextLength": -1,
+  "movementGranularities": 0,
+  "childCount": 1,
+  "actionCount": 4,
+  "actionList": [
+   {
+    "id": 4,
+    "label": "",
+    "name": "SELECT"
+   },
+   {
+    "id": 8,
+    "label": "",
+    "name": "CLEAR_SELECTION"
+   },
+   {
+    "id": 64,
+    "label": "",
+    "name": "UNKNOWN_64"
+   },
+   {
+    "id": 16908342,
+    "label": "",
+    "name": "UNKNOWN_16908342"
+   }
+  ],
+  "children": [
+   {
+    "resourceId": "com.android.deskclock:id/content",
+    "className": "android.view.ViewGroup",
+    "packageName": "com.android.deskclock",
+    "text": "",
+    "contentDescription": "",
+    "hint": "",
+    "stateDescription": "",
+    "tooltipText": "",
+    "paneTitle": "",
+    "error": "",
+    "boundsInScreen": {
+     "left": 0,
+     "top": 0,
+     "right": 720,
+     "bottom": 1280
+    },
+    "boundsInParent": {
+     "left": 0,
+     "top": 0,
+     "right": 720,
+     "bottom": 1280
+    },
+    "isClickable": false,
+    "isLongClickable": false,
+    "isContextClickable": false,
+    "isFocusable": false,
+    "isFocused": false,
+    "isAccessibilityFocused": false,
+    "isSelected": false,
+    "isCheckable": false,
+    "isChecked": false,
+    "isEnabled": true,
+    "isVisibleToUser": true,
+    "isEditable": false,
+    "isPassword": false,
+    "isShowingHintText": false,
+    "isScrollable": false,
+    "isDismissable": false,
+    "isMultiLine": false,
+    "isImportantForAccessibility": true,
+    "isScreenReaderFocusable": false,
+    "isHeading": false,
+    "inputType": 0,
+    "liveRegion": 0,
+    "windowId": 97,
+    "drawingOrder": 1,
+    "maxTextLength": -1,
+    "movementGranularities": 0,
+    "childCount": 18,
+    "actionCount": 4,
+    "actionList": [
+     {
+      "id": 4,
+      "label": "",
+      "name": "SELECT"
+     },
+     {
+      "id": 8,
+      "label": "",
+      "name": "CLEAR_SELECTION"
+     },
+     {
+      "id": 64,
+      "label": "",
+      "name": "UNKNOWN_64"
+     },
+     {
+      "id": 16908342,
+      "label": "",
+      "name": "UNKNOWN_16908342"
+     }
+    ],
+    "children": [
+     {
+      "resourceId": "com.android.deskclock:id/tabs",
+      "className": "android.widget.HorizontalScrollView",
+      "packageName": "com.android.deskclock",
+      "text": "",
+      "contentDescription": "",
+      "hint": "",
+      "stateDescription": "",
+      "tooltipText": "",
+      "paneTitle": "",
+      "error": "",
+      "boundsInScreen": {
+       "left": 0,
+       "top": 48,
+       "right": 640,
+       "bottom": 192
+      },
+      "boundsInParent": {
+       "left": 0,
+       "top": 0,
+       "right": 640,
+       "bottom": 144
+      },
+      "isClickable": false,
+      "isLongClickable": false,
+      "isContextClickable": false,
+      "isFocusable": true,
+      "isFocused": false,
+      "isAccessibilityFocused": false,
+      "isSelected": false,
+      "isCheckable": false,
+      "isChecked": false,
+      "isEnabled": true,
+      "isVisibleToUser": true,
+      "isEditable": false,
+      "isPassword": false,
+      "isShowingHintText": false,
+      "isScrollable": false,
+      "isDismissable": false,
+      "isMultiLine": false,
+      "isImportantForAccessibility": true,
+      "isScreenReaderFocusable": false,
+      "isHeading": false,
+      "inputType": 0,
+      "liveRegion": 0,
+      "windowId": 97,
+      "drawingOrder": 1,
+      "maxTextLength": -1,
+      "movementGranularities": 0,
+      "childCount": 4,
+      "actionCount": 5,
+      "collectionInfo": {
+       "rowCount": 1,
+       "columnCount": 4,
+       "isHierarchical": false,
+       "selectionMode": 1
+      },
+      "actionList": [
+       {
+        "id": 1,
+        "label": "",
+        "name": "FOCUS"
+       },
+       {
+        "id": 4,
+        "label": "",
+        "name": "SELECT"
+       },
+       {
+        "id": 8,
+        "label": "",
+        "name": "CLEAR_SELECTION"
+       },
+       {
+        "id": 64,
+        "label": "",
+        "name": "UNKNOWN_64"
+       },
+       {
+        "id": 16908342,
+        "label": "",
+        "name": "UNKNOWN_16908342"
+       }
+      ],
+      "children": [
+       {
+        "resourceId": "",
+        "className": "android.widget.LinearLayout",
+        "packageName": "com.android.deskclock",
+        "text": "",
+        "contentDescription": "Alarm",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "Alarm",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 0,
+         "top": 48,
+         "right": 160,
+         "bottom": 192
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 160,
+         "bottom": 144
+        },
+        "isClickable": false,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": true,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 1,
+        "maxTextLength": -1,
+        "movementGranularities": 11,
+        "childCount": 1,
+        "actionCount": 9,
+        "collectionItemInfo": {
+         "rowIndex": 0,
+         "rowSpan": 1,
+         "columnIndex": 0,
+         "columnSpan": 1,
+         "isHeading": false,
+         "isSelected": true
+        },
+        "extras": {
+         "AccessibilityNodeInfo.roleDescription": "Tab"
+        },
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         },
+         {
+          "id": 16908356,
+          "label": "",
+          "name": "UNKNOWN_16908356"
+         }
+        ],
+        "children": [
+         {
+          "resourceId": "android:id/text1",
+          "className": "android.widget.TextView",
+          "packageName": "com.android.deskclock",
+          "text": "ALARM",
+          "contentDescription": "",
+          "hint": "",
+          "stateDescription": "",
+          "tooltipText": "",
+          "paneTitle": "",
+          "error": "",
+          "boundsInScreen": {
+           "left": 39,
+           "top": 72,
+           "right": 121,
+           "bottom": 168
+          },
+          "boundsInParent": {
+           "left": 524247,
+           "top": 0,
+           "right": 524329,
+           "bottom": 96
+          },
+          "isClickable": false,
+          "isLongClickable": false,
+          "isContextClickable": false,
+          "isFocusable": false,
+          "isFocused": false,
+          "isAccessibilityFocused": false,
+          "isSelected": true,
+          "isCheckable": false,
+          "isChecked": false,
+          "isEnabled": true,
+          "isVisibleToUser": true,
+          "isEditable": false,
+          "isPassword": false,
+          "isShowingHintText": false,
+          "isScrollable": false,
+          "isDismissable": false,
+          "isMultiLine": false,
+          "isImportantForAccessibility": true,
+          "isScreenReaderFocusable": false,
+          "isHeading": false,
+          "textSelectionStart": -1,
+          "textSelectionEnd": -1,
+          "inputType": 0,
+          "liveRegion": 0,
+          "windowId": 97,
+          "drawingOrder": 2,
+          "maxTextLength": -1,
+          "movementGranularities": 31,
+          "childCount": 0,
+          "actionCount": 7,
+          "actionList": [
+           {
+            "id": 4,
+            "label": "",
+            "name": "SELECT"
+           },
+           {
+            "id": 8,
+            "label": "",
+            "name": "CLEAR_SELECTION"
+           },
+           {
+            "id": 64,
+            "label": "",
+            "name": "UNKNOWN_64"
+           },
+           {
+            "id": 256,
+            "label": "",
+            "name": "UNKNOWN_256"
+           },
+           {
+            "id": 512,
+            "label": "",
+            "name": "UNKNOWN_512"
+           },
+           {
+            "id": 131072,
+            "label": "",
+            "name": "UNKNOWN_131072"
+           },
+           {
+            "id": 16908342,
+            "label": "",
+            "name": "UNKNOWN_16908342"
+           }
+          ],
+          "children": []
+         }
+        ]
+       },
+       {
+        "resourceId": "",
+        "className": "android.widget.LinearLayout",
+        "packageName": "com.android.deskclock",
+        "text": "",
+        "contentDescription": "Clock",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "Clock",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 160,
+         "top": 48,
+         "right": 320,
+         "bottom": 192
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 160,
+         "bottom": 144
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 2,
+        "maxTextLength": -1,
+        "movementGranularities": 11,
+        "childCount": 1,
+        "actionCount": 10,
+        "collectionItemInfo": {
+         "rowIndex": 0,
+         "rowSpan": 1,
+         "columnIndex": 1,
+         "columnSpan": 1,
+         "isHeading": false,
+         "isSelected": false
+        },
+        "extras": {
+         "AccessibilityNodeInfo.roleDescription": "Tab"
+        },
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         },
+         {
+          "id": 16908356,
+          "label": "",
+          "name": "UNKNOWN_16908356"
+         }
+        ],
+        "children": [
+         {
+          "resourceId": "android:id/text1",
+          "className": "android.widget.TextView",
+          "packageName": "com.android.deskclock",
+          "text": "CLOCK",
+          "contentDescription": "",
+          "hint": "",
+          "stateDescription": "",
+          "tooltipText": "",
+          "paneTitle": "",
+          "error": "",
+          "boundsInScreen": {
+           "left": 201,
+           "top": 72,
+           "right": 278,
+           "bottom": 168
+          },
+          "boundsInParent": {
+           "left": 524249,
+           "top": 0,
+           "right": 524326,
+           "bottom": 96
+          },
+          "isClickable": false,
+          "isLongClickable": false,
+          "isContextClickable": false,
+          "isFocusable": false,
+          "isFocused": false,
+          "isAccessibilityFocused": false,
+          "isSelected": false,
+          "isCheckable": false,
+          "isChecked": false,
+          "isEnabled": true,
+          "isVisibleToUser": true,
+          "isEditable": false,
+          "isPassword": false,
+          "isShowingHintText": false,
+          "isScrollable": false,
+          "isDismissable": false,
+          "isMultiLine": false,
+          "isImportantForAccessibility": true,
+          "isScreenReaderFocusable": false,
+          "isHeading": false,
+          "textSelectionStart": -1,
+          "textSelectionEnd": -1,
+          "inputType": 0,
+          "liveRegion": 0,
+          "windowId": 97,
+          "drawingOrder": 2,
+          "maxTextLength": -1,
+          "movementGranularities": 31,
+          "childCount": 0,
+          "actionCount": 7,
+          "actionList": [
+           {
+            "id": 4,
+            "label": "",
+            "name": "SELECT"
+           },
+           {
+            "id": 8,
+            "label": "",
+            "name": "CLEAR_SELECTION"
+           },
+           {
+            "id": 64,
+            "label": "",
+            "name": "UNKNOWN_64"
+           },
+           {
+            "id": 256,
+            "label": "",
+            "name": "UNKNOWN_256"
+           },
+           {
+            "id": 512,
+            "label": "",
+            "name": "UNKNOWN_512"
+           },
+           {
+            "id": 131072,
+            "label": "",
+            "name": "UNKNOWN_131072"
+           },
+           {
+            "id": 16908342,
+            "label": "",
+            "name": "UNKNOWN_16908342"
+           }
+          ],
+          "children": []
+         }
+        ]
+       },
+       {
+        "resourceId": "",
+        "className": "android.widget.LinearLayout",
+        "packageName": "com.android.deskclock",
+        "text": "",
+        "contentDescription": "Timer",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "Timer",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 320,
+         "top": 48,
+         "right": 480,
+         "bottom": 192
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 160,
+         "bottom": 144
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 3,
+        "maxTextLength": -1,
+        "movementGranularities": 11,
+        "childCount": 1,
+        "actionCount": 10,
+        "collectionItemInfo": {
+         "rowIndex": 0,
+         "rowSpan": 1,
+         "columnIndex": 2,
+         "columnSpan": 1,
+         "isHeading": false,
+         "isSelected": false
+        },
+        "extras": {
+         "AccessibilityNodeInfo.roleDescription": "Tab"
+        },
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         },
+         {
+          "id": 16908356,
+          "label": "",
+          "name": "UNKNOWN_16908356"
+         }
+        ],
+        "children": [
+         {
+          "resourceId": "android:id/text1",
+          "className": "android.widget.TextView",
+          "packageName": "com.android.deskclock",
+          "text": "TIMER",
+          "contentDescription": "",
+          "hint": "",
+          "stateDescription": "",
+          "tooltipText": "",
+          "paneTitle": "",
+          "error": "",
+          "boundsInScreen": {
+           "left": 364,
+           "top": 72,
+           "right": 436,
+           "bottom": 168
+          },
+          "boundsInParent": {
+           "left": 524252,
+           "top": 0,
+           "right": 524324,
+           "bottom": 96
+          },
+          "isClickable": false,
+          "isLongClickable": false,
+          "isContextClickable": false,
+          "isFocusable": false,
+          "isFocused": false,
+          "isAccessibilityFocused": false,
+          "isSelected": false,
+          "isCheckable": false,
+          "isChecked": false,
+          "isEnabled": true,
+          "isVisibleToUser": true,
+          "isEditable": false,
+          "isPassword": false,
+          "isShowingHintText": false,
+          "isScrollable": false,
+          "isDismissable": false,
+          "isMultiLine": false,
+          "isImportantForAccessibility": true,
+          "isScreenReaderFocusable": false,
+          "isHeading": false,
+          "textSelectionStart": -1,
+          "textSelectionEnd": -1,
+          "inputType": 0,
+          "liveRegion": 0,
+          "windowId": 97,
+          "drawingOrder": 2,
+          "maxTextLength": -1,
+          "movementGranularities": 31,
+          "childCount": 0,
+          "actionCount": 7,
+          "actionList": [
+           {
+            "id": 4,
+            "label": "",
+            "name": "SELECT"
+           },
+           {
+            "id": 8,
+            "label": "",
+            "name": "CLEAR_SELECTION"
+           },
+           {
+            "id": 64,
+            "label": "",
+            "name": "UNKNOWN_64"
+           },
+           {
+            "id": 256,
+            "label": "",
+            "name": "UNKNOWN_256"
+           },
+           {
+            "id": 512,
+            "label": "",
+            "name": "UNKNOWN_512"
+           },
+           {
+            "id": 131072,
+            "label": "",
+            "name": "UNKNOWN_131072"
+           },
+           {
+            "id": 16908342,
+            "label": "",
+            "name": "UNKNOWN_16908342"
+           }
+          ],
+          "children": []
+         }
+        ]
+       },
+       {
+        "resourceId": "",
+        "className": "android.widget.LinearLayout",
+        "packageName": "com.android.deskclock",
+        "text": "",
+        "contentDescription": "Stopwatch",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "Stopwatch",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 480,
+         "top": 48,
+         "right": 640,
+         "bottom": 192
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 160,
+         "bottom": 144
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 4,
+        "maxTextLength": -1,
+        "movementGranularities": 11,
+        "childCount": 1,
+        "actionCount": 10,
+        "collectionItemInfo": {
+         "rowIndex": 0,
+         "rowSpan": 1,
+         "columnIndex": 3,
+         "columnSpan": 1,
+         "isHeading": false,
+         "isSelected": false
+        },
+        "extras": {
+         "AccessibilityNodeInfo.roleDescription": "Tab"
+        },
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         },
+         {
+          "id": 16908356,
+          "label": "",
+          "name": "UNKNOWN_16908356"
+         }
+        ],
+        "children": [
+         {
+          "resourceId": "android:id/text1",
+          "className": "android.widget.TextView",
+          "packageName": "com.android.deskclock",
+          "text": "STOPWATCH",
+          "contentDescription": "",
+          "hint": "",
+          "stateDescription": "",
+          "tooltipText": "",
+          "paneTitle": "",
+          "error": "",
+          "boundsInScreen": {
+           "left": 487,
+           "top": 72,
+           "right": 632,
+           "bottom": 168
+          },
+          "boundsInParent": {
+           "left": 524215,
+           "top": 0,
+           "right": 524360,
+           "bottom": 96
+          },
+          "isClickable": false,
+          "isLongClickable": false,
+          "isContextClickable": false,
+          "isFocusable": false,
+          "isFocused": false,
+          "isAccessibilityFocused": false,
+          "isSelected": false,
+          "isCheckable": false,
+          "isChecked": false,
+          "isEnabled": true,
+          "isVisibleToUser": true,
+          "isEditable": false,
+          "isPassword": false,
+          "isShowingHintText": false,
+          "isScrollable": false,
+          "isDismissable": false,
+          "isMultiLine": false,
+          "isImportantForAccessibility": true,
+          "isScreenReaderFocusable": false,
+          "isHeading": false,
+          "textSelectionStart": -1,
+          "textSelectionEnd": -1,
+          "inputType": 0,
+          "liveRegion": 0,
+          "windowId": 97,
+          "drawingOrder": 2,
+          "maxTextLength": -1,
+          "movementGranularities": 31,
+          "childCount": 0,
+          "actionCount": 7,
+          "actionList": [
+           {
+            "id": 4,
+            "label": "",
+            "name": "SELECT"
+           },
+           {
+            "id": 8,
+            "label": "",
+            "name": "CLEAR_SELECTION"
+           },
+           {
+            "id": 64,
+            "label": "",
+            "name": "UNKNOWN_64"
+           },
+           {
+            "id": 256,
+            "label": "",
+            "name": "UNKNOWN_256"
+           },
+           {
+            "id": 512,
+            "label": "",
+            "name": "UNKNOWN_512"
+           },
+           {
+            "id": 131072,
+            "label": "",
+            "name": "UNKNOWN_131072"
+           },
+           {
+            "id": 16908342,
+            "label": "",
+            "name": "UNKNOWN_16908342"
+           }
+          ],
+          "children": []
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "resourceId": "",
+      "className": "android.widget.ImageView",
+      "packageName": "com.android.deskclock",
+      "text": "",
+      "contentDescription": "More options",
+      "hint": "",
+      "stateDescription": "",
+      "tooltipText": "More options",
+      "paneTitle": "",
+      "error": "",
+      "boundsInScreen": {
+       "left": 640,
+       "top": 56,
+       "right": 720,
+       "bottom": 152
+      },
+      "boundsInParent": {
+       "left": 0,
+       "top": 0,
+       "right": 80,
+       "bottom": 96
+      },
+      "isClickable": true,
+      "isLongClickable": true,
+      "isContextClickable": false,
+      "isFocusable": true,
+      "isFocused": false,
+      "isAccessibilityFocused": false,
+      "isSelected": false,
+      "isCheckable": false,
+      "isChecked": false,
+      "isEnabled": true,
+      "isVisibleToUser": true,
+      "isEditable": false,
+      "isPassword": false,
+      "isShowingHintText": false,
+      "isScrollable": false,
+      "isDismissable": false,
+      "isMultiLine": false,
+      "isImportantForAccessibility": true,
+      "isScreenReaderFocusable": false,
+      "isHeading": false,
+      "inputType": 0,
+      "liveRegion": 0,
+      "windowId": 97,
+      "drawingOrder": 2,
+      "maxTextLength": -1,
+      "movementGranularities": 11,
+      "childCount": 0,
+      "actionCount": 11,
+      "actionList": [
+       {
+        "id": 1,
+        "label": "",
+        "name": "FOCUS"
+       },
+       {
+        "id": 4,
+        "label": "",
+        "name": "SELECT"
+       },
+       {
+        "id": 8,
+        "label": "",
+        "name": "CLEAR_SELECTION"
+       },
+       {
+        "id": 16,
+        "label": "",
+        "name": "CLICK"
+       },
+       {
+        "id": 32,
+        "label": "",
+        "name": "LONG_CLICK"
+       },
+       {
+        "id": 64,
+        "label": "",
+        "name": "UNKNOWN_64"
+       },
+       {
+        "id": 256,
+        "label": "",
+        "name": "UNKNOWN_256"
+       },
+       {
+        "id": 512,
+        "label": "",
+        "name": "UNKNOWN_512"
+       },
+       {
+        "id": 131072,
+        "label": "",
+        "name": "UNKNOWN_131072"
+       },
+       {
+        "id": 16908342,
+        "label": "",
+        "name": "UNKNOWN_16908342"
+       },
+       {
+        "id": 16908356,
+        "label": "",
+        "name": "UNKNOWN_16908356"
+       }
+      ],
+      "children": []
+     },
+     {
+      "resourceId": "com.android.deskclock:id/alarms_recycler_view",
+      "className": "androidx.recyclerview.widget.RecyclerView",
+      "packageName": "com.android.deskclock",
+      "text": "",
+      "contentDescription": "",
+      "hint": "",
+      "stateDescription": "",
+      "tooltipText": "",
+      "paneTitle": "",
+      "error": "",
+      "boundsInScreen": {
+       "left": 0,
+       "top": 194,
+       "right": 720,
+       "bottom": 1184
+      },
+      "boundsInParent": {
+       "left": 0,
+       "top": 0,
+       "right": 720,
+       "bottom": 990
+      },
+      "isClickable": false,
+      "isLongClickable": false,
+      "isContextClickable": false,
+      "isFocusable": true,
+      "isFocused": false,
+      "isAccessibilityFocused": false,
+      "isSelected": false,
+      "isCheckable": false,
+      "isChecked": false,
+      "isEnabled": true,
+      "isVisibleToUser": true,
+      "isEditable": false,
+      "isPassword": false,
+      "isShowingHintText": false,
+      "isScrollable": true,
+      "isDismissable": false,
+      "isMultiLine": false,
+      "isImportantForAccessibility": true,
+      "isScreenReaderFocusable": false,
+      "isHeading": false,
+      "inputType": 0,
+      "liveRegion": 0,
+      "windowId": 97,
+      "drawingOrder": 3,
+      "maxTextLength": -1,
+      "movementGranularities": 0,
+      "childCount": 12,
+      "actionCount": 6,
+      "collectionInfo": {
+       "rowCount": -1,
+       "columnCount": -1,
+       "isHierarchical": false,
+       "selectionMode": 0
+      },
+      "actionList": [
+       {
+        "id": 1,
+        "label": "",
+        "name": "FOCUS"
+       },
+       {
+        "id": 4,
+        "label": "",
+        "name": "SELECT"
+       },
+       {
+        "id": 8,
+        "label": "",
+        "name": "CLEAR_SELECTION"
+       },
+       {
+        "id": 64,
+        "label": "",
+        "name": "UNKNOWN_64"
+       },
+       {
+        "id": 4096,
+        "label": "",
+        "name": "SCROLL_FORWARD"
+       },
+       {
+        "id": 16908342,
+        "label": "",
+        "name": "UNKNOWN_16908342"
+       }
+      ],
+      "children": [
+       {
+        "resourceId": "com.android.deskclock:id/digital_clock",
+        "className": "android.widget.TextView",
+        "packageName": "com.android.deskclock",
+        "text": "6:45\u200aAM",
+        "contentDescription": "6:45\u200aAM",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 32,
+         "top": 218,
+         "right": 304,
+         "bottom": 368
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 272,
+         "bottom": 150
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": true,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "textSelectionStart": -1,
+        "textSelectionEnd": -1,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 1,
+        "maxTextLength": -1,
+        "movementGranularities": 31,
+        "childCount": 0,
+        "actionCount": 9,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.deskclock:id/onoff",
+        "className": "android.widget.Switch",
+        "packageName": "com.android.deskclock",
+        "text": "",
+        "contentDescription": "",
+        "hint": "",
+        "stateDescription": "OFF",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 592,
+         "top": 245,
+         "right": 688,
+         "bottom": 341
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 96,
+         "bottom": 96
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": true,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": true,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 2,
+        "maxTextLength": -1,
+        "movementGranularities": 0,
+        "childCount": 0,
+        "actionCount": 6,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.deskclock:id/upcoming_instance_label",
+        "className": "android.widget.TextView",
+        "packageName": "com.android.deskclock",
+        "text": "Tomorrow",
+        "contentDescription": "",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 32,
+         "top": 397,
+         "right": 176,
+         "bottom": 435
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 144,
+         "bottom": 38
+        },
+        "isClickable": false,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "textSelectionStart": -1,
+        "textSelectionEnd": -1,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 5,
+        "maxTextLength": -1,
+        "movementGranularities": 31,
+        "childCount": 0,
+        "actionCount": 8,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.deskclock:id/arrow",
+        "className": "android.widget.ImageButton",
+        "packageName": "com.android.deskclock",
+        "text": "",
+        "contentDescription": "Expand alarm",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 592,
+         "top": 368,
+         "right": 688,
+         "bottom": 464
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 96,
+         "bottom": 96
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 7,
+        "maxTextLength": -1,
+        "movementGranularities": 11,
+        "childCount": 0,
+        "actionCount": 9,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.deskclock:id/digital_clock",
+        "className": "android.widget.TextView",
+        "packageName": "com.android.deskclock",
+        "text": "8:30\u200aAM",
+        "contentDescription": "8:30\u200aAM",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 32,
+         "top": 490,
+         "right": 304,
+         "bottom": 640
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 272,
+         "bottom": 150
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": true,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "textSelectionStart": -1,
+        "textSelectionEnd": -1,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 8,
+        "maxTextLength": -1,
+        "movementGranularities": 31,
+        "childCount": 0,
+        "actionCount": 9,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.deskclock:id/onoff",
+        "className": "android.widget.Switch",
+        "packageName": "com.android.deskclock",
+        "text": "",
+        "contentDescription": "",
+        "hint": "",
+        "stateDescription": "OFF",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 592,
+         "top": 517,
+         "right": 688,
+         "bottom": 613
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 96,
+         "bottom": 96
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": true,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": true,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 9,
+        "maxTextLength": -1,
+        "movementGranularities": 0,
+        "childCount": 0,
+        "actionCount": 6,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.deskclock:id/days_of_week",
+        "className": "android.widget.TextView",
+        "packageName": "com.android.deskclock",
+        "text": "Mon, Tue, Wed, Thu, Fri",
+        "contentDescription": "Monday, Tuesday, Wednesday, Thursday, Friday",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 32,
+         "top": 669,
+         "right": 340,
+         "bottom": 707
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 308,
+         "bottom": 38
+        },
+        "isClickable": false,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": true,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "textSelectionStart": -1,
+        "textSelectionEnd": -1,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 11,
+        "maxTextLength": -1,
+        "movementGranularities": 31,
+        "childCount": 0,
+        "actionCount": 8,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.deskclock:id/arrow",
+        "className": "android.widget.ImageButton",
+        "packageName": "com.android.deskclock",
+        "text": "",
+        "contentDescription": "Expand alarm",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 592,
+         "top": 640,
+         "right": 688,
+         "bottom": 736
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 96,
+         "bottom": 96
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 14,
+        "maxTextLength": -1,
+        "movementGranularities": 11,
+        "childCount": 0,
+        "actionCount": 9,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.deskclock:id/digital_clock",
+        "className": "android.widget.TextView",
+        "packageName": "com.android.deskclock",
+        "text": "9:00\u200aAM",
+        "contentDescription": "9:00\u200aAM",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 32,
+         "top": 762,
+         "right": 304,
+         "bottom": 912
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 272,
+         "bottom": 150
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": true,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "textSelectionStart": -1,
+        "textSelectionEnd": -1,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 15,
+        "maxTextLength": -1,
+        "movementGranularities": 31,
+        "childCount": 0,
+        "actionCount": 9,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.deskclock:id/onoff",
+        "className": "android.widget.Switch",
+        "packageName": "com.android.deskclock",
+        "text": "",
+        "contentDescription": "",
+        "hint": "",
+        "stateDescription": "OFF",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 592,
+         "top": 789,
+         "right": 688,
+         "bottom": 885
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 96,
+         "bottom": 96
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": true,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": true,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 16,
+        "maxTextLength": -1,
+        "movementGranularities": 0,
+        "childCount": 0,
+        "actionCount": 6,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.deskclock:id/days_of_week",
+        "className": "android.widget.TextView",
+        "packageName": "com.android.deskclock",
+        "text": "Sun, Sat",
+        "contentDescription": "Sunday, Saturday",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 32,
+         "top": 941,
+         "right": 151,
+         "bottom": 979
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 119,
+         "bottom": 38
+        },
+        "isClickable": false,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": true,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "textSelectionStart": -1,
+        "textSelectionEnd": -1,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 18,
+        "maxTextLength": -1,
+        "movementGranularities": 31,
+        "childCount": 0,
+        "actionCount": 8,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.deskclock:id/arrow",
+        "className": "android.widget.ImageButton",
+        "packageName": "com.android.deskclock",
+        "text": "",
+        "contentDescription": "Expand alarm",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 592,
+         "top": 912,
+         "right": 688,
+         "bottom": 1008
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 96,
+         "bottom": 96
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 97,
+        "drawingOrder": 21,
+        "maxTextLength": -1,
+        "movementGranularities": 11,
+        "childCount": 0,
+        "actionCount": 9,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       }
+      ]
+     },
+     {
+      "resourceId": "com.android.deskclock:id/fab",
+      "className": "android.widget.ImageButton",
+      "packageName": "com.android.deskclock",
+      "text": "",
+      "contentDescription": "Add alarm",
+      "hint": "",
+      "stateDescription": "",
+      "tooltipText": "",
+      "paneTitle": "",
+      "error": "",
+      "boundsInScreen": {
+       "left": 304,
+       "top": 1040,
+       "right": 416,
+       "bottom": 1152
+      },
+      "boundsInParent": {
+       "left": 0,
+       "top": 0,
+       "right": 112,
+       "bottom": 112
+      },
+      "isClickable": true,
+      "isLongClickable": false,
+      "isContextClickable": false,
+      "isFocusable": true,
+      "isFocused": false,
+      "isAccessibilityFocused": false,
+      "isSelected": false,
+      "isCheckable": false,
+      "isChecked": false,
+      "isEnabled": true,
+      "isVisibleToUser": true,
+      "isEditable": false,
+      "isPassword": false,
+      "isShowingHintText": false,
+      "isScrollable": false,
+      "isDismissable": false,
+      "isMultiLine": false,
+      "isImportantForAccessibility": true,
+      "isScreenReaderFocusable": false,
+      "isHeading": false,
+      "inputType": 0,
+      "liveRegion": 0,
+      "windowId": 97,
+      "drawingOrder": 23,
+      "maxTextLength": -1,
+      "movementGranularities": 11,
+      "childCount": 0,
+      "actionCount": 9,
+      "actionList": [
+       {
+        "id": 1,
+        "label": "",
+        "name": "FOCUS"
+       },
+       {
+        "id": 4,
+        "label": "",
+        "name": "SELECT"
+       },
+       {
+        "id": 8,
+        "label": "",
+        "name": "CLEAR_SELECTION"
+       },
+       {
+        "id": 16,
+        "label": "",
+        "name": "CLICK"
+       },
+       {
+        "id": 64,
+        "label": "",
+        "name": "UNKNOWN_64"
+       },
+       {
+        "id": 256,
+        "label": "",
+        "name": "UNKNOWN_256"
+       },
+       {
+        "id": 512,
+        "label": "",
+        "name": "UNKNOWN_512"
+       },
+       {
+        "id": 131072,
+        "label": "",
+        "name": "UNKNOWN_131072"
+       },
+       {
+        "id": 16908342,
+        "label": "",
+        "name": "UNKNOWN_16908342"
+       }
+      ],
+      "children": []
+     }
+    ]
+   }
+  ]
+ },
+ "phone_state": {
+  "currentApp": "Clock",
+  "packageName": "com.android.deskclock",
+  "activityName": "com.android.deskclock.DeskClock",
+  "keyboardVisible": false,
+  "isEditable": false,
+  "focusedElement": {
+   "resourceId": ""
+  }
+ },
+ "device_context": {
+  "screen_bounds": {
+   "width": 720,
+   "height": 1280
+  },
+  "filtering_params": {
+   "min_element_size": 5,
+   "overlay_offset": 0
+  },
+  "display_metrics": {
+   "density": 2,
+   "densityDpi": 320,
+   "scaledDensity": 2,
+   "widthPixels": 720,
+   "heightPixels": 1184
+  }
+ }
+}

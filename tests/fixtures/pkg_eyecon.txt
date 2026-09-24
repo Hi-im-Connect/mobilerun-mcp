@@ -1,0 +1,375 @@
+Activity Resolver Table:
+  Full MIME Types:
+      vnd.android.cursor.dir/raw_contact:
+        b5adf13 com.eyecon.global/.Contacts.NewContactActivity filter 6590349
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+      vnd.android.cursor.item/person:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter acad0b4
+          Action: "android.intent.action.DIAL"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          StaticType: "vnd.android.cursor.item/phone"
+          StaticType: "vnd.android.cursor.item/person"
+      vnd.android.cursor.dir/calls:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter c7ff852
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          StaticType: "vnd.android.cursor.dir/calls"
+      vnd.android.cursor.dir/person:
+        b5adf13 com.eyecon.global/.Contacts.NewContactActivity filter 6590349
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+      vnd.android.cursor.item/contact:
+        b5adf13 com.eyecon.global/.Contacts.NewContactActivity filter 15af550
+          Action: "android.intent.action.INSERT_OR_EDIT"
+          Category: "android.intent.category.APP_CONTACTS"
+          Category: "android.intent.category.DEFAULT"
+          Authority: "com.android.contacts": -1
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "text/x-vcard"
+      video/*:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter fb63faa
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "video"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+      text/x-vcard:
+        b5adf13 com.eyecon.global/.Contacts.NewContactActivity filter 15af550
+          Action: "android.intent.action.INSERT_OR_EDIT"
+          Category: "android.intent.category.APP_CONTACTS"
+          Category: "android.intent.category.DEFAULT"
+          Authority: "com.android.contacts": -1
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "text/x-vcard"
+      text/plain:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 9a9d295
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/plain"
+      vnd.android.cursor.item/phone:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter acad0b4
+          Action: "android.intent.action.DIAL"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          StaticType: "vnd.android.cursor.item/phone"
+          StaticType: "vnd.android.cursor.item/person"
+      vnd.android.cursor.dir/contact:
+        b5adf13 com.eyecon.global/.Contacts.NewContactActivity filter 6590349
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+
+  Base MIME Types:
+      vnd.android.cursor.dir:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter c7ff852
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          StaticType: "vnd.android.cursor.dir/calls"
+        b5adf13 com.eyecon.global/.Contacts.NewContactActivity filter 6590349
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+        b5adf13 com.eyecon.global/.Contacts.NewContactActivity filter 6590349
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+        b5adf13 com.eyecon.global/.Contacts.NewContactActivity filter 6590349
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+      vnd.android.cursor.item:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter acad0b4
+          Action: "android.intent.action.DIAL"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          StaticType: "vnd.android.cursor.item/phone"
+          StaticType: "vnd.android.cursor.item/person"
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter acad0b4
+          Action: "android.intent.action.DIAL"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          StaticType: "vnd.android.cursor.item/phone"
+          StaticType: "vnd.android.cursor.item/person"
+        b5adf13 com.eyecon.global/.Contacts.NewContactActivity filter 15af550
+          Action: "android.intent.action.INSERT_OR_EDIT"
+          Category: "android.intent.category.APP_CONTACTS"
+          Category: "android.intent.category.DEFAULT"
+          Authority: "com.android.contacts": -1
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "text/x-vcard"
+      text:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 9a9d295
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/plain"
+        b5adf13 com.eyecon.global/.Contacts.NewContactActivity filter 15af550
+          Action: "android.intent.action.INSERT_OR_EDIT"
+          Category: "android.intent.category.APP_CONTACTS"
+          Category: "android.intent.category.DEFAULT"
+          Authority: "com.android.contacts": -1
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "text/x-vcard"
+
+  Wild MIME Types:
+      video:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter fb63faa
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "video"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+
+  Schemes:
+      tl-1d6737ca:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 65f6dab
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "tl-1d6737ca"
+      eyecon_store:
+        8ae0767 com.eyecon.global/.Billing.Store.StoreActivity filter 904b914
+          Action: "android.intent.action.VIEW"
+          Scheme: "eyecon_store"
+      eyecon:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 74dfc08
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "eyecon"
+      voicemail:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 329e4dd
+          Action: "android.intent.action.DIAL"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "voicemail"
+      stripe:
+        4f83f75 com.eyecon.global/com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity filter a86db0a
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "stripe"
+          Authority: "financial-connections-lite": -1
+          Path: "PatternMatcher{PREFIX: /com.eyecon.global/auth_redirect}"
+      fb1716660955257637:
+        65cd44e com.eyecon.global/com.facebook.CustomTabActivity filter 8a596f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "fb1716660955257637"
+      eyecon_request:
+        ca58b05 com.eyecon.global/.Others.Activities.DummyActivity filter db5e75a
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "eyecon_request"
+      link-popup:
+        96c50b9 com.eyecon.global/com.stripe.android.link.LinkRedirectHandlerActivity filter bccecfe
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "link-popup"
+          Authority: "complete": -1
+          Path: "PatternMatcher{LITERAL: /com.eyecon.global}"
+      stripesdk:
+        ea7c5f com.eyecon.global/com.stripe.android.payments.StripeBrowserProxyReturnActivity filter 63616ac
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "stripesdk"
+          Authority: "payment_return_url": -1
+          Path: "PatternMatcher{LITERAL: /com.eyecon.global}"
+      mms:
+        e09b303 com.eyecon.global/.Sms.SmsComposeActivity filter 5fe5280
+          Action: "android.intent.action.VIEW"
+          Action: "android.intent.action.SENDTO"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "sms"
+          Scheme: "smsto"
+          Scheme: "mms"
+          Scheme: "mmsto"
+      sms:
+        e09b303 com.eyecon.global/.Sms.SmsComposeActivity filter 5fe5280
+          Action: "android.intent.action.VIEW"
+          Action: "android.intent.action.SENDTO"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "sms"
+          Scheme: "smsto"
+          Scheme: "mms"
+          Scheme: "mmsto"
+      tel:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 98545c6
+          Action: "android.intent.action.DIAL"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "tel"
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 6253987
+          Action: "android.intent.action.VIEW"
+          Action: "android.intent.action.DIAL"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "tel"
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 791d27f
+          Action: "android.intent.action.CALL"
+          Category: "android.intent.category.LAUNCHER"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "tel"
+      mmsto:
+        e09b303 com.eyecon.global/.Sms.SmsComposeActivity filter 5fe5280
+          Action: "android.intent.action.VIEW"
+          Action: "android.intent.action.SENDTO"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "sms"
+          Scheme: "smsto"
+          Scheme: "mms"
+          Scheme: "mmsto"
+      smsto:
+        e09b303 com.eyecon.global/.Sms.SmsComposeActivity filter 5fe5280
+          Action: "android.intent.action.VIEW"
+          Action: "android.intent.action.SENDTO"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "sms"
+          Scheme: "smsto"
+          Scheme: "mms"
+          Scheme: "mmsto"
+      fbconnect:
+        65cd44e com.eyecon.global/com.facebook.CustomTabActivity filter d02167c
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "fbconnect"
+          Authority: "cct.com.eyecon.global": -1
+      eyecon_settings:
+        c8d1d8b com.eyecon.global/.MoreMenuAndSettings.SettingActivity filter b981e68
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "eyecon_settings"
+      eyecon_number_validation:
+        12bf4d com.eyecon.global/.Registration.PhoneNumberValidationActivity filter d31a02
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "eyecon_number_validation"
+
+  Non-Data Actions:
+      com.android.phone.action.RECENT_CALLS:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 45ce3fa
+          Action: "com.android.phone.action.RECENT_CALLS"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.TAB"
+      eyecon.notification.action:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 473824c
+          Action: "android.intent.action.VIEW"
+          Action: "eyecon.notification.action"
+          Category: "android.intent.category.LAUNCHER"
+          Category: "android.intent.category.DEFAULT"
+      android.intent.action.CALL:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 501479e
+          Action: "android.intent.action.CALL"
+          Category: "android.intent.category.LAUNCHER"
+          Category: "android.intent.category.DEFAULT"
+      android.intent.action.DIAL:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 52eefa1
+          Action: "android.intent.action.DIAL"
+          Category: "android.intent.category.DEFAULT"
+      android.intent.action.MAIN:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 60e1625
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.LAUNCHER"
+        f7b179b com.eyecon.global/.pink filter 57c7738
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        fa20311 com.eyecon.global/.blue filter 510ac76
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        5e99277 com.eyecon.global/.green filter e1dcee4
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        578d281 com.eyecon.global/.purple filter 55b1f26
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+      android.intent.action.VIEW:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 473824c
+          Action: "android.intent.action.VIEW"
+          Action: "eyecon.notification.action"
+          Category: "android.intent.category.LAUNCHER"
+          Category: "android.intent.category.DEFAULT"
+      EYECON_PREMIUM_UPDATE:
+        df15bd com.eyecon.global/.Billing.Premium.FreePremiumUserActivity filter 4ca07b2
+          Action: "EYECON_PREMIUM_UPDATE"
+          Category: "android.intent.category.DEFAULT"
+      android.intent.action.CALL_BUTTON:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 191e723
+          Action: "android.intent.action.CALL_BUTTON"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+      com.android.phone.action.TOUCH_DIALER:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 79e4420
+          Action: "com.android.phone.action.TOUCH_DIALER"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.TAB"
+      android.intent.action.SEARCH:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 7e4f1d9
+          Action: "android.intent.action.SEARCH"
+          Category: "android.intent.category.DEFAULT"
+
+  MIME Typed Actions:
+      android.intent.action.DIAL:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter acad0b4
+          Action: "android.intent.action.DIAL"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          StaticType: "vnd.android.cursor.item/phone"
+          StaticType: "vnd.android.cursor.item/person"
+      android.intent.action.SEND:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter 9a9d295
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/plain"
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter fb63faa
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "video"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+      android.intent.action.VIEW:
+        5175a1c com.eyecon.global/.MainScreen.MainActivity filter c7ff852
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          StaticType: "vnd.android.cursor.dir/calls"
+      android.intent.action.INSERT_OR_EDIT:
+        b5adf13 com.eyecon.global/.Contacts.NewContactActivity filter 15af550
+          Action: "android.intent.action.INSERT_OR_EDIT"
+          Category: "android.intent.category.APP_CONTACTS"
+          Category: "android.intent.category.DEFAULT"
+          Authority: "com.android.contacts": -1
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "text/x-vcard"
+      android.intent.action.INSERT:
+        b5adf13 com.eyecon.global/.Contacts.NewContactActivity filter 6590349
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+

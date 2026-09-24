@@ -1,0 +1,2 @@
+  mCurrentFocus=Window{f5cfda0 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}
+  mFocusedApp=ActivityRecord{88d4c5e u0 com.android.launcher3/.uioverrides.QuickstepLauncher t8}

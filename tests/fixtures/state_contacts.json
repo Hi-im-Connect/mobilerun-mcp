@@ -1,0 +1,1090 @@
+{
+ "a11y_tree": {
+  "resourceId": "",
+  "className": "android.widget.FrameLayout",
+  "packageName": "com.android.contacts",
+  "text": "",
+  "contentDescription": "",
+  "hint": "",
+  "stateDescription": "",
+  "tooltipText": "",
+  "paneTitle": "",
+  "error": "",
+  "boundsInScreen": {
+   "left": 0,
+   "top": 0,
+   "right": 720,
+   "bottom": 1280
+  },
+  "boundsInParent": {
+   "left": 0,
+   "top": 0,
+   "right": 720,
+   "bottom": 1280
+  },
+  "isClickable": false,
+  "isLongClickable": false,
+  "isContextClickable": false,
+  "isFocusable": false,
+  "isFocused": false,
+  "isAccessibilityFocused": false,
+  "isSelected": false,
+  "isCheckable": false,
+  "isChecked": false,
+  "isEnabled": true,
+  "isVisibleToUser": true,
+  "isEditable": false,
+  "isPassword": false,
+  "isShowingHintText": false,
+  "isScrollable": false,
+  "isDismissable": false,
+  "isMultiLine": false,
+  "isImportantForAccessibility": true,
+  "isScreenReaderFocusable": false,
+  "isHeading": false,
+  "inputType": 0,
+  "liveRegion": 0,
+  "windowId": 94,
+  "drawingOrder": 0,
+  "maxTextLength": -1,
+  "movementGranularities": 0,
+  "childCount": 1,
+  "actionCount": 4,
+  "actionList": [
+   {
+    "id": 4,
+    "label": "",
+    "name": "SELECT"
+   },
+   {
+    "id": 8,
+    "label": "",
+    "name": "CLEAR_SELECTION"
+   },
+   {
+    "id": 64,
+    "label": "",
+    "name": "UNKNOWN_64"
+   },
+   {
+    "id": 16908342,
+    "label": "",
+    "name": "UNKNOWN_16908342"
+   }
+  ],
+  "children": [
+   {
+    "resourceId": "com.android.contacts:id/drawer_layout",
+    "className": "androidx.drawerlayout.widget.DrawerLayout",
+    "packageName": "com.android.contacts",
+    "text": "",
+    "contentDescription": "",
+    "hint": "",
+    "stateDescription": "",
+    "tooltipText": "",
+    "paneTitle": "",
+    "error": "",
+    "boundsInScreen": {
+     "left": 0,
+     "top": 0,
+     "right": 720,
+     "bottom": 1184
+    },
+    "boundsInParent": {
+     "left": 0,
+     "top": 0,
+     "right": 720,
+     "bottom": 1184
+    },
+    "isClickable": false,
+    "isLongClickable": false,
+    "isContextClickable": false,
+    "isFocusable": false,
+    "isFocused": false,
+    "isAccessibilityFocused": false,
+    "isSelected": false,
+    "isCheckable": false,
+    "isChecked": false,
+    "isEnabled": true,
+    "isVisibleToUser": true,
+    "isEditable": false,
+    "isPassword": false,
+    "isShowingHintText": false,
+    "isScrollable": false,
+    "isDismissable": false,
+    "isMultiLine": false,
+    "isImportantForAccessibility": true,
+    "isScreenReaderFocusable": false,
+    "isHeading": false,
+    "inputType": 0,
+    "liveRegion": 0,
+    "windowId": 94,
+    "drawingOrder": 1,
+    "maxTextLength": -1,
+    "movementGranularities": 0,
+    "childCount": 1,
+    "actionCount": 4,
+    "actionList": [
+     {
+      "id": 4,
+      "label": "",
+      "name": "SELECT"
+     },
+     {
+      "id": 8,
+      "label": "",
+      "name": "CLEAR_SELECTION"
+     },
+     {
+      "id": 64,
+      "label": "",
+      "name": "UNKNOWN_64"
+     },
+     {
+      "id": 16908342,
+      "label": "",
+      "name": "UNKNOWN_16908342"
+     }
+    ],
+    "children": [
+     {
+      "resourceId": "com.android.contacts:id/fragment_container",
+      "className": "android.widget.LinearLayout",
+      "packageName": "com.android.contacts",
+      "text": "",
+      "contentDescription": "",
+      "hint": "",
+      "stateDescription": "",
+      "tooltipText": "",
+      "paneTitle": "",
+      "error": "",
+      "boundsInScreen": {
+       "left": 0,
+       "top": 48,
+       "right": 720,
+       "bottom": 1184
+      },
+      "boundsInParent": {
+       "left": 0,
+       "top": 0,
+       "right": 720,
+       "bottom": 1136
+      },
+      "isClickable": false,
+      "isLongClickable": false,
+      "isContextClickable": false,
+      "isFocusable": false,
+      "isFocused": false,
+      "isAccessibilityFocused": false,
+      "isSelected": false,
+      "isCheckable": false,
+      "isChecked": false,
+      "isEnabled": true,
+      "isVisibleToUser": true,
+      "isEditable": false,
+      "isPassword": false,
+      "isShowingHintText": false,
+      "isScrollable": false,
+      "isDismissable": false,
+      "isMultiLine": false,
+      "isImportantForAccessibility": true,
+      "isScreenReaderFocusable": false,
+      "isHeading": false,
+      "inputType": 0,
+      "liveRegion": 0,
+      "windowId": 94,
+      "drawingOrder": 1,
+      "maxTextLength": -1,
+      "movementGranularities": 0,
+      "childCount": 4,
+      "actionCount": 4,
+      "actionList": [
+       {
+        "id": 4,
+        "label": "",
+        "name": "SELECT"
+       },
+       {
+        "id": 8,
+        "label": "",
+        "name": "CLEAR_SELECTION"
+       },
+       {
+        "id": 64,
+        "label": "",
+        "name": "UNKNOWN_64"
+       },
+       {
+        "id": 16908342,
+        "label": "",
+        "name": "UNKNOWN_16908342"
+       }
+      ],
+      "children": [
+       {
+        "resourceId": "",
+        "className": "android.widget.ImageButton",
+        "packageName": "com.android.contacts",
+        "text": "",
+        "contentDescription": "Open navigation drawer",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 0,
+         "top": 48,
+         "right": 112,
+         "bottom": 160
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 112,
+         "bottom": 112
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 94,
+        "drawingOrder": 3,
+        "maxTextLength": -1,
+        "movementGranularities": 11,
+        "childCount": 0,
+        "actionCount": 9,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "",
+        "className": "android.widget.TextView",
+        "packageName": "com.android.contacts",
+        "text": "Contacts",
+        "contentDescription": "",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 144,
+         "top": 77,
+         "right": 305,
+         "bottom": 131
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 161,
+         "bottom": 54
+        },
+        "isClickable": false,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": false,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "textSelectionStart": -1,
+        "textSelectionEnd": -1,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 94,
+        "drawingOrder": 2,
+        "maxTextLength": -1,
+        "movementGranularities": 31,
+        "childCount": 0,
+        "actionCount": 7,
+        "actionList": [
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 256,
+          "label": "",
+          "name": "UNKNOWN_256"
+         },
+         {
+          "id": 512,
+          "label": "",
+          "name": "UNKNOWN_512"
+         },
+         {
+          "id": 131072,
+          "label": "",
+          "name": "UNKNOWN_131072"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.contacts:id/menu_search",
+        "className": "android.widget.TextView",
+        "packageName": "com.android.contacts",
+        "text": "",
+        "contentDescription": "Search contacts",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "Search contacts",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 608,
+         "top": 56,
+         "right": 720,
+         "bottom": 152
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 112,
+         "bottom": 96
+        },
+        "isClickable": true,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": true,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": true,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 94,
+        "drawingOrder": 4,
+        "maxTextLength": -1,
+        "movementGranularities": 0,
+        "childCount": 0,
+        "actionCount": 7,
+        "actionList": [
+         {
+          "id": 1,
+          "label": "",
+          "name": "FOCUS"
+         },
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 16,
+          "label": "",
+          "name": "CLICK"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         },
+         {
+          "id": 16908356,
+          "label": "",
+          "name": "UNKNOWN_16908356"
+         }
+        ],
+        "children": []
+       },
+       {
+        "resourceId": "com.android.contacts:id/root",
+        "className": "android.view.ViewGroup",
+        "packageName": "com.android.contacts",
+        "text": "",
+        "contentDescription": "",
+        "hint": "",
+        "stateDescription": "",
+        "tooltipText": "",
+        "paneTitle": "",
+        "error": "",
+        "boundsInScreen": {
+         "left": 0,
+         "top": 160,
+         "right": 720,
+         "bottom": 1184
+        },
+        "boundsInParent": {
+         "left": 0,
+         "top": 0,
+         "right": 720,
+         "bottom": 1024
+        },
+        "isClickable": false,
+        "isLongClickable": false,
+        "isContextClickable": false,
+        "isFocusable": false,
+        "isFocused": false,
+        "isAccessibilityFocused": false,
+        "isSelected": false,
+        "isCheckable": false,
+        "isChecked": false,
+        "isEnabled": true,
+        "isVisibleToUser": true,
+        "isEditable": false,
+        "isPassword": false,
+        "isShowingHintText": false,
+        "isScrollable": false,
+        "isDismissable": false,
+        "isMultiLine": false,
+        "isImportantForAccessibility": true,
+        "isScreenReaderFocusable": false,
+        "isHeading": false,
+        "inputType": 0,
+        "liveRegion": 0,
+        "windowId": 94,
+        "drawingOrder": 1,
+        "maxTextLength": -1,
+        "movementGranularities": 0,
+        "childCount": 2,
+        "actionCount": 4,
+        "actionList": [
+         {
+          "id": 4,
+          "label": "",
+          "name": "SELECT"
+         },
+         {
+          "id": 8,
+          "label": "",
+          "name": "CLEAR_SELECTION"
+         },
+         {
+          "id": 64,
+          "label": "",
+          "name": "UNKNOWN_64"
+         },
+         {
+          "id": 16908342,
+          "label": "",
+          "name": "UNKNOWN_16908342"
+         }
+        ],
+        "children": [
+         {
+          "resourceId": "android:id/list",
+          "className": "android.widget.ListView",
+          "packageName": "com.android.contacts",
+          "text": "",
+          "contentDescription": "",
+          "hint": "",
+          "stateDescription": "",
+          "tooltipText": "",
+          "paneTitle": "",
+          "error": "",
+          "boundsInScreen": {
+           "left": 0,
+           "top": 160,
+           "right": 720,
+           "bottom": 1184
+          },
+          "boundsInParent": {
+           "left": 0,
+           "top": 0,
+           "right": 720,
+           "bottom": 1024
+          },
+          "isClickable": false,
+          "isLongClickable": true,
+          "isContextClickable": false,
+          "isFocusable": true,
+          "isFocused": false,
+          "isAccessibilityFocused": false,
+          "isSelected": false,
+          "isCheckable": false,
+          "isChecked": false,
+          "isEnabled": true,
+          "isVisibleToUser": true,
+          "isEditable": false,
+          "isPassword": false,
+          "isShowingHintText": false,
+          "isScrollable": false,
+          "isDismissable": false,
+          "isMultiLine": false,
+          "isImportantForAccessibility": true,
+          "isScreenReaderFocusable": false,
+          "isHeading": false,
+          "inputType": 0,
+          "liveRegion": 0,
+          "windowId": 94,
+          "drawingOrder": 4,
+          "maxTextLength": -1,
+          "movementGranularities": 0,
+          "childCount": 2,
+          "actionCount": 7,
+          "collectionInfo": {
+           "rowCount": -1,
+           "columnCount": -1,
+           "isHierarchical": false,
+           "selectionMode": 0
+          },
+          "actionList": [
+           {
+            "id": 1,
+            "label": "",
+            "name": "FOCUS"
+           },
+           {
+            "id": 4,
+            "label": "",
+            "name": "SELECT"
+           },
+           {
+            "id": 8,
+            "label": "",
+            "name": "CLEAR_SELECTION"
+           },
+           {
+            "id": 32,
+            "label": "",
+            "name": "LONG_CLICK"
+           },
+           {
+            "id": 64,
+            "label": "",
+            "name": "UNKNOWN_64"
+           },
+           {
+            "id": 16908342,
+            "label": "",
+            "name": "UNKNOWN_16908342"
+           },
+           {
+            "id": 16908343,
+            "label": "",
+            "name": "UNKNOWN_16908343"
+           }
+          ],
+          "children": [
+           {
+            "resourceId": "",
+            "className": "android.view.ViewGroup",
+            "packageName": "com.android.contacts",
+            "text": "",
+            "contentDescription": "",
+            "hint": "",
+            "stateDescription": "",
+            "tooltipText": "",
+            "paneTitle": "",
+            "error": "",
+            "boundsInScreen": {
+             "left": 0,
+             "top": 174,
+             "right": 720,
+             "bottom": 286
+            },
+            "boundsInParent": {
+             "left": 0,
+             "top": 0,
+             "right": 720,
+             "bottom": 112
+            },
+            "isClickable": true,
+            "isLongClickable": true,
+            "isContextClickable": false,
+            "isFocusable": false,
+            "isFocused": false,
+            "isAccessibilityFocused": false,
+            "isSelected": false,
+            "isCheckable": false,
+            "isChecked": false,
+            "isEnabled": true,
+            "isVisibleToUser": true,
+            "isEditable": false,
+            "isPassword": false,
+            "isShowingHintText": false,
+            "isScrollable": false,
+            "isDismissable": false,
+            "isMultiLine": false,
+            "isImportantForAccessibility": true,
+            "isScreenReaderFocusable": false,
+            "isHeading": false,
+            "inputType": 0,
+            "liveRegion": 0,
+            "windowId": 94,
+            "drawingOrder": 2,
+            "maxTextLength": -1,
+            "movementGranularities": 0,
+            "childCount": 2,
+            "actionCount": 6,
+            "collectionItemInfo": {
+             "rowIndex": 1,
+             "rowSpan": 1,
+             "columnIndex": 0,
+             "columnSpan": 1,
+             "isHeading": false,
+             "isSelected": false
+            },
+            "actionList": [
+             {
+              "id": 4,
+              "label": "",
+              "name": "SELECT"
+             },
+             {
+              "id": 8,
+              "label": "",
+              "name": "CLEAR_SELECTION"
+             },
+             {
+              "id": 16,
+              "label": "",
+              "name": "CLICK"
+             },
+             {
+              "id": 32,
+              "label": "",
+              "name": "LONG_CLICK"
+             },
+             {
+              "id": 64,
+              "label": "",
+              "name": "UNKNOWN_64"
+             },
+             {
+              "id": 16908342,
+              "label": "",
+              "name": "UNKNOWN_16908342"
+             }
+            ],
+            "children": [
+             {
+              "resourceId": "",
+              "className": "android.widget.TextView",
+              "packageName": "com.android.contacts",
+              "text": "A",
+              "contentDescription": "A",
+              "hint": "",
+              "stateDescription": "",
+              "tooltipText": "",
+              "paneTitle": "",
+              "error": "",
+              "boundsInScreen": {
+               "left": 0,
+               "top": 204,
+               "right": 112,
+               "bottom": 247
+              },
+              "boundsInParent": {
+               "left": 0,
+               "top": 0,
+               "right": 112,
+               "bottom": 43
+              },
+              "isClickable": false,
+              "isLongClickable": false,
+              "isContextClickable": false,
+              "isFocusable": false,
+              "isFocused": false,
+              "isAccessibilityFocused": false,
+              "isSelected": false,
+              "isCheckable": false,
+              "isChecked": false,
+              "isEnabled": true,
+              "isVisibleToUser": true,
+              "isEditable": false,
+              "isPassword": false,
+              "isShowingHintText": false,
+              "isScrollable": false,
+              "isDismissable": false,
+              "isMultiLine": true,
+              "isImportantForAccessibility": true,
+              "isScreenReaderFocusable": false,
+              "isHeading": false,
+              "textSelectionStart": -1,
+              "textSelectionEnd": -1,
+              "inputType": 0,
+              "liveRegion": 0,
+              "windowId": 94,
+              "drawingOrder": 1,
+              "maxTextLength": -1,
+              "movementGranularities": 31,
+              "childCount": 0,
+              "actionCount": 7,
+              "actionList": [
+               {
+                "id": 4,
+                "label": "",
+                "name": "SELECT"
+               },
+               {
+                "id": 8,
+                "label": "",
+                "name": "CLEAR_SELECTION"
+               },
+               {
+                "id": 64,
+                "label": "",
+                "name": "UNKNOWN_64"
+               },
+               {
+                "id": 256,
+                "label": "",
+                "name": "UNKNOWN_256"
+               },
+               {
+                "id": 512,
+                "label": "",
+                "name": "UNKNOWN_512"
+               },
+               {
+                "id": 131072,
+                "label": "",
+                "name": "UNKNOWN_131072"
+               },
+               {
+                "id": 16908342,
+                "label": "",
+                "name": "UNKNOWN_16908342"
+               }
+              ],
+              "children": []
+             },
+             {
+              "resourceId": "com.android.contacts:id/cliv_name_textview",
+              "className": "android.widget.TextView",
+              "packageName": "com.android.contacts",
+              "text": "Ali Omar",
+              "contentDescription": "Ali Omar",
+              "hint": "",
+              "stateDescription": "",
+              "tooltipText": "",
+              "paneTitle": "",
+              "error": "",
+              "boundsInScreen": {
+               "left": 254,
+               "top": 204,
+               "right": 656,
+               "bottom": 247
+              },
+              "boundsInParent": {
+               "left": 0,
+               "top": 0,
+               "right": 402,
+               "bottom": 43
+              },
+              "isClickable": false,
+              "isLongClickable": false,
+              "isContextClickable": false,
+              "isFocusable": false,
+              "isFocused": false,
+              "isAccessibilityFocused": false,
+              "isSelected": false,
+              "isCheckable": false,
+              "isChecked": false,
+              "isEnabled": true,
+              "isVisibleToUser": true,
+              "isEditable": false,
+              "isPassword": false,
+              "isShowingHintText": false,
+              "isScrollable": false,
+              "isDismissable": false,
+              "isMultiLine": false,
+              "isImportantForAccessibility": true,
+              "isScreenReaderFocusable": false,
+              "isHeading": false,
+              "textSelectionStart": -1,
+              "textSelectionEnd": -1,
+              "inputType": 0,
+              "liveRegion": 0,
+              "windowId": 94,
+              "drawingOrder": 2,
+              "maxTextLength": -1,
+              "movementGranularities": 31,
+              "childCount": 0,
+              "actionCount": 7,
+              "actionList": [
+               {
+                "id": 4,
+                "label": "",
+                "name": "SELECT"
+               },
+               {
+                "id": 8,
+                "label": "",
+                "name": "CLEAR_SELECTION"
+               },
+               {
+                "id": 64,
+                "label": "",
+                "name": "UNKNOWN_64"
+               },
+               {
+                "id": 256,
+                "label": "",
+                "name": "UNKNOWN_256"
+               },
+               {
+                "id": 512,
+                "label": "",
+                "name": "UNKNOWN_512"
+               },
+               {
+                "id": 131072,
+                "label": "",
+                "name": "UNKNOWN_131072"
+               },
+               {
+                "id": 16908342,
+                "label": "",
+                "name": "UNKNOWN_16908342"
+               }
+              ],
+              "children": []
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "resourceId": "com.android.contacts:id/floating_action_button",
+          "className": "android.widget.ImageButton",
+          "packageName": "com.android.contacts",
+          "text": "",
+          "contentDescription": "Create new contact",
+          "hint": "",
+          "stateDescription": "",
+          "tooltipText": "",
+          "paneTitle": "",
+          "error": "",
+          "boundsInScreen": {
+           "left": 576,
+           "top": 1040,
+           "right": 688,
+           "bottom": 1152
+          },
+          "boundsInParent": {
+           "left": 0,
+           "top": 0,
+           "right": 112,
+           "bottom": 112
+          },
+          "isClickable": true,
+          "isLongClickable": false,
+          "isContextClickable": false,
+          "isFocusable": true,
+          "isFocused": false,
+          "isAccessibilityFocused": false,
+          "isSelected": false,
+          "isCheckable": false,
+          "isChecked": false,
+          "isEnabled": true,
+          "isVisibleToUser": true,
+          "isEditable": false,
+          "isPassword": false,
+          "isShowingHintText": false,
+          "isScrollable": false,
+          "isDismissable": false,
+          "isMultiLine": false,
+          "isImportantForAccessibility": true,
+          "isScreenReaderFocusable": false,
+          "isHeading": false,
+          "inputType": 0,
+          "liveRegion": 0,
+          "windowId": 94,
+          "drawingOrder": 10,
+          "maxTextLength": -1,
+          "movementGranularities": 11,
+          "childCount": 0,
+          "actionCount": 9,
+          "actionList": [
+           {
+            "id": 1,
+            "label": "",
+            "name": "FOCUS"
+           },
+           {
+            "id": 4,
+            "label": "",
+            "name": "SELECT"
+           },
+           {
+            "id": 8,
+            "label": "",
+            "name": "CLEAR_SELECTION"
+           },
+           {
+            "id": 16,
+            "label": "",
+            "name": "CLICK"
+           },
+           {
+            "id": 64,
+            "label": "",
+            "name": "UNKNOWN_64"
+           },
+           {
+            "id": 256,
+            "label": "",
+            "name": "UNKNOWN_256"
+           },
+           {
+            "id": 512,
+            "label": "",
+            "name": "UNKNOWN_512"
+           },
+           {
+            "id": 131072,
+            "label": "",
+            "name": "UNKNOWN_131072"
+           },
+           {
+            "id": 16908342,
+            "label": "",
+            "name": "UNKNOWN_16908342"
+           }
+          ],
+          "children": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "phone_state": {
+  "currentApp": "Contacts",
+  "packageName": "com.android.contacts",
+  "activityName": "com.android.contacts.activities.PeopleActivity",
+  "keyboardVisible": false,
+  "isEditable": false,
+  "focusedElement": {
+   "resourceId": ""
+  }
+ },
+ "device_context": {
+  "screen_bounds": {
+   "width": 720,
+   "height": 1280
+  },
+  "filtering_params": {
+   "min_element_size": 5,
+   "overlay_offset": 0
+  },
+  "display_metrics": {
+   "density": 2,
+   "densityDpi": 320,
+   "scaledDensity": 2,
+   "widthPixels": 720,
+   "heightPixels": 1184
+  }
+ }
+}

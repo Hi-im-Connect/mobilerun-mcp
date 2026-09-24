@@ -1,0 +1,658 @@
+{
+ "a11y_tree": {
+  "resourceId": "",
+  "className": "android.widget.FrameLayout",
+  "packageName": "org.chromium.webview_shell",
+  "text": "",
+  "contentDescription": "",
+  "hint": "",
+  "stateDescription": "",
+  "tooltipText": "",
+  "paneTitle": "",
+  "error": "",
+  "boundsInScreen": {
+   "left": 0,
+   "top": 0,
+   "right": 720,
+   "bottom": 1280
+  },
+  "boundsInParent": {
+   "left": 0,
+   "top": 0,
+   "right": 720,
+   "bottom": 1280
+  },
+  "isClickable": false,
+  "isLongClickable": false,
+  "isContextClickable": false,
+  "isFocusable": false,
+  "isFocused": false,
+  "isAccessibilityFocused": false,
+  "isSelected": false,
+  "isCheckable": false,
+  "isChecked": false,
+  "isEnabled": true,
+  "isVisibleToUser": true,
+  "isEditable": false,
+  "isPassword": false,
+  "isShowingHintText": false,
+  "isScrollable": false,
+  "isDismissable": false,
+  "isMultiLine": false,
+  "isImportantForAccessibility": true,
+  "isScreenReaderFocusable": false,
+  "isHeading": false,
+  "inputType": 0,
+  "liveRegion": 0,
+  "windowId": 92,
+  "drawingOrder": 0,
+  "maxTextLength": -1,
+  "movementGranularities": 0,
+  "childCount": 5,
+  "actionCount": 4,
+  "actionList": [
+   {
+    "id": 4,
+    "label": "",
+    "name": "SELECT"
+   },
+   {
+    "id": 8,
+    "label": "",
+    "name": "CLEAR_SELECTION"
+   },
+   {
+    "id": 64,
+    "label": "",
+    "name": "UNKNOWN_64"
+   },
+   {
+    "id": 16908342,
+    "label": "",
+    "name": "UNKNOWN_16908342"
+   }
+  ],
+  "children": [
+   {
+    "resourceId": "android:id/title",
+    "className": "android.widget.TextView",
+    "packageName": "org.chromium.webview_shell",
+    "text": "WebView Browser Tester 125.0.6422.113",
+    "contentDescription": "",
+    "hint": "",
+    "stateDescription": "",
+    "tooltipText": "",
+    "paneTitle": "",
+    "error": "",
+    "boundsInScreen": {
+     "left": 8,
+     "top": 49,
+     "right": 712,
+     "bottom": 95
+    },
+    "boundsInParent": {
+     "left": 0,
+     "top": 0,
+     "right": 704,
+     "bottom": 46
+    },
+    "isClickable": false,
+    "isLongClickable": false,
+    "isContextClickable": false,
+    "isFocusable": false,
+    "isFocused": false,
+    "isAccessibilityFocused": false,
+    "isSelected": false,
+    "isCheckable": false,
+    "isChecked": false,
+    "isEnabled": true,
+    "isVisibleToUser": true,
+    "isEditable": false,
+    "isPassword": false,
+    "isShowingHintText": false,
+    "isScrollable": false,
+    "isDismissable": false,
+    "isMultiLine": false,
+    "isImportantForAccessibility": true,
+    "isScreenReaderFocusable": false,
+    "isHeading": false,
+    "textSelectionStart": -1,
+    "textSelectionEnd": -1,
+    "inputType": 0,
+    "liveRegion": 0,
+    "windowId": 92,
+    "drawingOrder": 1,
+    "maxTextLength": -1,
+    "movementGranularities": 31,
+    "childCount": 0,
+    "actionCount": 7,
+    "actionList": [
+     {
+      "id": 4,
+      "label": "",
+      "name": "SELECT"
+     },
+     {
+      "id": 8,
+      "label": "",
+      "name": "CLEAR_SELECTION"
+     },
+     {
+      "id": 64,
+      "label": "",
+      "name": "UNKNOWN_64"
+     },
+     {
+      "id": 256,
+      "label": "",
+      "name": "UNKNOWN_256"
+     },
+     {
+      "id": 512,
+      "label": "",
+      "name": "UNKNOWN_512"
+     },
+     {
+      "id": 131072,
+      "label": "",
+      "name": "UNKNOWN_131072"
+     },
+     {
+      "id": 16908342,
+      "label": "",
+      "name": "UNKNOWN_16908342"
+     }
+    ],
+    "children": []
+   },
+   {
+    "resourceId": "org.chromium.webview_shell:id/url_field",
+    "className": "android.widget.EditText",
+    "packageName": "org.chromium.webview_shell",
+    "text": "about:blank",
+    "contentDescription": "",
+    "hint": "",
+    "stateDescription": "",
+    "tooltipText": "",
+    "paneTitle": "",
+    "error": "",
+    "boundsInScreen": {
+     "left": 0,
+     "top": 98,
+     "right": 488,
+     "bottom": 194
+    },
+    "boundsInParent": {
+     "left": 0,
+     "top": 0,
+     "right": 488,
+     "bottom": 96
+    },
+    "isClickable": true,
+    "isLongClickable": true,
+    "isContextClickable": false,
+    "isFocusable": true,
+    "isFocused": false,
+    "isAccessibilityFocused": false,
+    "isSelected": false,
+    "isCheckable": false,
+    "isChecked": false,
+    "isEnabled": true,
+    "isVisibleToUser": true,
+    "isEditable": true,
+    "isPassword": false,
+    "isShowingHintText": false,
+    "isScrollable": false,
+    "isDismissable": false,
+    "isMultiLine": false,
+    "isImportantForAccessibility": true,
+    "isScreenReaderFocusable": false,
+    "isHeading": false,
+    "textSelectionStart": 0,
+    "textSelectionEnd": 0,
+    "inputType": 17,
+    "liveRegion": 0,
+    "windowId": 92,
+    "drawingOrder": 2,
+    "maxTextLength": 5000,
+    "movementGranularities": 31,
+    "childCount": 0,
+    "actionCount": 11,
+    "actionList": [
+     {
+      "id": 1,
+      "label": "",
+      "name": "FOCUS"
+     },
+     {
+      "id": 4,
+      "label": "",
+      "name": "SELECT"
+     },
+     {
+      "id": 8,
+      "label": "",
+      "name": "CLEAR_SELECTION"
+     },
+     {
+      "id": 16,
+      "label": "",
+      "name": "CLICK"
+     },
+     {
+      "id": 32,
+      "label": "",
+      "name": "LONG_CLICK"
+     },
+     {
+      "id": 64,
+      "label": "",
+      "name": "UNKNOWN_64"
+     },
+     {
+      "id": 256,
+      "label": "",
+      "name": "UNKNOWN_256"
+     },
+     {
+      "id": 512,
+      "label": "",
+      "name": "UNKNOWN_512"
+     },
+     {
+      "id": 131072,
+      "label": "",
+      "name": "UNKNOWN_131072"
+     },
+     {
+      "id": 2097152,
+      "label": "",
+      "name": "SET_TEXT"
+     },
+     {
+      "id": 16908342,
+      "label": "",
+      "name": "UNKNOWN_16908342"
+     }
+    ],
+    "children": []
+   },
+   {
+    "resourceId": "",
+    "className": "android.widget.ImageButton",
+    "packageName": "org.chromium.webview_shell",
+    "text": "",
+    "contentDescription": "Load URL",
+    "hint": "",
+    "stateDescription": "",
+    "tooltipText": "",
+    "paneTitle": "",
+    "error": "",
+    "boundsInScreen": {
+     "left": 488,
+     "top": 98,
+     "right": 604,
+     "bottom": 194
+    },
+    "boundsInParent": {
+     "left": 0,
+     "top": 0,
+     "right": 116,
+     "bottom": 96
+    },
+    "isClickable": true,
+    "isLongClickable": false,
+    "isContextClickable": false,
+    "isFocusable": true,
+    "isFocused": false,
+    "isAccessibilityFocused": false,
+    "isSelected": false,
+    "isCheckable": false,
+    "isChecked": false,
+    "isEnabled": true,
+    "isVisibleToUser": true,
+    "isEditable": false,
+    "isPassword": false,
+    "isShowingHintText": false,
+    "isScrollable": false,
+    "isDismissable": false,
+    "isMultiLine": false,
+    "isImportantForAccessibility": true,
+    "isScreenReaderFocusable": false,
+    "isHeading": false,
+    "inputType": 0,
+    "liveRegion": 0,
+    "windowId": 92,
+    "drawingOrder": 3,
+    "maxTextLength": -1,
+    "movementGranularities": 11,
+    "childCount": 0,
+    "actionCount": 9,
+    "actionList": [
+     {
+      "id": 1,
+      "label": "",
+      "name": "FOCUS"
+     },
+     {
+      "id": 4,
+      "label": "",
+      "name": "SELECT"
+     },
+     {
+      "id": 8,
+      "label": "",
+      "name": "CLEAR_SELECTION"
+     },
+     {
+      "id": 16,
+      "label": "",
+      "name": "CLICK"
+     },
+     {
+      "id": 64,
+      "label": "",
+      "name": "UNKNOWN_64"
+     },
+     {
+      "id": 256,
+      "label": "",
+      "name": "UNKNOWN_256"
+     },
+     {
+      "id": 512,
+      "label": "",
+      "name": "UNKNOWN_512"
+     },
+     {
+      "id": 131072,
+      "label": "",
+      "name": "UNKNOWN_131072"
+     },
+     {
+      "id": 16908342,
+      "label": "",
+      "name": "UNKNOWN_16908342"
+     }
+    ],
+    "children": []
+   },
+   {
+    "resourceId": "",
+    "className": "android.widget.ImageButton",
+    "packageName": "org.chromium.webview_shell",
+    "text": "",
+    "contentDescription": "About WebView",
+    "hint": "",
+    "stateDescription": "",
+    "tooltipText": "",
+    "paneTitle": "",
+    "error": "",
+    "boundsInScreen": {
+     "left": 604,
+     "top": 98,
+     "right": 720,
+     "bottom": 194
+    },
+    "boundsInParent": {
+     "left": 0,
+     "top": 0,
+     "right": 116,
+     "bottom": 96
+    },
+    "isClickable": true,
+    "isLongClickable": false,
+    "isContextClickable": false,
+    "isFocusable": true,
+    "isFocused": false,
+    "isAccessibilityFocused": false,
+    "isSelected": false,
+    "isCheckable": false,
+    "isChecked": false,
+    "isEnabled": true,
+    "isVisibleToUser": true,
+    "isEditable": false,
+    "isPassword": false,
+    "isShowingHintText": false,
+    "isScrollable": false,
+    "isDismissable": false,
+    "isMultiLine": false,
+    "isImportantForAccessibility": true,
+    "isScreenReaderFocusable": false,
+    "isHeading": false,
+    "inputType": 0,
+    "liveRegion": 0,
+    "windowId": 92,
+    "drawingOrder": 4,
+    "maxTextLength": -1,
+    "movementGranularities": 11,
+    "childCount": 0,
+    "actionCount": 9,
+    "actionList": [
+     {
+      "id": 1,
+      "label": "",
+      "name": "FOCUS"
+     },
+     {
+      "id": 4,
+      "label": "",
+      "name": "SELECT"
+     },
+     {
+      "id": 8,
+      "label": "",
+      "name": "CLEAR_SELECTION"
+     },
+     {
+      "id": 16,
+      "label": "",
+      "name": "CLICK"
+     },
+     {
+      "id": 64,
+      "label": "",
+      "name": "UNKNOWN_64"
+     },
+     {
+      "id": 256,
+      "label": "",
+      "name": "UNKNOWN_256"
+     },
+     {
+      "id": 512,
+      "label": "",
+      "name": "UNKNOWN_512"
+     },
+     {
+      "id": 131072,
+      "label": "",
+      "name": "UNKNOWN_131072"
+     },
+     {
+      "id": 16908342,
+      "label": "",
+      "name": "UNKNOWN_16908342"
+     }
+    ],
+    "children": []
+   },
+   {
+    "resourceId": "",
+    "className": "android.webkit.WebView",
+    "packageName": "org.chromium.webview_shell",
+    "text": "",
+    "contentDescription": "",
+    "hint": "",
+    "stateDescription": "",
+    "tooltipText": "",
+    "paneTitle": "",
+    "error": "",
+    "boundsInScreen": {
+     "left": 0,
+     "top": 194,
+     "right": 720,
+     "bottom": 1184
+    },
+    "boundsInParent": {
+     "left": 0,
+     "top": 0,
+     "right": 720,
+     "bottom": 990
+    },
+    "isClickable": false,
+    "isLongClickable": false,
+    "isContextClickable": false,
+    "isFocusable": false,
+    "isFocused": false,
+    "isAccessibilityFocused": false,
+    "isSelected": false,
+    "isCheckable": false,
+    "isChecked": false,
+    "isEnabled": true,
+    "isVisibleToUser": true,
+    "isEditable": false,
+    "isPassword": false,
+    "isShowingHintText": false,
+    "isScrollable": false,
+    "isDismissable": false,
+    "isMultiLine": false,
+    "isImportantForAccessibility": false,
+    "isScreenReaderFocusable": false,
+    "isHeading": false,
+    "inputType": 0,
+    "liveRegion": 0,
+    "windowId": 92,
+    "drawingOrder": 0,
+    "maxTextLength": -1,
+    "movementGranularities": 0,
+    "childCount": 1,
+    "actionCount": 0,
+    "actionList": [],
+    "children": [
+     {
+      "resourceId": "",
+      "className": "android.webkit.WebView",
+      "packageName": "org.chromium.webview_shell",
+      "text": "",
+      "contentDescription": "",
+      "hint": "",
+      "stateDescription": "",
+      "tooltipText": "",
+      "paneTitle": "",
+      "error": "",
+      "boundsInScreen": {
+       "left": 0,
+       "top": 194,
+       "right": 720,
+       "bottom": 1184
+      },
+      "boundsInParent": {
+       "left": 0,
+       "top": 0,
+       "right": 980,
+       "bottom": 1348
+      },
+      "isClickable": false,
+      "isLongClickable": false,
+      "isContextClickable": false,
+      "isFocusable": true,
+      "isFocused": true,
+      "isAccessibilityFocused": false,
+      "isSelected": false,
+      "isCheckable": false,
+      "isChecked": false,
+      "isEnabled": true,
+      "isVisibleToUser": true,
+      "isEditable": false,
+      "isPassword": false,
+      "isShowingHintText": false,
+      "isScrollable": false,
+      "isDismissable": false,
+      "isMultiLine": false,
+      "isImportantForAccessibility": false,
+      "isScreenReaderFocusable": false,
+      "isHeading": false,
+      "textSelectionStart": -1,
+      "textSelectionEnd": -1,
+      "inputType": 0,
+      "liveRegion": 0,
+      "windowId": 92,
+      "drawingOrder": 0,
+      "maxTextLength": -1,
+      "movementGranularities": 15,
+      "childCount": 0,
+      "actionCount": 6,
+      "extras": {
+       "AccessibilityNodeInfo.roleDescription": "",
+       "AccessibilityNodeInfo.hint": "",
+       "AccessibilityNodeInfo.chromeRole": "rootWebArea",
+       "ACTION_ARGUMENT_HTML_ELEMENT_STRING_VALUES": "ARTICLE,BLOCKQUOTE,BUTTON,CHECKBOX,COMBOBOX,CONTROL,FOCUSABLE,FRAME,GRAPHIC,H1,H2,H3,H4,H5,H6,HEADING,HEADING_SAME,LANDMARK,LINK,LIST,LIST_ITEM,LIVE,MAIN,MEDIA,PARAGRAPH,RADIO,RADIO_GROUP,SECTION,TABLE,TEXT_FIELD,TEXT_BOLD,TEXT_ITALIC,TEXT_UNDERLINE,TREE,UNVISITED_LINK,VISITED_LINK"
+      },
+      "actionList": [
+       {
+        "id": 2,
+        "label": "",
+        "name": "CLEAR_FOCUS"
+       },
+       {
+        "id": 64,
+        "label": "",
+        "name": "UNKNOWN_64"
+       },
+       {
+        "id": 1024,
+        "label": "",
+        "name": "UNKNOWN_1024"
+       },
+       {
+        "id": 2048,
+        "label": "",
+        "name": "UNKNOWN_2048"
+       },
+       {
+        "id": 16908342,
+        "label": "",
+        "name": "UNKNOWN_16908342"
+       },
+       {
+        "id": 16908348,
+        "label": "",
+        "name": "UNKNOWN_16908348"
+       }
+      ],
+      "children": []
+     }
+    ]
+   }
+  ]
+ },
+ "phone_state": {
+  "currentApp": "WebView Shell",
+  "packageName": "org.chromium.webview_shell",
+  "activityName": "org.chromium.webview_shell.WebViewBrowserActivity",
+  "keyboardVisible": false,
+  "isEditable": false,
+  "focusedElement": {
+   "className": "android.webkit.WebView",
+   "resourceId": ""
+  }
+ },
+ "device_context": {
+  "screen_bounds": {
+   "width": 720,
+   "height": 1280
+  },
+  "filtering_params": {
+   "min_element_size": 5,
+   "overlay_offset": 0
+  },
+  "display_metrics": {
+   "density": 2,
+   "densityDpi": 320,
+   "scaledDensity": 2,
+   "widthPixels": 720,
+   "heightPixels": 1184
+  }
+ }
+}
