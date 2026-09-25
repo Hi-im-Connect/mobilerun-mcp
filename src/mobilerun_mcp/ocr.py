@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import shutil
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 
 from .models import Bounds, Mark
 
@@ -103,17 +103,4 @@ def merge_ocr_marks(marks: list[Mark], lines: list[OcrLine]) -> list[Mark]:
         for ln in uncovered_lines(lines, marks)
     ]
     combined = sorted(marks + extra, key=lambda m: (m.bounds.top, m.bounds.left))
-    return [
-        Mark(
-            id=i,
-            kind=m.kind,
-            label=m.label,
-            bounds=m.bounds,
-            element_index=m.element_index,
-            source=m.source,
-            checked=m.checked,
-            password=m.password,
-            scrollable=m.scrollable,
-        )
-        for i, m in enumerate(combined, start=1)
-    ]
+    return [replace(m, id=i) for i, m in enumerate(combined, start=1)]

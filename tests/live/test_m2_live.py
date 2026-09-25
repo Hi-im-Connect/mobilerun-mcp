@@ -31,7 +31,9 @@ async def shell_notifications(phone):
 
 
 async def test_read_notifications_sees_the_portal_service(phone):
-    data = await phone.call("read_notifications", package="com.mobilerun.portal")
+    data = await phone.call(
+        "read_notifications", package="com.mobilerun.portal", include_ongoing=True
+    )
     (item,) = data["notifications"]
     assert item["title"] == "Keep Screen Awake"
     assert item["actions"] == ["Stop"] and item["ongoing"] and not item["clearable"]
@@ -64,7 +66,9 @@ async def test_clear_all_removes_every_clearable_notification(phone):
     result = await phone.call("dismiss_notification", clear_all=True)
     assert result["ok"] and len(result["dismissed"]) >= 2
     assert await shell_notifications(phone) == []
-    assert (await phone.call("read_notifications", package="com.mobilerun.portal"))["count"] == 1
+    assert (
+        await phone.call("read_notifications", package="com.mobilerun.portal", include_ongoing=True)
+    )["count"] == 1
 
 
 async def test_volume_roundtrip_and_mute(phone):
@@ -133,6 +137,9 @@ async def test_resolve_contact(phone):
 async def test_find_files_and_path_guard(phone):
     await phone.shell("echo hi > /sdcard/Download/mcp_live_note.txt")
     found = await phone.call("find_files", query="mcp_live_note")
-    assert "/sdcard/Download/mcp_live_note.txt" in found["files"]
+    hit = next(f for f in found["files"] if f["name"] == "mcp_live_note.txt")
+    assert hit["uri"].startswith("content://media/") and hit["path"].endswith(
+        "/Download/mcp_live_note.txt"
+    )
     assert "not_permitted" in await phone.call_error("find_files", path="/data/data")
     await phone.shell("rm /sdcard/Download/mcp_live_note.txt")

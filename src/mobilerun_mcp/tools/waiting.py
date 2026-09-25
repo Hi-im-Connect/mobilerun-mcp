@@ -17,6 +17,7 @@ from ..conditions import (
     snapshot_of,
 )
 from ..errors import fail
+from ..marks import has_loading_indicator, signature, top_labels
 from ..observe import build_observation
 from ..parsers.notifications import parse_notifications
 from ..parsers.packages import resolve_app
@@ -45,29 +46,53 @@ async def poll_until(session: DeviceSession, check, timeout: float, interval: fl
 def register(mcp: FastMCP, rt: Runtime) -> None:
     @mcp.tool(tags={"read"})
     async def wait_for(
+        condition: str | None = None,
+        timeout_ms: int | None = None,
+        poll_interval_ms: int | None = None,
         text: str | None = None,
         package: str | None = None,
         activity: str | None = None,
         gone: bool = False,
-        timeout: float = 15.0,
-        interval: float = 0.5,
+        timeout: float | None = None,
+        interval: float | None = None,
         device: Device = None,
     ) -> dict:
-        """Wait until text is on screen and/or an app/activity is in the foreground (gone=true waits
-        for it to disappear). For long waits (downloads, uploads); gestures already settle."""
-        if text is None and package is None and activity is None:
-            fail("invalid_argument", "give text, package or activity to wait for")
+        """LONG waits only (downloads, uploads, processing, status changes); gestures already
+        settle. With text / package / activity: wait until that is on screen (gone=true: until it
+        disappears). Otherwise wait until loading finishes (no progress bar or "Loading" text) and
+        the screen is still; condition is echoed back, you judge the returned state.
+        Timeouts: timeout_ms (default 5000, max 30000) / poll_interval_ms (default 500, min 100),
+        or timeout / interval in seconds."""
         session = get_session(rt, device)
         started = time.monotonic()
+        explicit = text is not None or package is not None or activity is not None
+        if timeout_ms is not None:
+            limit = min(max(timeout_ms, 0), 30000) / 1000
+        elif timeout is not None:
+            limit = min(timeout, 120.0)
+        else:
+            limit = 15.0 if explicit else 5.0
+        step = max(poll_interval_ms or 500, 100) / 1000 if interval is None else interval
+        if explicit:
 
-        def check(screen, marks):
-            ok, evidence = matches(screen, marks, text=text, package=package, activity=activity)
-            return evidence or True if (not ok if gone else ok) else None
+            def check(screen, marks):
+                ok, evidence = matches(screen, marks, text=text, package=package, activity=activity)
+                return evidence or True if (not ok if gone else ok) else None
+        else:
+            last: dict[str, str] = {}
 
-        found, screen, marks, sig = await poll_until(session, check, min(timeout, 120.0), interval)
+            def check(screen, marks):
+                sig = signature(screen, marks)
+                still = last.get("sig") == sig
+                last["sig"] = sig
+                return "loaded" if still and not has_loading_indicator(screen) else None
+
+        found, screen, marks, sig = await poll_until(session, check, limit, step)
         return {
             "ok": bool(found),
+            **({"condition": condition} if condition else {}),
             "gone": gone,
+            "timed_out": not found,
             "elapsed": round(time.monotonic() - started, 2),
             "evidence": found if isinstance(found, str) else "",
             "observation": build_observation("", screen, marks, sig, True),
@@ -75,17 +100,22 @@ def register(mcp: FastMCP, rt: Runtime) -> None:
 
     @mcp.tool(tags={"read"})
     async def watch_device_events(
-        duration: float = 5.0,
+        timeout_seconds: float | None = None,
+        max_events: int = 50,
+        duration: float | None = None,
         interval: float = 0.5,
         kinds: list[str] | None = None,
         device: Device = None,
     ) -> dict:
-        """Collect what changes over ``duration`` seconds (max 30): foreground app, keyboard,
-        screen content, notifications posted/removed. kinds filters: foreground, keyboard,
-        screen, notifications."""
+        """Collect device events for up to timeout_seconds (default 10, max 30), returning early
+        once max_events (default 50) arrive: foreground app, keyboard, screen content,
+        notifications posted/removed. kinds filters: foreground, keyboard, screen, notifications."""
         session = get_session(rt, device)
         wanted = set(kinds or ["foreground", "keyboard", "screen", "notifications"])
-        duration = min(max(duration, 0.5), MAX_WATCH_SECONDS)
+        if not session.has_adb:
+            wanted.discard("notifications")  # read from dumpsys
+        seconds = timeout_seconds if timeout_seconds is not None else duration
+        duration = min(max(10.0 if seconds is None else seconds, 0.5), MAX_WATCH_SECONDS)
         events: list[dict] = []
         screen, marks, sig = await session.peek()
         prev = snapshot_of(screen, marks, sig)
@@ -127,7 +157,8 @@ def register(mcp: FastMCP, rt: Runtime) -> None:
                 for event in diff_notifications(keys, now_keys):
                     events.append({"t": round(time.monotonic() - start, 2), **event})
                 keys = now_keys
-            if len(events) >= 100:
+            if len(events) >= max_events:
+                events = events[:max_events]
                 break
         return {
             "duration": round(time.monotonic() - start, 2),
@@ -137,7 +168,9 @@ def register(mcp: FastMCP, rt: Runtime) -> None:
 
     @mcp.tool(tags={"read"})
     async def validate_action(
-        action: str,
+        gesture_type: str | None = None,
+        target: str | None = None,
+        action: str | None = None,
         x: int | None = None,
         y: int | None = None,
         som_id: int | None = None,
@@ -147,11 +180,42 @@ def register(mcp: FastMCP, rt: Runtime) -> None:
         uri: str | None = None,
         device: Device = None,
     ) -> dict:
-        """Dry-run an action: would it be allowed and does its target exist? Nothing is executed."""
+        """Pre-check a planned action against the safety policy (and, for our action set, that
+        its target exists) without doing it. gesture_type is the action (tap, type_text,
+        launch_app, open_deeplink, ...); target is the app name/package, deep-link URI or text
+        you plan to use. Returns allowed=false with a category for blocked apps and text."""
+        action = action or gesture_type
+        if not action:
+            fail("invalid_argument", "give gesture_type")
+        mode = rt.config.policy
+        if target is not None:
+            if action in ("type_text", "type", "type_secret"):
+                text = text if text is not None else target
+            elif (
+                action in ("open_deeplink", "open_deep_link", "resolve_deeplink") or "://" in target
+            ):
+                uri = uri or target
+            else:
+                app_name = app_name or target
         if action not in ACTIONS:
-            fail("invalid_argument", f"action must be one of {', '.join(ACTIONS)}")
+            decision = check_text(mode, target or "") if target else None
+            if decision is None or decision.allowed:
+                decision = check_app(mode, target or "", target or "") if target else decision
+            blocked = bool(decision and not decision.allowed)
+            return {
+                "allowed": not blocked,
+                "valid": not blocked,
+                "problems": [f"policy_blocked: {decision.category}"] if blocked else [],
+                "category": decision.category if blocked else "",
+                "message": decision.reason if blocked else "",
+                "policy": {
+                    "mode": mode,
+                    "blocked": blocked,
+                    "category": decision.category if blocked else "",
+                },
+            }
         session = get_session(rt, device)
-        mode, problems = rt.config.policy, []
+        problems: list[str] = []
         blocked = None
         if action in ("tap", "double_tap", "long_press", "swipe"):
             if som_id is not None:
@@ -204,9 +268,13 @@ def register(mcp: FastMCP, rt: Runtime) -> None:
                     blocked = check_app(mode, component.split("/")[0])
         if blocked is not None and not blocked.allowed:
             problems.append(f"policy_blocked: {blocked.category}")
+        is_blocked = bool(blocked and not blocked.allowed)
         return {
+            "allowed": not is_blocked,
             "valid": not problems,
             "problems": problems,
+            "category": blocked.category if is_blocked else "",
+            "message": blocked.reason if is_blocked else "",
             "policy": {
                 "mode": mode,
                 "blocked": bool(blocked and not blocked.allowed),
@@ -244,13 +312,23 @@ def register(mcp: FastMCP, rt: Runtime) -> None:
                 ok = ok if kind == "text" else not ok
             return ev or True if ok else None
 
-        found, screen, marks, _ = await poll_until(session, check, timeout, 0.4)
+        found, screen, marks, sig = await poll_until(session, check, timeout, 0.4)
+        state = build_observation("", screen, marks, sig, True)
+        state["top_labels"] = top_labels(marks, 10)
+        state.pop("screen_changed", None)
         if not found and kind == "text" and use_ocr and ocr_mod.available():
             lines = await ocr_mod.run_tesseract(await session.screenshot())
             haystack = normalize(" ".join(line.text for line in lines))
             if normalize(expected) in haystack:
-                return {"verified": True, "evidence": "found by OCR"}
+                return {
+                    "verified": True,
+                    "evidence": "found by OCR",
+                    "expected": expected,
+                    "state": state,
+                }
         return {
+            "expected": expected,
+            "state": state,
             "verified": bool(found),
             "evidence": found if isinstance(found, str) else "",
             "foreground": screen.phone.package,

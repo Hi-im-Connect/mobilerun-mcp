@@ -46,6 +46,9 @@ class BrowserManager:
         self._ports: dict[str, int] = {}
         self._attached: dict[str, Attached] = {}
         self._http = httpx.AsyncClient(timeout=8.0)
+        self.generations: dict[str, tuple[int, int]] = {}  # session -> (page signature, generation)
+        self.tabs: dict[str, list[str]] = {}  # scratch-browser virtual tabs (inactive URLs)
+        self.handoffs: dict[str, dict] = {}
 
     # ---- discovery ---------------------------------------------------------------------
     async def _packages(self, pids: list[int]) -> dict[int, str]:

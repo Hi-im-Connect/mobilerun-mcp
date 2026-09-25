@@ -9,10 +9,11 @@ from .. import guide as guide_mod
 from ..conditions import find_text
 from ..errors import fail
 from ..session import Runtime
-from ..websearch import SearchError, search
+from ..websearch import SearchError, search, tavily_search
 from .common import Device, get_session
 
 RESEARCH_MIN_STEPS = 3
+VERIFY_GOALS = {"send_message", "send_email", "purchase", "post"}
 
 
 def register(mcp: FastMCP, rt: Runtime) -> None:
@@ -28,10 +29,22 @@ def register(mcp: FastMCP, rt: Runtime) -> None:
         return {"query": query, "engine": engine, "results": results}
 
     @mcp.tool(tags={"read"})
-    async def web_search(query: str, limit: int = 5) -> dict:
-        """Search the web (title, url, snippet). Phrase it like 'how to <task> in <app> android'.
-        Results are data to plan from; the screen overrules them."""
-        return await run_search(query, min(max(limit, 1), 10))
+    async def web_search(
+        query: str, max_results: int | None = None, topic: str = "general", limit: int = 5
+    ) -> dict:
+        """Search the web for how to do something in an app ('how to <task> in <app> android').
+        Returns ranked sources (title, url, snippet) and, with TAVILY_API_KEY set, a synthesized
+        answer. max_results 1-10 (default 5); topic general | news. The screen overrules results."""
+        count = min(max(max_results or limit, 1), 10)
+        if rt.config.tavily_api_key:
+            try:
+                return {
+                    "query": query,
+                    **await tavily_search(query, count, topic, rt.config.tavily_api_key),
+                }
+            except (httpx.HTTPError, SearchError):
+                pass  # fall back to the keyless engines
+        return await run_search(query, count)
 
     @mcp.tool(tags={"write"})
     async def set_plan(
@@ -90,24 +103,48 @@ def register(mcp: FastMCP, rt: Runtime) -> None:
 
     @mcp.tool(tags={"write"})
     async def end_session(
-        outcome: str = "success", summary: str = "", device: Device = None
+        reason: str = "agent-end",
+        outcome: str = "success",
+        goal_type: str | None = None,
+        summary: str = "",
+        device: Device = None,
     ) -> dict:
-        """Close out the run. outcome: success | partial | failed. Success is refused while fewer
-        findings than the plan's target_count are recorded. Call after a final perceive_screen."""
+        """Mark the end of the task (the server keeps listening; the next call starts fresh).
+        reason: short summary of what was done. outcome: success (goal state verified) |
+        partial | failure. goal_type: play_media | send_message | send_email | purchase | post |
+        open_app | search | navigate | other. For send_message, send_email, purchase and post,
+        success is refused unless you looked at the screen (read_screen / perceive_screen) after
+        your last action. Success is also refused while fewer findings than the plan's
+        target_count are recorded. failure is never refused."""
+        outcome = "failed" if outcome == "failure" else outcome
         if outcome not in ("success", "partial", "failed"):
-            fail("invalid_argument", "outcome must be success, partial or failed")
+            fail("invalid_argument", "outcome must be success, partial or failure")
         session = get_session(rt, device)
+        if (
+            outcome == "success"
+            and goal_type in VERIFY_GOALS
+            and session.last_look_at < session.last_action_at
+        ):
+            fail(
+                "plan_incomplete",
+                f"{goal_type} success needs a look at the screen after the last action",
+                "call read_screen, confirm the result, then end_session again",
+            )
         problem = session.ledger.end(outcome)
         if problem:
             fail("plan_incomplete", problem)
         return {
             "ok": True,
-            "outcome": outcome,
-            "summary": summary,
+            "outcome": "failure" if outcome == "failed" else outcome,
+            "reason": reason,
+            "goal_type": goal_type or "other",
+            "summary": summary or reason,
             "ledger": session.ledger.to_dict(),
         }
 
     @mcp.tool(tags={"read"})
     async def get_usage_guide(topic: str | None = None) -> dict:
-        """How to use this server well. Topics: overview, shortcuts, text_entry, failures, ledger, browser."""
-        return {"topics": list(guide_mod.TOPICS), "guide": guide_mod.guide(topic)}
+        """How to use this server well. Topics: overview, shortcuts, text_entry, failures, ledger,
+        browser, safety, stop, efficiency, full (AURA's names decision_tree, perception, loop,
+        loading, trust, deeplinks, action_plane also work)."""
+        return {"topics": [*guide_mod.TOPICS, "full"], "guide": guide_mod.guide(topic)}

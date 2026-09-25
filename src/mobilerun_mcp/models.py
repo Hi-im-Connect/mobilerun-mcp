@@ -120,14 +120,15 @@ class Mark:
     """A numbered, targetable item on screen (set-of-marks)."""
 
     id: int
-    kind: str  # button | input | toggle | text | image
+    kind: str  # button | input | toggle | text | image | scroll | icon
     label: str
     bounds: Bounds
     element_index: int
-    source: str = "a11y"  # a11y | ocr
+    source: str = "a11y"  # a11y | ocr | vision
     checked: bool | None = None
     password: bool = False
     scrollable: bool = False
+    confidence: float = 1.0  # detector score for source="vision"
 
     @property
     def center(self) -> tuple[int, int]:

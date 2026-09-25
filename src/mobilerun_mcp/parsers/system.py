@@ -111,3 +111,35 @@ def parse_find(output: str) -> list[str]:
 def is_chooser(component: str | None) -> bool:
     """True for the system resolver/chooser, i.e. no single default handler exists."""
     return bool(component) and component.startswith("android/com.android.internal.app.")
+
+
+MEDIA_KINDS = {"1": "image", "2": "audio", "3": "video", "6": "document"}
+MEDIA_COLLECTION = {"image": "images", "audio": "audio", "video": "video"}
+_ROW = re.compile(r"^Row: \d+ (.*)$")
+
+
+def parse_content_rows(raw: str, keys: tuple[str, ...]) -> list[dict[str, str]]:
+    """``content query`` rows; values may contain ", " so fields are split on the known keys."""
+    rows = []
+    pattern = re.compile(r"(?:^|, )(" + "|".join(map(re.escape, keys)) + r")=")
+    for line in raw.splitlines():
+        m = _ROW.match(line.strip())
+        if not m:
+            continue
+        body = m.group(1)
+        marks = list(pattern.finditer(body))
+        row = {}
+        for i, mk in enumerate(marks):
+            end = marks[i + 1].start() if i + 1 < len(marks) else len(body)
+            value = body[mk.end() : end]
+            row[mk.group(1)] = "" if value == "NULL" else value
+        rows.append(row)
+    return rows
+
+
+def media_uri(row: dict[str, str]) -> str:
+    kind = MEDIA_KINDS.get(row.get("media_type", ""), "")
+    collection = MEDIA_COLLECTION.get(kind)
+    if collection:
+        return f"content://media/external/{collection}/media/{row['_id']}"
+    return f"content://media/external/file/{row['_id']}"

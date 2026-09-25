@@ -108,6 +108,11 @@ def act(
         "focus": "el.scrollIntoView({block:'center'}); el.focus(); return {ok:true};",
         "hover": "el.dispatchEvent(new MouseEvent('mouseover', {bubbles:true})); return {ok:true};",
         "scroll_into_view": "el.scrollIntoView({block:'center'}); return {ok:true};",
+        "submit": (
+            "const form = el.form || el.closest('form');"
+            " if (form) { form.requestSubmit ? form.requestSubmit() : form.submit(); return {ok:true, via:'form'}; }"
+            " el.click(); return {ok:true, via:'click'};"
+        ),
         "select": (
             f"const v = {json.dumps(value)}; const opt = Array.from(el.options || []).find(o => o.value === v || o.text === v);"
             " if (!opt) return {error: 'no such option'}; el.value = opt.value;"
@@ -152,3 +157,24 @@ def wait_condition(text: str | None, selector: str | None, url_contains: str | N
 
 def file_input(ref: str | None, selector: str | None) -> str:
     return _target(ref, selector)
+
+
+def items(limit: int) -> str:
+    """Repeated items (search results, cards, listings): the largest group of same-shaped
+    siblings that carry text. Returns {total, items: [{text, link}]}."""
+    return (
+        "(() => { let best = null, bestScore = 0;"
+        " for (const parent of document.querySelectorAll('body *')) {"
+        "  const kids = Array.from(parent.children); if (kids.length < 3) continue;"
+        "  const groups = {};"
+        "  for (const k of kids) { const t = (k.innerText || '').trim(); if (t.length < 3) continue;"
+        "   const key = k.tagName + '.' + (k.className && k.className.baseVal === undefined ? k.className : '');"
+        "   (groups[key] = groups[key] || []).push(k); }"
+        "  for (const g of Object.values(groups)) { if (g.length < 3) continue;"
+        "   const score = g.length * Math.min(200, g.reduce((n, k) => n + (k.innerText || '').length, 0) / g.length);"
+        "   if (score > bestScore) { bestScore = score; best = g; } } }"
+        " if (!best) return {total: 0, items: []};"
+        " const rows = best.map(k => { const a = k.matches('a[href]') ? k : k.querySelector('a[href]');"
+        "  return {text: (k.innerText || '').trim().replace(/\\s+/g, ' ').slice(0, 300), link: a ? a.href : null}; });"
+        f" return {{total: rows.length, items: rows.slice(0, {int(limit)})}}; }})()"
+    )

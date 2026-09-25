@@ -35,7 +35,7 @@ async def open_page(phone, **kw):
 
 
 async def ref_of(phone, query):
-    return (await phone.call("browser_find", query=query))["matches"][0]["ref"]
+    return (await phone.call("browser_find", query=query))["matches"][0]["el_id"]
 
 
 async def test_open_reads_title_text_and_structure(phone):
@@ -45,7 +45,7 @@ async def test_open_reads_title_text_and_structure(phone):
     assert "Hello Browser" in page["text"] and not page["truncated"]
     tags = {(e["tag"], e["text"]) for e in page["elements"]}
     assert ("button", "Increment") in tags and ("a", "Go next") in tags
-    assert all(e["ref"].startswith("e") for e in page["elements"])
+    assert all(isinstance(e["el_id"], int) for e in page["elements"])
     limited = await phone.call("browser_read", max_chars=5)
     assert limited["truncated"] and len(limited["text"]) == 5
     part = await phone.call("browser_read", selector="#count")
@@ -58,16 +58,16 @@ async def test_tabs_lists_the_page_and_session(phone):
     tabs = await phone.call("browser_tabs")
     assert any(
         p["title"] == "MCP Test Page" and p["app"] == "org.chromium.webview_shell"
-        for p in tabs["pages"]
+        for p in tabs["all_pages"]
     )
-    assert "default" in tabs["sessions"]
+    assert "scratch" in tabs["sessions"]
 
 
 async def test_find_click_updates_the_page(phone):
     await open_page(phone)
     found = (await phone.call("browser_find", query="increment"))["matches"][0]
     assert found["tag"] == "button" and found["rect"][2] > 0
-    clicked = await phone.call("browser_act", action="click", ref=found["ref"])
+    clicked = await phone.call("browser_act", action="click", el_id=found["el_id"])
     assert clicked["ok"]
     await phone.call("browser_act", action="click", selector="#btn")
     assert (await phone.call("browser_read", selector="#count"))["text"] == "clicks: 2"
@@ -146,14 +146,18 @@ async def test_upload_sets_the_file_input(phone, tmp_path):
 async def test_double_tap_gesture_reaches_the_page(phone):
     await open_page(phone)
     await phone.call("browser_handoff")  # foreground the browser so device gestures land on it
-    await asyncio.sleep(1)
-    elements = (await phone.call("read_screen"))["elements"]
-    line = next((ln for ln in elements.splitlines() if "Double-click me" in ln), None)
+    line = None
+    for _ in range(10):  # the WebView fills its accessibility tree a moment after it renders
+        await asyncio.sleep(0.5)
+        elements = await phone.elements()
+        line = next((ln for ln in elements.splitlines() if "Double-click me" in ln), None)
+        if line:
+            break
     assert line, elements
     await phone.call("double_tap", som_id=int(line.split("[")[0]))
     await asyncio.sleep(0.5)
     tabs = await phone.call("browser_tabs")
-    assert any(p["title"] == "dbl:1" for p in tabs["pages"]), tabs
+    assert any(p["title"] == "dbl:1" for p in tabs["all_pages"]), tabs
 
 
 async def test_handoff_and_close(phone):

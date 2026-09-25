@@ -23,7 +23,8 @@ class Phone:
         """Return the structured result (dict) or, for list results, the raw content blocks."""
         result = await self.client.call_tool(tool, args)
         if result.structured_content is not None:
-            return result.structured_content
+            data = result.structured_content
+            return data["result"] if list(data) == ["result"] else data
         texts = [c for c in result.content if c.type == "text"]
         if len(result.content) == 1 and texts:
             try:
@@ -37,8 +38,14 @@ class Phone:
             await self.client.call_tool(tool, args)
         return str(info.value)
 
+    async def perceive(self, **args) -> dict:
+        """perceive_screen's JSON part (the tool returns [json, image?])."""
+        result = await self.client.call_tool("perceive_screen", {"include_image": False, **args})
+        text = next(c.text for c in result.content if c.type == "text")
+        return json.loads(text)
+
     async def elements(self) -> str:
-        return (await self.call("read_screen"))["elements"]
+        return (await self.perceive())["elements"]
 
     async def home(self):
         await self.call("press_home")

@@ -95,3 +95,35 @@ async def search(
     finally:
         if owns:
             await client.aclose()
+
+
+TAVILY_URL = "https://api.tavily.com/search"
+
+
+async def tavily_search(
+    query: str, limit: int, topic: str, api_key: str, client: httpx.AsyncClient | None = None
+) -> dict[str, Any]:
+    """Tavily (AURA's provider): a synthesized answer plus ranked source snippets."""
+    body = {
+        "query": query,
+        "max_results": limit,
+        "topic": "news" if topic == "news" else "general",
+        "include_answer": True,
+    }
+    headers = {"Authorization": f"Bearer {api_key}"}
+    own = client is None
+    client = client or httpx.AsyncClient(timeout=20)
+    try:
+        resp = await client.post(TAVILY_URL, json=body, headers=headers)
+        resp.raise_for_status()
+        data = resp.json()
+    finally:
+        if own:
+            await client.aclose()
+    results = [
+        {"title": r.get("title", ""), "url": r.get("url", ""), "snippet": r.get("content", "")}
+        for r in data.get("results") or []
+    ][:limit]
+    if not results and not data.get("answer"):
+        raise SearchError("tavily returned nothing")
+    return {"engine": "tavily", "answer": data.get("answer") or "", "results": results}

@@ -18,7 +18,8 @@ async def test_wait_for_text_package_gone_and_timeout(phone):
     assert (await phone.call("wait_for", package="com.android.contacts", timeout=3))["ok"]
     assert not (await phone.call("wait_for", text="zzz-not-there", timeout=1))["ok"]
     assert (await phone.call("wait_for", text="zzz-not-there", gone=True, timeout=2))["ok"]
-    assert "invalid_argument" in await phone.call_error("wait_for")
+    idle = await phone.call("wait_for", condition="contacts loaded", timeout_ms=3000)
+    assert idle["ok"] and idle["condition"] == "contacts loaded"
 
 
 async def test_verify_action_kinds(phone):
@@ -173,7 +174,7 @@ async def test_standard_policy_blocks_card_numbers_but_not_normal_text(phone):
 
 
 async def _search_id(p):
-    for line in (await p.call("read_screen"))["elements"].splitlines():
+    for line in (await p.elements()).splitlines():
         if "Search contacts" in line:
             return int(line.split("[")[0])
     raise AssertionError("no search control")
@@ -211,6 +212,6 @@ async def test_read_scope_hides_actions_but_keeps_perception(phone):
     try:
         names = {t.name for t in await client.list_tools()}
         assert "perceive_screen" in names and "tap" not in names and "launch_app" not in names
-        assert (await read_only.call("read_screen"))["mark_count"] >= 0
+        assert (await read_only.call("read_screen")).startswith("SCREEN ")
     finally:
         await client.__aexit__(None, None, None)

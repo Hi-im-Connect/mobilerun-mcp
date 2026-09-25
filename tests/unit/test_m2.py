@@ -39,8 +39,11 @@ def test_set_alarm_args_and_validation():
     )
     with pytest.raises(ValueError):
         build_intent("set_alarm", {"hour": 25, "minute": 0})
+    assert (
+        "alarm.MINUTES 0" in build_intent("set_alarm", {"hour": 7}).args
+    )  # AURA: minute defaults to 0
     with pytest.raises(ValueError, match="missing"):
-        build_intent("set_alarm", {"hour": 7})
+        build_intent("set_alarm", {"minute": 5})
 
 
 def test_timer_dial_sms_share_navigate():
@@ -69,7 +72,8 @@ def test_calendar_event_defaults_to_one_hour():
 def test_unknown_verb_lists_choices():
     with pytest.raises(ValueError, match="set_alarm"):
         build_intent("teleport", {})
-    assert len(VERBS) == 7
+    assert len(VERBS) == 8
+    assert build_intent("show_alarms", {}).args == "-a android.intent.action.SHOW_ALARMS"
 
 
 # ---- shade parsing --------------------------------------------------------------------

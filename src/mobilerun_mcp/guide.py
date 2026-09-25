@@ -5,7 +5,8 @@ from __future__ import annotations
 TOPICS: dict[str, str] = {
     "overview": """\
 Perceive, act, verify.
-1. perceive_screen: numbered marks (som_id) + annotated screenshot. Read the numbers off the list.
+1. read_screen (text grid, cheap) or perceive_screen (annotated screenshot + e array): numbered
+   marks (som_id). perceive_screen(detail="full") adds the icon detector + OCR for unlabelled icons.
 2. Act with tap/type_text/swipe/scroll_*/press_*/launch_app. Each call settles and returns
    post_action_observation (foreground app, element_count, keyboard_visible, top_labels,
    screen_changed, settled). That block is your verification: read it before perceiving again.
@@ -35,14 +36,42 @@ record_finding(item, quote) for each item you read (the quote must appear on the
 end_session(outcome="success") is refused until findings reach target_count; otherwise finish with
 outcome="partial" and say exactly what was covered. Never claim an unverified success.""",
     "browser": """\
-browser_open(url) opens a tab in the on-device browser (WebView Browser Tester) or attaches to an
-in-app WebView; browser_read / browser_find / browser_extract read the page, browser_act clicks or
-types by element ref, browser_wait waits for text or load. browser_handoff brings the browser to the
-foreground so a person can solve a login or captcha.""",
+browser_open(url) returns the page text, numbered elements (el_id) and a generation. session
+"scratch" (default) is this server's browser, signed into nothing; "mine" drives the user's
+signed-in browser (Chrome). browser_act(action, el_id, value, generation) acts and returns the new
+page; a stale generation returns stale_handles. browser_find(text) locates an element (scrolling
+lazy lists), browser_extract pulls repeated items, browser_tabs keeps several pages, browser_wait
+waits for text. browser_handoff(prompt) lets the person sign in or solve a CAPTCHA; call it again
+with check=true. Never ask for passwords.""",
+    "safety": """validate_action(gesture_type, target) pre-checks the policy. With MOBILERUN_MCP_POLICY on, banking,
+payment, authenticator and password-manager apps, card numbers, CVVs (and in strict mode passwords,
+PINs, national ids) are refused with policy_blocked. That is final: never reach it through adb,
+run_task or coordinates. sensitive_foreground in an observation means leave the app.""",
+    "stop": """Finish with end_session(reason, outcome, goal_type). Claim success only from evidence you hold:
+the last post_action_observation or a fresh read_screen. For send_message, send_email, purchase
+and post, success is refused unless you looked at the screen after your last action.""",
+    "efficiency": """One consequential action per turn, then read its observation instead of re-reading the screen.
+Prefer typed tools and deep links over navigation. wait_for is for long waits only (downloads,
+processing); gestures already settle. read_screen is cheaper than perceive_screen.""",
+}
+
+
+# AURA's topic names
+ALIASES = {
+    "decision_tree": "shortcuts",
+    "perception": "overview",
+    "loop": "overview",
+    "loading": "efficiency",
+    "trust": "safety",
+    "deeplinks": "shortcuts",
+    "action_plane": "text_entry",
 }
 
 
 def guide(topic: str | None = None) -> str:
+    topic = ALIASES.get(topic or "", topic)
+    if topic == "full":
+        topic = None
     if topic and topic in TOPICS:
         return TOPICS[topic]
     if topic:

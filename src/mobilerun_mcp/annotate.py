@@ -8,13 +8,23 @@ from PIL import Image, ImageDraw, ImageFont
 
 from .models import Mark
 
-COLORS = {
-    "button": (230, 60, 60),
-    "input": (40, 140, 240),
-    "toggle": (150, 80, 220),
-    "image": (240, 150, 30),
-    "text": (40, 170, 90),
-}
+# AURA's colour legend: BLUE tappable, GREEN text input, MAGENTA scrollable, AMBER toggle,
+# GREY nothing declared, RED on-host vision (detector/OCR, not the accessibility tree).
+BLUE, GREEN, MAGENTA, AMBER, GREY, RED = (
+    (40, 110, 240),
+    (30, 170, 70),
+    (210, 40, 200),
+    (240, 170, 20),
+    (128, 128, 128),
+    (230, 40, 40),
+)
+COLORS = {"button": BLUE, "input": GREEN, "scroll": MAGENTA, "toggle": AMBER}
+
+
+def color_for(mark: Mark) -> tuple[int, int, int]:
+    if mark.source != "a11y":
+        return RED
+    return COLORS.get(mark.kind, GREY)
 
 
 def annotate(png: bytes, marks: list[Mark]) -> bytes:
@@ -22,7 +32,7 @@ def annotate(png: bytes, marks: list[Mark]) -> bytes:
     draw = ImageDraw.Draw(image)
     font = ImageFont.load_default(size=18)
     for mark in marks:
-        color = COLORS.get(mark.kind, (90, 90, 90))
+        color = color_for(mark)
         b = mark.bounds
         draw.rectangle([b.left, b.top, b.right - 1, b.bottom - 1], outline=color, width=2)
         text = str(mark.id)

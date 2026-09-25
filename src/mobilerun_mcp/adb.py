@@ -101,6 +101,21 @@ class Adb:
         await self.run("push", local_path, remote_path, timeout=timeout)
 
 
+async def run_adb(adb_bin: str | None, *args: str, timeout: float = 15.0) -> str:
+    """Host-level adb command (not bound to one device); returns combined output."""
+    binary = adb_bin or shutil.which("adb") or "adb"
+    proc = await asyncio.create_subprocess_exec(
+        binary, *args, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.STDOUT
+    )
+    try:
+        out, _ = await asyncio.wait_for(proc.communicate(), timeout)
+    except TimeoutError as exc:
+        proc.kill()
+        await proc.wait()
+        raise AdbTimeout(f"adb {args[0]} timed out after {timeout}s") from exc
+    return out.decode("utf-8", "replace")
+
+
 async def connect_tcp(serial: str, adb_bin: str | None = None, timeout: float = 15.0) -> str:
     """``adb connect`` for host:port serials (no-op for USB serials)."""
     if ":" not in serial:

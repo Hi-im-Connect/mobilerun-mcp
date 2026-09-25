@@ -1,0 +1,568 @@
+Now: [1790309863713] 2026-09-25 04:17:43  Raw last reset: [1790309853279] 2026-09-25 04:17:33  Last reset: [1790309853279] 2026-09-25 04:17:33  Next reset: [1790396253279] 2026-09-26 04:17:33
+
+  Config:    Max icon dim: 192
+    Icon format: PNG
+    Icon quality: 100
+    saveDelayMillis: 3000
+    resetInterval: 86400000
+    maxUpdatesPerInterval: 10
+    maxShortcutsPerActivity: 15
+
+  Stats:
+    getHomeActivities(): count=1, total=0.0ms, avg=0.034ms, max calls/s=0 max dur/s=0.0ms max time=0.0ms
+    Launcher permission check: count=133, total=3.6ms, avg=0.027ms, max calls/s=47 max dur/s=1.3ms max time=1.1ms
+    getPackageInfo(): count=16, total=0.4ms, avg=0.023ms, max calls/s=0 max dur/s=0.0ms max time=0.0ms
+    getPackageInfo(SIG): count=152, total=4.4ms, avg=0.029ms, max calls/s=13 max dur/s=0.9ms max time=0.8ms
+    getApplicationInfo: count=1045, total=309.3ms, avg=0.296ms, max calls/s=0 max dur/s=0.0ms max time=188.1ms
+    cleanupDanglingBitmaps: count=58, total=25.6ms, avg=0.441ms, max calls/s=3 max dur/s=16.6ms max time=16.6ms
+    getActivity+metadata: count=56, total=20.0ms, avg=0.356ms, max calls/s=0 max dur/s=0.0ms max time=6.2ms
+    getInstalledPackages: count=1, total=0.6ms, avg=0.583ms, max calls/s=0 max dur/s=0.0ms max time=0.6ms
+    checkPackageChanges: count=1, total=0.9ms, avg=0.852ms, max calls/s=0 max dur/s=0.0ms max time=0.9ms
+    getApplicationResources: count=170, total=45.6ms, avg=0.268ms, max calls/s=0 max dur/s=0.0ms max time=4.9ms
+    resourceNameLookup: count=122, total=16.6ms, avg=0.136ms, max calls/s=0 max dur/s=0.0ms max time=6.9ms
+    getLauncherActivity: count=18, total=3.6ms, avg=0.200ms, max calls/s=0 max dur/s=0.0ms max time=0.4ms
+    checkLauncherActivity: count=100, total=179.8ms, avg=1.798ms, max calls/s=0 max dur/s=0.0ms max time=20.8ms
+    isActivityEnabled: count=48, total=2.1ms, avg=0.044ms, max calls/s=0 max dur/s=0.0ms max time=0.1ms
+    packageUpdateCheck: count=133, total=6.1ms, avg=0.046ms, max calls/s=0 max dur/s=0.0ms max time=1.1ms
+    asyncPreloadUserDelay: count=1, total=0.3ms, avg=0.287ms, max calls/s=0 max dur/s=0.0ms max time=0.3ms
+    getDefaultLauncher(): count=1063, total=110.0ms, avg=0.104ms, max calls/s=15 max dur/s=103.7ms max time=103.7ms
+
+  #Failures: 0
+
+  Pending saves: Num=0 Executor=java.util.concurrent.ThreadPoolExecutor@f4f0027[Running, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 72]
+
+  User: 0  Known locales: en-US  Last app scan: [1790241326215] 2026-09-24 09:15:26
+      Last app scan FP: redroid/redroid_x86_64/redroid_x86_64:12/SP1A.210812.016.C2/eng.frank.20240527.144937:userdebug/test-keys
+      Restore from FP: null
+      Cached launcher: com.android.launcher3
+
+      Launcher: com.android.launcher3  Package user: 0  Owner user: 0
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 31
+          Backup Allowed: true
+          Last package update time: 1716821534000
+            SigHash: A40DA80A59D170CAA950CF15C18C454D47A39B26989D8B640ECD745BA71BF5DC
+
+
+      Launcher: com.android.systemui  Package user: 0  Owner user: 0
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 31
+          Backup Allowed: true
+          Last package update time: 1716821501000
+            SigHash: C8A2E9BCCF597C2FB6DC66BEE293FC13F2FC47EC77BC6B2B0D52C11F51192AB8
+
+
+      Package: com.zhiliaoapp.musically.go  UID: 10087
+        Calls: 0
+        Last known FG: 77231883
+        Last reset: [1790309853279] 2026-09-25 04:17:33
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 460901
+          Backup Allowed: false
+          Last package update time: 1790102525306
+            SigHash: D7811EC4166FEA6CC720BA66699DC84B584AC9E6986613A76D4E43D8CBE32B27
+
+        Shortcuts:
+        Total bitmap size: 0 (0 B)
+
+      Package: com.google.android.googlequicksearchbox  UID: 10050
+        Calls: 0
+        Last known FG: 0
+        Last reset: [1790309853279] 2026-09-25 04:17:33
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 301806948
+          Backup Allowed: false
+          Last package update time: 1790077065019
+            SigHash: F0FD6C5B410F25CB25C3B53346C8972FAE30F8EE7411DF910480AD6B2D60DB83
+
+        Shortcuts:
+          ShortcutInfo {id=voice_static_shortcut, flags=0x1a4 [ImManIc-rStr]
+            packageName=com.google.android.googlequicksearchbox
+            activity=ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.googlequicksearchbox.SearchActivity}
+            shortLabel=Voice search, resId=2132094163[launcher_shortcut_voice_search_short]
+            longLabel=null, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=1, timestamp=1790285010733
+            intents=[Intent { act=com.google.android.googlequicksearchbox.action.CLASSIC_GSA_VOICE_SEARCH flg=0x1000c000 cmp=com.google.android.googlequicksearchbox/com.google.android.apps.search.googleapp.activity.GoogleAppActivity }/PersistableBundle[{source=and.gsa.launcher.shortcut.voice}]]
+            extras=null
+            iconRes=2131235661[drawable/ic_voice_search_shortcut], bitmapPath=null, iconUri=null}
+          ShortcutInfo {id=text_static_shortcut, flags=0x1a4 [ImManIc-rStr]
+            packageName=com.google.android.googlequicksearchbox
+            activity=ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.googlequicksearchbox.SearchActivity}
+            shortLabel=Search, resId=2132094162[launcher_shortcut_text_search_short]
+            longLabel=null, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=0, timestamp=1790285010732
+            intents=[Intent { act=android.search.action.GLOBAL_SEARCH flg=0x1000c000 cmp=com.google.android.googlequicksearchbox/com.google.android.apps.search.googleapp.activity.GoogleAppActivity }/PersistableBundle[{source=and.gsa.launcher.shortcut.text}]]
+            extras=null
+            iconRes=2131235620[drawable/ic_text_search_shortcut], bitmapPath=null, iconUri=null}
+        Total bitmap size: 0 (0 B)
+
+      Package: com.android.documentsui  UID: 10026
+        Calls: 0
+        Last known FG: 0
+        Last reset: [1790309853279] 2026-09-25 04:17:33
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 31
+          Backup Allowed: true
+          Last package update time: 1716821475000
+            SigHash: C8A2E9BCCF597C2FB6DC66BEE293FC13F2FC47EC77BC6B2B0D52C11F51192AB8
+
+        Shortcuts:
+          ShortcutInfo {id=content://com.android.providers.media.documents/root/images_root, flags=0x1a4 [ImManIc-rStr]
+            packageName=com.android.documentsui
+            activity=ComponentInfo{com.android.documentsui/com.android.documentsui.LauncherActivity}
+            shortLabel=Images, resId=2131755163[images_shortcut_label]
+            longLabel=null, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=0, timestamp=1790285010738
+            intents=[Intent { act=android.intent.action.VIEW dat=content://com.android.providers.media.documents/root/images_root flg=0x1000c000 }/null]
+            extras=null
+            iconRes=2131165328[drawable/ic_images_shortcut], bitmapPath=null, iconUri=null}
+        Total bitmap size: 0 (0 B)
+
+      Package: com.android.vending  UID: 10051
+        Calls: 0
+        Last known FG: 77231887
+        Last reset: [1790309853279] 2026-09-25 04:17:33
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 85322330
+          Backup Allowed: true
+          Last package update time: 1790101864728
+            SigHash: 7CE83C1B71F3D572FED04C8D40C5CB10FF75E6D87D9DF6FBD53F0468C2905053
+
+        Shortcuts:
+          ShortcutInfo {id=cubes_activity_shortcut, flags=0x85 [DynIc-rStr]
+            packageName=com.android.vending
+            activity=ComponentInfo{com.android.vending/com.android.vending.AssetBrowserActivity}
+            shortLabel=Collections, resId=0[null]
+            longLabel=Collections, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=[Landroid.app.Person;@bd922d4
+            icon=null
+            rank=0, timestamp=1790285010740
+            intents=[Intent { act=android.intent.action.VIEW dat=https://play.google.com/... }/null]
+            extras=null
+            iconRes=2131230720[drawable/0_resource_name_obfuscated], bitmapPath=null, iconUri=null}
+          ShortcutInfo {id=VIEW_MY_DOWNLOADS, flags=0x1a4 [ImManIc-rStr]
+            packageName=com.android.vending
+            activity=ComponentInfo{com.android.vending/com.android.vending.AssetBrowserActivity}
+            shortLabel=My apps, resId=2132020661[0_resource_name_obfuscated]
+            longLabel=null, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=0, timestamp=1790285010740
+            intents=[Intent { act=com.google.android.finsky.VIEW_MY_DOWNLOADS flg=0x1000c000 }/null]
+            extras=null
+            iconRes=2131232069[drawable/0_resource_name_obfuscated], bitmapPath=null, iconUri=null}
+        Total bitmap size: 0 (0 B)
+
+      Package: com.android.contacts  UID: 10048
+        Calls: 0
+        Last known FG: 77231887
+        Last reset: [1790309853279] 2026-09-25 04:17:33
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 10733
+          Backup Allowed: true
+          Last package update time: 1716821480000
+            SigHash: 28BBFE4A7B97E74681DC55C2FBB6CCB8D6C74963733F6AF6AE74D8C3A6E879FD
+
+        Shortcuts:
+          ShortcutInfo {id=shortcut-add-contact, flags=0x1a4 [ImManIc-rStr]
+            packageName=com.android.contacts
+            activity=ComponentInfo{com.android.contacts/com.android.contacts.activities.PeopleActivity}
+            shortLabel=Add contact, resId=2131755579[shortcut_add_contact]
+            longLabel=null, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=0, timestamp=1790285010744
+            intents=[Intent { act=android.intent.action.INSERT dat=content://com.android.contacts/contacts flg=0x1000c000 cmp=com.android.contacts/.activities.ContactEditorActivity }/null]
+            extras=null
+            iconRes=2131230831[drawable/ic_add_contact_shortcut], bitmapPath=null, iconUri=null}
+        Total bitmap size: 0 (0 B)
+
+      Package: com.instagram.android  UID: 10088
+        Calls: 0
+        Last known FG: 77231887
+        Last reset: [1790309853279] 2026-09-25 04:17:33
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 385311929
+          Backup Allowed: true
+          Last package update time: 1790083018979
+            SigHash: 5F3E50F435583C9AE626302A71F7340044087A7E2C60ADACFC254205A993E305
+
+        Shortcuts:
+          ShortcutInfo {id=post, flags=0x85 [DynIc-rStr]
+            packageName=com.instagram.android
+            activity=ComponentInfo{com.instagram.android/com.instagram.android.activity.MainTabActivity}
+            shortLabel=New post, resId=0[null]
+            longLabel=null, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=2, timestamp=1790285010752
+            intents=[Intent { act=android.intent.action.VIEW dat=instagram://share?app_shortcut=true }/PersistableBundle[{is_nux_shortcut=false}]]
+            extras=null
+            iconRes=2131755057[mipmap/new_post_shortcut_icon], bitmapPath=null, iconUri=null}
+          ShortcutInfo {id=messages, flags=0x85 [DynIc-rStr]
+            packageName=com.instagram.android
+            activity=ComponentInfo{com.instagram.android/com.instagram.android.activity.MainTabActivity}
+            shortLabel=Messages, resId=0[null]
+            longLabel=null, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=3, timestamp=1790285010752
+            intents=[Intent { act=android.intent.action.VIEW dat=instagram://direct-inbox?app_shortcut=true }/PersistableBundle[{is_nux_shortcut=false}]]
+            extras=null
+            iconRes=2131755041[mipmap/direct_shortcut_icon], bitmapPath=null, iconUri=null}
+          ShortcutInfo {id=camera, flags=0x85 [DynIc-rStr]
+            packageName=com.instagram.android
+            activity=ComponentInfo{com.instagram.android/com.instagram.android.activity.MainTabActivity}
+            shortLabel=Camera, resId=0[null]
+            longLabel=null, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=0, timestamp=1790285010752
+            intents=[Intent { act=android.intent.action.VIEW dat=instagram://story-camera?app_shortcut=true }/PersistableBundle[{is_nux_shortcut=false}]]
+            extras=null
+            iconRes=2131755028[mipmap/camera_shortcut_icon], bitmapPath=null, iconUri=null}
+          ShortcutInfo {id=activity, flags=0x85 [DynIc-rStr]
+            packageName=com.instagram.android
+            activity=ComponentInfo{com.instagram.android/com.instagram.android.activity.MainTabActivity}
+            shortLabel=View activity, resId=0[null]
+            longLabel=null, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=1, timestamp=1790285010752
+            intents=[Intent { act=android.intent.action.VIEW dat=instagram://news?app_shortcut=true }/PersistableBundle[{is_nux_shortcut=false}]]
+            extras=null
+            iconRes=2131755008[mipmap/activity_shortcut_icon], bitmapPath=null, iconUri=null}
+        Total bitmap size: 0 (0 B)
+
+      Package: com.google.android.gm  UID: 10085
+        Calls: 0
+        Last known FG: 77231887
+        Last reset: [1790309853279] 2026-09-25 04:17:33
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 66003358
+          Backup Allowed: true
+          Last package update time: 1790077937568
+            SigHash: F0FD6C5B410F25CB25C3B53346C8972FAE30F8EE7411DF910480AD6B2D60DB83
+
+        Shortcuts:
+          ShortcutInfo {id=user@example.com, flags=0x89 [DynIc-fStr]
+            packageName=com.google.android.gm
+            activity=ComponentInfo{com.google.android.gm/com.google.android.gm.ConversationListActivityGmail}
+            shortLabel=user@example.com, resId=0[null]
+            longLabel=user@example.com, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=0, timestamp=1790285019755
+            intents=[Intent { act=android.intent.action.VIEW flg=0x1000c000 pkg=com.google.android.gm cmp=com.google.android.gm/.ui.MailActivityGmail }/PersistableBundle[{android.intent.extra.shortcut.ID=user@example.com, from-account-launcher-shortcut=true, mail_account_serialized={"name":"user@example.com","type":"com.google","accountManagerName":"user@example.com","accountId":"user@example.com","providerVersion":0,"accountUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/account?account_type=com.google","capabilities":275629211263,"folderListUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/labels?account_type=com.google","fullFolderListUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/labels?account_type=com.google","allFolderListUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/labels?account_type=com.google","searchUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/search?account_type=com.google","searchMessageGenericUri":"","accountFromAddresses":"[]","expungeMessageUri":"","undoUri":"","accountSettingsIntentUri":"setting:\/\/gmail\/?account=user%40example.com","helpIntentUri":"","sendFeedbackIntentUri":"","reauthenticationUri":"auth:\/\/gmail\/?account=user%40example.com","syncStatus":0,"composeUri":"gmail2from:\/\/gmail-ls\/account\/user@example.com","mimeType":"application\/gmail-ls","recentFolderListUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/recentlabels?account_type=com.google","defaultRecentFolderListUri":"","manualSyncUri":"","viewProxyUri":"content:\/\/gmail\/proxy","accountCookieUri":"","accountOAuthTokenUri":"","updateSettingsUri":"","enableMessageTransforms":1,"syncAuthority":"gmail-ls","quickResponseUri":"","settingsFragmentClass":"com.google.android.gm.preference.AccountPreferenceFragment","securityHold":0,"accountSecurityUri":"","settingsSnapshotUri":"","vacationResponderSettingsUri":"","driveUri":"","drawerAddress":"","providerHostname":"mail.google.com","providerPathname":"\/mail\/","recipientSecurityCheckUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/recipientSecurityCheck?account_type=com.google","settings":{"auto_advance":0,"reply_behavior":2,"confirm_delete":false,"confirm_archive":false,"confirm_send":false,"default_inbox":"content:\/\/com.google.android.gm.sapi\/user@example.com\/label\/%5Esq_ig_i_personal?account_type=com.google","force_reply_from_default":true,"max_attachment_size":26214400,"swipe":0,"importance_markers_enabled":false,"show_chevrons_enabled":false,"setup_intent_uri":"","conversation_view_mode":0,"move_to_inbox":"content:\/\/com.google.android.gm.sapi\/user@example.com\/label\/%5Esq_ig_i_personal?account_type=com.google","show_images":0,"welcome_tour_shown_version":1,"temp_tls_ii":true,"temp_tls_oi":true,"temp_fz_ii":true,"temp_fz_oi":false,"temp_ood":false,"sync_interval":-1},"protocolVersion":""}, from-account-launcher-shortcut-with-id=user@example.com, shortcutUri=content://com.google.android.gm.sapi/user@example.com/label/%5Esq_ig_i_personal?account_type=com.google}]]
+            extras=PersistableBundle[{account-shortcut-manager-account=user@example.com, is-from-account-shortcut-manager=true}]
+            iconRes=0[null], bitmapPath=/data/system_ce/0/shortcut_service/bitmaps/com.google.android.gm/1790285019758.png, iconUri=null}
+            bitmap size=3347
+          ShortcutInfo {id=user@example.com, flags=0x89 [DynIc-fStr]
+            packageName=com.google.android.gm
+            activity=ComponentInfo{com.google.android.gm/com.google.android.gm.ConversationListActivityGmail}
+            shortLabel=user@example.com, resId=0[null]
+            longLabel=user@example.com, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=1, timestamp=1790285019761
+            intents=[Intent { act=android.intent.action.VIEW flg=0x1000c000 pkg=com.google.android.gm cmp=com.google.android.gm/.ui.MailActivityGmail }/PersistableBundle[{android.intent.extra.shortcut.ID=user@example.com, from-account-launcher-shortcut=true, mail_account_serialized={"name":"user@example.com","type":"com.google","accountManagerName":"user@example.com","accountId":"user@example.com","providerVersion":0,"accountUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/account?account_type=com.google","capabilities":275629211263,"folderListUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/labels?account_type=com.google","fullFolderListUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/labels?account_type=com.google","allFolderListUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/labels?account_type=com.google","searchUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/search?account_type=com.google","searchMessageGenericUri":"","accountFromAddresses":"[]","expungeMessageUri":"","undoUri":"","accountSettingsIntentUri":"setting:\/\/gmail\/?account=user%40example.com","helpIntentUri":"","sendFeedbackIntentUri":"","reauthenticationUri":"auth:\/\/gmail\/?account=user%40example.com","syncStatus":0,"composeUri":"gmail2from:\/\/gmail-ls\/account\/user@example.com","mimeType":"application\/gmail-ls","recentFolderListUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/recentlabels?account_type=com.google","defaultRecentFolderListUri":"","manualSyncUri":"","viewProxyUri":"content:\/\/gmail\/proxy","accountCookieUri":"","accountOAuthTokenUri":"","updateSettingsUri":"","enableMessageTransforms":1,"syncAuthority":"gmail-ls","quickResponseUri":"","settingsFragmentClass":"com.google.android.gm.preference.AccountPreferenceFragment","securityHold":0,"accountSecurityUri":"","settingsSnapshotUri":"","vacationResponderSettingsUri":"","driveUri":"","drawerAddress":"","providerHostname":"mail.google.com","providerPathname":"\/mail\/","recipientSecurityCheckUri":"content:\/\/com.google.android.gm.sapi\/user@example.com\/recipientSecurityCheck?account_type=com.google","settings":{"auto_advance":0,"reply_behavior":2,"confirm_delete":false,"confirm_archive":false,"confirm_send":false,"default_inbox":"content:\/\/com.google.android.gm.sapi\/user@example.com\/label\/%5Esq_ig_i_personal?account_type=com.google","force_reply_from_default":true,"max_attachment_size":26214400,"swipe":0,"importance_markers_enabled":false,"show_chevrons_enabled":false,"setup_intent_uri":"","conversation_view_mode":0,"move_to_inbox":"content:\/\/com.google.android.gm.sapi\/user@example.com\/label\/%5Esq_ig_i_personal?account_type=com.google","show_images":0,"welcome_tour_shown_version":1,"temp_tls_ii":true,"temp_tls_oi":true,"temp_fz_ii":true,"temp_fz_oi":false,"temp_ood":false,"sync_interval":-1},"protocolVersion":""}, from-account-launcher-shortcut-with-id=user@example.com, shortcutUri=content://com.google.android.gm.sapi/user@example.com/label/%5Esq_ig_i_personal?account_type=com.google}]]
+            extras=PersistableBundle[{account-shortcut-manager-account=user@example.com, is-from-account-shortcut-manager=true}]
+            iconRes=0[null], bitmapPath=/data/system_ce/0/shortcut_service/bitmaps/com.google.android.gm/1790285019763.png, iconUri=null}
+            bitmap size=2835
+          ShortcutInfo {id=manifest_compose_shortcut, flags=0x1a4 [ImManIc-rStr]
+            packageName=com.google.android.gm
+            activity=ComponentInfo{com.google.android.gm/com.google.android.gm.ConversationListActivityGmail}
+            shortLabel=Compose, resId=2132087080[compose_title]
+            longLabel=null, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=0, timestamp=1790285010758
+            intents=[Intent { act=com.android.mail.intentutils.action.LAUNCH_COMPOSE flg=0x1000c000 cmp=com.google.android.gm/.ComposeActivityGmail }/PersistableBundle[{is-default-cse-allowed=true, from-launcher-shortcut=true}]]
+            extras=null
+            iconRes=2131232612[drawable/compose_launcher_shortcut_icon], bitmapPath=null, iconUri=null}
+        Total bitmap size: 6182 (6.18 kB)
+
+      Package: com.eyecon.global  UID: 10081
+        Calls: 0
+        Last known FG: 77242312
+        Last reset: [1790309853279] 2026-09-25 04:17:33
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 790
+          Backup Allowed: false
+          Last package update time: 1790077039364
+            SigHash: 5E96BA4651AF6183093D85EE5A9BBB4547446C40FF92F4BE63FAD1B21EB40778
+
+        Shortcuts:
+        Total bitmap size: 0 (0 B)
+
+      Package: com.twitter.android  UID: 10086
+        Calls: 0
+        Last known FG: 77231889
+        Last reset: [1790309853279] 2026-09-25 04:17:33
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 312280001
+          Backup Allowed: false
+          Last package update time: 1790079318679
+            SigHash: 0FD9A0CFB07B65950997B4EAEBDC53931392391AA406538A3B04073BC2CE2FE9
+
+        Shortcuts:
+          ShortcutInfo {id=tweet, flags=0x1a4 [ImManIc-rStr]
+            packageName=com.twitter.android
+            activity=ComponentInfo{com.twitter.android/com.x.android.main.MainActivity}
+            shortLabel=Post, resId=2132023041[tweet_title]
+            longLabel=Post, resId=2132023041[tweet_title]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=1, timestamp=1790285010763
+            intents=[Intent { act=android.intent.action.VIEW dat=twitter://post flg=0x1000c000 cmp=com.twitter.android/com.x.android.deeplink.XUrlInterpreterActivity }/null]
+            extras=null
+            iconRes=2131232126[drawable/ic_vector_post_shortcut], bitmapPath=null, iconUri=null}
+          ShortcutInfo {id=grok, flags=0x1a4 [ImManIc-rStr]
+            packageName=com.twitter.android
+            activity=ComponentInfo{com.twitter.android/com.x.android.main.MainActivity}
+            shortLabel=Grok, resId=2132018685[grok_screen_title]
+            longLabel=Grok, resId=2132018685[grok_screen_title]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=3, timestamp=1790285010763
+            intents=[Intent { act=android.intent.action.VIEW dat=https://x.com/... flg=0x1000c000 cmp=com.twitter.android/com.x.android.deeplink.XUrlInterpreterActivity }/null]
+            extras=null
+            iconRes=2131231827[drawable/ic_vector_grok_shortcut], bitmapPath=null, iconUri=null}
+          ShortcutInfo {id=dm, flags=0x1a4 [ImManIc-rStr]
+            packageName=com.twitter.android
+            activity=ComponentInfo{com.twitter.android/com.x.android.main.MainActivity}
+            shortLabel=New message, resId=2132021915[shortcut_dm]
+            longLabel=New message, resId=2132021915[shortcut_dm]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=2, timestamp=1790285010763
+            intents=[Intent { act=android.intent.action.VIEW dat=twitter://messages/compose flg=0x1000c000 cmp=com.twitter.android/com.x.android.deeplink.XUrlInterpreterActivity }/null]
+            extras=null
+            iconRes=2131231671[drawable/ic_vector_compose_dm_shortcut], bitmapPath=null, iconUri=null}
+          ShortcutInfo {id=search, flags=0x1a4 [ImManIc-rStr]
+            packageName=com.twitter.android
+            activity=ComponentInfo{com.twitter.android/com.x.android.main.MainActivity}
+            shortLabel=Search, resId=2132021916[shortcut_search]
+            longLabel=Search, resId=2132021916[shortcut_search]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=0, timestamp=1790285010763
+            intents=[Intent { act=android.intent.action.VIEW dat=twitter://explore flg=0x1000c000 cmp=com.twitter.android/com.x.android.deeplink.XUrlInterpreterActivity }/null]
+            extras=null
+            iconRes=2131232208[drawable/ic_vector_search_shortcut], bitmapPath=null, iconUri=null}
+        Total bitmap size: 0 (0 B)
+
+      Package: com.google.android.gms  UID: 10052
+        Calls: 0
+        Last known FG: 77242312
+        Last reset: [1790309853279] 2026-09-25 04:17:33
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 263436032
+          Backup Allowed: true
+          Last package update time: 1789981336011
+            SigHash: 7CE83C1B71F3D572FED04C8D40C5CB10FF75E6D87D9DF6FBD53F0468C2905053
+
+        Shortcuts:
+        Total bitmap size: 0 (0 B)
+
+      Package: com.facebook.katana  UID: 10084
+        Calls: 0
+        Last known FG: 77231890
+        Last reset: [1790309853279] 2026-09-25 04:17:33
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 474818424
+          Backup Allowed: true
+          Last package update time: 1790078458495
+            SigHash: E3F9E1E0CF99D0E56A055BA65E241B3399F7CEA524326B0CDD6EC1327ED0FDC1
+
+        Shortcuts:
+          ShortcutInfo {id=shortcut_notification_tab, flags=0x2085 [DynIc-rStrLiv]
+            packageName=com.facebook.katana
+            activity=ComponentInfo{com.facebook.katana/com.facebook.katana.LoginActivity}
+            shortLabel=Notifications, resId=0[null]
+            longLabel=Notifications, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories={android.shortcut.dynamic}
+            persons=null
+            icon=null
+            rank=0, timestamp=1790285010776
+            intents=[Intent { act=android.intent.action.VIEW dat=fb://notifications_tab cmp=com.facebook.katana/.IntentUriHandler }/PersistableBundle[{shortcut_open=true, dynamic_shortcut_target=notifications, dynamic_shortcut_server_label=Notifications, dynamic_shortcut_index=0}]]
+            extras=null
+            iconRes=2132346165[drawable.2/fb_ic_bell_filled_24], bitmapPath=null, iconUri=null}
+          ShortcutInfo {id=shortcut_friending_tab, flags=0x2085 [DynIc-rStrLiv]
+            packageName=com.facebook.katana
+            activity=ComponentInfo{com.facebook.katana/com.facebook.katana.LoginActivity}
+            shortLabel=Friends, resId=0[null]
+            longLabel=Friends, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories={android.shortcut.dynamic}
+            persons=null
+            icon=null
+            rank=1, timestamp=1790285010776
+            intents=[Intent { act=android.intent.action.VIEW dat=https://facebook.com/... cmp=com.facebook.katana/.IntentUriHandler }/PersistableBundle[{shortcut_open=true, dynamic_shortcut_target=friending, dynamic_shortcut_server_label=Friends, dynamic_shortcut_index=1}]]
+            extras=null
+            iconRes=2132347534[drawable.2/fb_ic_friends_filled_24], bitmapPath=null, iconUri=null}
+          ShortcutInfo {id=shortcut_video_home, flags=0x2085 [DynIc-rStrLiv]
+            packageName=com.facebook.katana
+            activity=ComponentInfo{com.facebook.katana/com.facebook.katana.LoginActivity}
+            shortLabel=Reels, resId=0[null]
+            longLabel=Reels, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories={android.shortcut.dynamic}
+            persons=null
+            icon=null
+            rank=2, timestamp=1790285010777
+            intents=[Intent { act=android.intent.action.VIEW dat=fb://watch cmp=com.facebook.katana/.IntentUriHandler }/PersistableBundle[{shortcut_open=true, dynamic_shortcut_target=video, dynamic_shortcut_server_label=Reels, dynamic_shortcut_index=2}]]
+            extras=null
+            iconRes=2132349663[drawable.2/fb_ic_video_filled_24], bitmapPath=null, iconUri=null}
+        Total bitmap size: 0 (0 B)
+
+      Package: com.android.settings  UID: 1000
+        Calls: 0
+        Last known FG: 77242313
+        Last reset: [1790309853279] 2026-09-25 04:17:33
+
+        PackageInfo:
+          IsShadow: false (installed)
+          Version: 31
+          Backup Allowed: true
+          Last package update time: 1716821501000
+            SigHash: C8A2E9BCCF597C2FB6DC66BEE293FC13F2FC47EC77BC6B2B0D52C11F51192AB8
+
+        Shortcuts:
+          ShortcutInfo {id=manifest-shortcut-data-usage, flags=0x1a4 [ImManIc-rStr]
+            packageName=com.android.settings
+            activity=ComponentInfo{com.android.settings/com.android.settings.Settings}
+            shortLabel=Data usage, resId=2131887734[data_usage_summary_title]
+            longLabel=null, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=1, timestamp=1790285010780
+            intents=[Intent { act=android.intent.action.MAIN flg=0x1000c000 cmp=com.android.settings/.Settings$DataUsageSummaryActivity }/null]
+            extras=null
+            iconRes=2131231418[drawable/ic_shortcut_data_usage], bitmapPath=null, iconUri=null}
+          ShortcutInfo {id=manifest-shortcut-battery, flags=0x1a4 [ImManIc-rStr]
+            packageName=com.android.settings
+            activity=ComponentInfo{com.android.settings/com.android.settings.Settings}
+            shortLabel=Battery, resId=2131889682[power_usage_summary_title]
+            longLabel=null, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=2, timestamp=1790285010780
+            intents=[Intent { act=android.intent.action.POWER_USAGE_SUMMARY flg=0x1000c000 }/null]
+            extras=null
+            iconRes=2131231417[drawable/ic_shortcut_battery], bitmapPath=null, iconUri=null}
+          ShortcutInfo {id=manifest-shortcut-wifi, flags=0x1a4 [ImManIc-rStr]
+            packageName=com.android.settings
+            activity=ComponentInfo{com.android.settings/com.android.settings.Settings}
+            shortLabel=Wi‑Fi, resId=2131891608[wifi_settings]
+            longLabel=null, resId=0[null]
+            disabledMessage=null, resId=0[null]
+            disabledReason=[Not disabled]
+            categories=null
+            persons=null
+            icon=null
+            rank=0, timestamp=1790285010780
+            intents=[Intent { act=android.settings.WIFI_SETTINGS flg=0x1000c000 }/null]
+            extras=null
+            iconRes=2131231419[drawable/ic_shortcut_wireless], bitmapPath=null, iconUri=null}
+        Total bitmap size: 0 (0 B)
+
+      Bitmap directories: 
+          Path: com.google.android.gm/ has 2 files, size=6182 (6.18 kB)
+        Path: bitmaps/ has 0 files, size=0 (0 B)
+
+
+

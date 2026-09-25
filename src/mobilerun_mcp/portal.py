@@ -125,11 +125,12 @@ class PortalClient:
             raise PortalError(f"state_full returned an unusable payload: {str(data)[:120]}")
         return data
 
-    async def screenshot(self) -> bytes:
+    async def screenshot(self, hide_overlay: bool = False) -> bytes:
         """PNG bytes; falls back to adb screencap when the Portal endpoint is unavailable."""
         await self._ensure()
         if self._http_ok:
-            resp = await self._request("GET", "/screenshot")
+            params = {"hideOverlay": "true"} if hide_overlay else None
+            resp = await self._request("GET", "/screenshot", params=params)
             if resp.status_code == 200:
                 body = resp.json()
                 encoded = unwrap(body) if body.get("status") == "success" else None

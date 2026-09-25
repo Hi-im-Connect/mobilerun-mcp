@@ -19,7 +19,15 @@ class App:
     version: str = ""
 
     def to_dict(self) -> dict[str, object]:
-        return {"package": self.package, "label": self.label, "system": self.system}
+        return {
+            "package": self.package,
+            "label": self.label,
+            "system": self.system,
+            # mobilerun-core list_apps field names
+            "package_name": self.package,
+            "version_name": self.version,
+            "is_system_app": self.system,
+        }
 
 
 def parse_apps(raw: list[dict[str, Any]]) -> list[App]:

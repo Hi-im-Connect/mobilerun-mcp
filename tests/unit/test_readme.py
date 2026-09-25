@@ -38,7 +38,7 @@ def section():
 
 
 def test_every_tool_is_in_the_reference_table_and_nothing_else(schemas, section):
-    documented = set(re.findall(r"^\| `([a-z_]+)` \|", section, re.M))
+    documented = set(re.findall(r"^\| `([a-z_-]+)` \|", section, re.M))
     assert documented == set(schemas), {
         "undocumented": sorted(set(schemas) - documented),
         "unknown": sorted(documented - set(schemas)),
@@ -46,12 +46,12 @@ def test_every_tool_is_in_the_reference_table_and_nothing_else(schemas, section)
 
 
 def test_every_tool_has_an_example_call(schemas, section):
-    with_examples = {name for name, _ in re.findall(r"^([a-z_]+) (\{.*\})$", section, re.M)}
+    with_examples = {name for name, _ in re.findall(r"^([a-z_-]+) (\{.*\})$", section, re.M)}
     assert set(schemas) - with_examples == set()
 
 
 def test_example_calls_are_valid_for_their_tool(schemas, section):
-    examples = re.findall(r"^([a-z_]+) (\{.*\})$", section, re.M)
+    examples = re.findall(r"^([a-z_-]+) (\{.*\})$", section, re.M)
     assert len(examples) >= len(schemas)
     for tool, arguments in examples:
         jsonschema.validate(json.loads(arguments), schemas[tool])

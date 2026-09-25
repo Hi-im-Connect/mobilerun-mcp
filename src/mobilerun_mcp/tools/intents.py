@@ -21,7 +21,8 @@ CONTACT_URI = "content://com.android.contacts/data/phones"
 def register(mcp: FastMCP, rt: Runtime) -> None:
     @mcp.tool(tags={"write"})
     async def system_intent(
-        verb: str,
+        action: str | None = None,
+        verb: str | None = None,
         hour: int | None = None,
         minute: int | None = None,
         seconds: int | None = None,
@@ -40,10 +41,13 @@ def register(mcp: FastMCP, rt: Runtime) -> None:
         skip_ui: bool = True,
         device: Device = None,
     ) -> dict:
-        """One-call Android actions. Verbs: set_alarm(hour, minute, label), set_timer(seconds,
+        """One-call Android actions (action = the verb; verb= is accepted too). Verbs: set_alarm(hour, minute, label), set_timer(seconds,
         label), dial(phone_number), compose_sms(phone_number, body), add_calendar_event(title,
         start, end, location, notes; ISO datetimes), share_text(text, subject), navigate(
         destination, mode drive|walk|bike|transit). dial/compose_sms only prefill; the user sends."""
+        verb = action or verb
+        if not verb:
+            fail("invalid_argument", "give action", f"one of: {', '.join(VERBS)}")
         params = {
             "hour": hour,
             "minute": minute,

@@ -39,6 +39,14 @@ def split_command(command: str) -> list[str]:
 
 
 def register(mcp: FastMCP, rt: Runtime) -> None:
+    @mcp.tool(
+        name="aura-adb",
+        description=DESCRIPTION + " (AURA's name for the adb tool.)",
+        tags={"write"},
+    )
+    async def aura_adb(command: str, device: Device = None) -> dict:
+        return await adb_command(command, device)
+
     @mcp.tool(name="adb", description=DESCRIPTION, tags={"write"})
     async def adb_command(command: str, device: Device = None) -> dict:
         if rt.config.policy != "off":

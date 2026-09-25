@@ -53,8 +53,8 @@ async def test_type_text_lands_in_field(phone):
     await phone.call("tap", som_id=mark_id(await phone.elements(), "Search contacts"))
     typed = await phone.call("type_text", text="ali")
     assert typed["chars"] == 3
-    screen = await phone.call("read_screen")
-    assert '"ali"' in screen["elements"] and "Ali Omar" in screen["elements"]
+    elements = await phone.elements()
+    assert '"ali"' in elements and "Ali Omar" in elements
     back = await phone.call("press_back")
     assert back["ok"]
 
@@ -71,6 +71,7 @@ async def test_long_press_shows_launcher_menu(phone):
 
 
 async def test_scroll_to_finds_offscreen_item(phone):
+    await phone.shell("am force-stop com.android.settings")  # start from the top level
     await phone.call("launch_app", app_name="settings")
     found = await phone.call("scroll_to", text="About phone", max_scrolls=10)
     assert found["found"] and "About phone" in found["mark"]["label"]

@@ -53,14 +53,29 @@ def register(mcp: FastMCP, rt: Runtime) -> None:
         }
 
     @mcp.tool(tags={"write"})
-    async def media_control(action: str, device: Device = None) -> dict:
-        """Send a media key: play, pause, play_pause, stop, next, previous, rewind, fast_forward."""
-        if action not in DISPATCH_KEYS:
-            fail("invalid_argument", f"action must be one of {', '.join(DISPATCH_KEYS)}")
+    async def media_control(
+        command: str | None = None,
+        package_name: str | None = None,
+        action: str | None = None,
+        device: Device = None,
+    ) -> dict:
+        """Control playback in any app without touching the screen: play, pause, play_pause,
+        next, previous, stop, rewind, fast_forward. Goes to the active media session;
+        package_name (from get_media_sessions) is checked against it and reported."""
+        command = command or action
+        if command not in DISPATCH_KEYS:
+            fail("invalid_argument", f"command must be one of {', '.join(DISPATCH_KEYS)}")
         session = get_session(rt, device)
-        await session.shell(f"cmd media_session dispatch {DISPATCH_KEYS[action]}")
+        before = parse_media_sessions(await session.shell("dumpsys media_session"))
+        if package_name and not any(m.package == package_name for m in before):
+            fail("app_not_found", f"{package_name} has no media session", "see get_media_sessions")
+        await session.shell(f"cmd media_session dispatch {DISPATCH_KEYS[command]}")
         sessions = parse_media_sessions(await session.shell("dumpsys media_session"))
-        return {"ok": True, "action": action, "sessions": [s.to_dict() for s in sessions]}
+        result = {"ok": True, "command": command, "sessions": [m.to_dict() for m in sessions]}
+        active = next((m for m in before if m.active), None)
+        if package_name and active is not None and active.package != package_name:
+            result["note"] = f"dispatched to the active session ({active.package})"
+        return result
 
     async def adjust(session: DeviceSession, direction: str, steps: int) -> dict:
         for _ in range(max(1, min(steps, 15))):
@@ -78,10 +93,13 @@ def register(mcp: FastMCP, rt: Runtime) -> None:
         return await adjust(get_session(rt, device), "lower", steps)
 
     @mcp.tool(tags={"write"})
-    async def mute(muted: bool = True, device: Device = None) -> dict:
-        """Mute (volume 0, previous level remembered) or unmute the music stream."""
+    async def mute(muted: bool | None = None, device: Device = None) -> dict:
+        """Toggle mute on the media stream (muted=true/false forces a state). Muting remembers
+        the previous level for unmute."""
         session = get_session(rt, device)
         current = await read_volume(session)
+        if muted is None:
+            muted = bool(current["volume"])
         if muted:
             if current["volume"]:
                 premute[session.serial] = int(current["volume"])

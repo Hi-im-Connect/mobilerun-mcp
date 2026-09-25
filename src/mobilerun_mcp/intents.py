@@ -12,6 +12,7 @@ from .shell import q
 VERBS = (
     "set_alarm",
     "set_timer",
+    "show_alarms",
     "dial",
     "compose_sms",
     "add_calendar_event",
@@ -44,8 +45,8 @@ def build_intent(verb: str, params: dict) -> IntentSpec:
     if verb not in VERBS:
         raise ValueError(f"unknown verb {verb!r}; choose from {', '.join(VERBS)}")
     if verb == "set_alarm":
-        _need(params, "hour", "minute")
-        hour, minute = int(params["hour"]), int(params["minute"])
+        _need(params, "hour")
+        hour, minute = int(params["hour"]), int(params.get("minute") or 0)
         if not (0 <= hour <= 23 and 0 <= minute <= 59):
             raise ValueError("hour must be 0-23 and minute 0-59")
         args = (
@@ -57,14 +58,16 @@ def build_intent(verb: str, params: dict) -> IntentSpec:
     if verb == "set_timer":
         _need(params, "seconds")
         seconds = int(params["seconds"])
-        if seconds <= 0:
-            raise ValueError("seconds must be positive")
+        if not 1 <= seconds <= 86400:
+            raise ValueError("seconds must be 1-86400")
         args = (
             f"-a android.intent.action.SET_TIMER --ei {EXTRA}.alarm.LENGTH {seconds} "
             f"--es {EXTRA}.alarm.MESSAGE {q(params.get('label') or '')} "
             f"--ez {EXTRA}.alarm.SKIP_UI {'true' if params.get('skip_ui', True) else 'false'}"
         )
         return IntentSpec(args, f"timer for {seconds}s")
+    if verb == "show_alarms":
+        return IntentSpec("-a android.intent.action.SHOW_ALARMS", "alarm list")
     if verb == "dial":
         _need(params, "phone_number")
         number = _PHONE_CLEAN.sub("", params["phone_number"])
@@ -74,8 +77,7 @@ def build_intent(verb: str, params: dict) -> IntentSpec:
             f"-a android.intent.action.DIAL -d {q('tel:' + number)}", f"dialer with {number}"
         )
     if verb == "compose_sms":
-        _need(params, "phone_number")
-        number = _PHONE_CLEAN.sub("", params["phone_number"])
+        number = _PHONE_CLEAN.sub("", params.get("phone_number") or "")
         args = f"-a android.intent.action.SENDTO -d {q('smsto:' + number)} --es sms_body {q(params.get('body') or '')}"
         return IntentSpec(args, f"SMS composer to {number}")
     if verb == "add_calendar_event":

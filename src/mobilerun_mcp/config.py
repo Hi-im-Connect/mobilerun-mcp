@@ -19,6 +19,10 @@ class Config:
     adb_bin: str | None = None
     mobilerun_bin: str | None = None
     brave_api_key: str | None = None
+    cloud_api_key: str | None = None
+    tavily_api_key: str | None = None
+    http_host: str = "127.0.0.1"
+    http_port: int = 4816
 
     @classmethod
     def from_env(cls, env: Mapping[str, str] | None = None) -> Config:
@@ -40,4 +44,8 @@ class Config:
             adb_bin=env.get("MOBILERUN_ADB_BIN") or None,
             mobilerun_bin=env.get("MOBILERUN_BIN") or None,
             brave_api_key=env.get("BRAVE_API_KEY") or None,
+            cloud_api_key=env.get("MOBILERUN_CLOUD_API_KEY") or None,
+            tavily_api_key=env.get("TAVILY_API_KEY") or None,
+            http_host=env.get("MOBILERUN_MCP_HTTP_HOST", "127.0.0.1").strip() or "127.0.0.1",
+            http_port=int(env.get("MOBILERUN_MCP_HTTP_PORT", "4816") or 4816),
         )

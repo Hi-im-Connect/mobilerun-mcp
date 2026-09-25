@@ -18,8 +18,6 @@ from ..policy import check_app
 from ..session import DeviceSession, Runtime
 from .common import Device, enforce, get_session
 
-KEY_ENTER = 66
-
 
 async def dump(session: DeviceSession) -> list[Notification]:
     return parse_notifications(await session.shell("dumpsys notification --noredact", timeout=45))
@@ -92,13 +90,21 @@ async def dismiss_rows(session: DeviceSession, targets: list[Notification]) -> N
 def register(mcp: FastMCP, rt: Runtime) -> None:
     @mcp.tool(tags={"read"})
     async def read_notifications(
+        package_name: str | None = None,
+        include_ongoing: bool = False,
+        limit: int = 20,
         package: str | None = None,
-        limit: int = 30,
-        include_ongoing: bool = True,
         device: Device = None,
     ) -> dict:
-        """Notifications currently posted: key, app, title, text, action labels, clearable."""
+        """Current status-bar notifications, newest first, without touching the screen: key,
+        app, title, text, action labels. Ongoing ones (music, navigation, downloads) only with
+        include_ongoing=true; package_name filters to one app; limit default 20, cap 30.
+        With the safety policy on, banking and authenticator notifications are withheld."""
+        package = package_name or package
+        limit = min(max(limit, 1), 30)
         items = await dump(get_session(rt, device))
+        if rt.config.policy != "off":
+            items = [n for n in items if check_app(rt.config.policy, n.package).allowed]
         shown = [
             n
             for n in items
@@ -181,7 +187,7 @@ def register(mcp: FastMCP, rt: Runtime) -> None:
             if reply_text is not None:
                 await settle(session.peek, timeout=3.0)
                 await session.portal.input_text(reply_text)
-                await session.shell(f"input keyevent {KEY_ENTER}")
+                await session.press("enter")
 
         return await mutate(
             session, sequence, {"action": "notification_action", "notification": target.title}

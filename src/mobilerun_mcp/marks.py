@@ -23,6 +23,8 @@ def _descendant_labels(screen: Screen, root: Element) -> list[str]:
 
 
 def _kind(el: Element) -> str:
+    if el.scrollable and not el.label and not el.editable:
+        return "scroll"
     if el.editable:
         return "input"
     if el.checkable:
@@ -57,8 +59,11 @@ def build_marks(screen: Screen, max_marks: int = MAX_MARKS) -> list[Mark]:
         if not _usable(el, screen, allow_system_ui):
             continue
         label = el.label
-        if not label and (el.scrollable or _is_container(el, screen)):
-            continue  # scroll regions and screen-sized wrappers are not targets
+        if not label and el.scrollable:
+            candidates.append((el, el.short_id or el.class_name))  # scroll host (flag w)
+            continue
+        if not label and _is_container(el, screen):
+            continue  # screen-sized wrappers are not targets
         if not label and el.interactive:
             label = " / ".join(_descendant_labels(screen, el))[:MAX_LABEL]
         if el.interactive:
@@ -69,8 +74,10 @@ def build_marks(screen: Screen, max_marks: int = MAX_MARKS) -> list[Mark]:
 
     marks: list[Mark] = []
     for el, label in candidates:
-        if not el.interactive and any(
-            box.contains(el.bounds) and label in owner for box, owner in interactive_boxes
+        if (
+            not el.interactive
+            and not el.scrollable
+            and any(box.contains(el.bounds) and label in owner for box, owner in interactive_boxes)
         ):
             continue  # text already represented by the clickable container around it
         marks.append(
@@ -97,6 +104,8 @@ def build_marks(screen: Screen, max_marks: int = MAX_MARKS) -> list[Mark]:
             checked=m.checked,
             password=m.password,
             scrollable=m.scrollable,
+            source=m.source,
+            confidence=m.confidence,
         )
         for i, m in enumerate(marks[:max_marks], start=1)
     ]

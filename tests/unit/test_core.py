@@ -169,6 +169,9 @@ class FakeSession:
         self.stale = False
         self.signature = ""
         self.last_observation = None
+        self.action_count = 0
+        self.last_action_at = 0.0
+        self.seen_at = {}
         self._sigs = iter(["before", "after", "after"])
         self.screen = parse_screen({"phone_state": {"packageName": "com.x"}})
 
